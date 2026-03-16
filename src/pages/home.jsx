@@ -6,13 +6,14 @@ import agoda from "../Assets/agoda.png";
 import image1 from "../Assets/1.jpg";
 import image2 from "../Assets/2.jpg";
 import image3 from "../Assets/3.jpg";
-import image4 from "../Assets/4.jpg";
 import image5 from "../Assets/5.jpg";
 import image6 from "../Assets/6.jpg";
-import image7 from "../Assets/7.jpg";
 import image8 from "../Assets/8.jpg";
+
 export default function Home() {
+
    const [currentSlide, setCurrentSlide] = useState(0)
+   const [startIndex, setStartIndex] = useState(0)
 
    const slides = [
       {
@@ -29,7 +30,6 @@ export default function Home() {
          description: "PEACEFUL STAY IN UK",
          bgImage: `url(${image2})`
       },
-
       {
          id: 3,
          subtitle: "COMFORTABLE ROOMS FOR EVERY STAY",
@@ -38,60 +38,19 @@ export default function Home() {
          bgImage: `url(${image3})`
       }
    ]
-   const attractions = [
-      {
-         title: "Edward Jenner Museum",
-         time: "5 minutes",
-         image: `https://source.unsplash.com/random/600x400?nature&sig=1`
-      },
-      {
-         title: "Cotswold Way National Trail",
-         time: "10 minutes",
-         image: `https://source.unsplash.com/random/600x400?mountain&sig=2`
-      },
-      {
-         title: "Slimbridge Wetland Centre",
-         time: "10 minutes",
-         image: `https://source.unsplash.com/random/600x400?lake&sig=3`
-      },
-      {
-         title: "Berkeley Marina",
-         time: "8 minutes",
-         image: `https://source.unsplash.com/random/600x400?harbour&sig=4`
-      },
-      {
-         title: "Thornbury Castle",
-         time: "15 minutes",
-         image: `https://source.unsplash.com/random/600x400?castle&sig=5`
-      },
-      {
-         title: "Gloucester Cathedral",
-         time: "20 minutes",
-         image: `https://source.unsplash.com/random/600x400?cathedral&sig=6`
-      },
-      {
-         title: "Berkeley Castle",
-         time: "6 minutes",
-         image: `https://source.unsplash.com/random/600x400?palace&sig=7`
-      },
-      {
-         title: "Cotswolds Village",
-         time: "25 minutes",
-         image: `https://source.unsplash.com/random/600x400?village&sig=8`
-      },
-      {
-         title: "Severn Bridge",
-         time: "18 minutes",
-         image: `https://source.unsplash.com/random/600x400?bridge&sig=9`
-      },
-      {
-         title: "Bristol Harbour",
-         time: "30 minutes",
-         image: `https://source.unsplash.com/random/600x400?city&sig=10`
-      }
-   ]
 
-   const [startIndex, setStartIndex] = useState(0)
+   const attractions = [
+      { title: "Edward Jenner Museum", time: "5 minutes", image: "https://source.unsplash.com/random/600x400?nature&sig=1" },
+      { title: "Cotswold Way National Trail", time: "10 minutes", image: "https://source.unsplash.com/random/600x400?mountain&sig=2" },
+      { title: "Slimbridge Wetland Centre", time: "10 minutes", image: "https://source.unsplash.com/random/600x400?lake&sig=3" },
+      { title: "Berkeley Marina", time: "8 minutes", image: "https://source.unsplash.com/random/600x400?harbour&sig=4" },
+      { title: "Thornbury Castle", time: "15 minutes", image: "https://source.unsplash.com/random/600x400?castle&sig=5" },
+      { title: "Gloucester Cathedral", time: "20 minutes", image: "https://source.unsplash.com/random/600x400?cathedral&sig=6" },
+      { title: "Berkeley Castle", time: "6 minutes", image: "https://source.unsplash.com/random/600x400?palace&sig=7" },
+      { title: "Cotswolds Village", time: "25 minutes", image: "https://source.unsplash.com/random/600x400?village&sig=8" },
+      { title: "Severn Bridge", time: "18 minutes", image: "https://source.unsplash.com/random/600x400?bridge&sig=9" },
+      { title: "Bristol Harbour", time: "30 minutes", image: "https://source.unsplash.com/random/600x400?city&sig=10" }
+   ]
 
    const nextSlide = () => {
       setStartIndex((prev) => (prev + 1) % attractions.length)
@@ -111,23 +70,29 @@ export default function Home() {
       )
    }
 
+   /* Auto slide attractions */
    useEffect(() => {
+
       const auto = setInterval(() => {
-         nextSlide()
+         setStartIndex((prev) => (prev + 1) % attractions.length)
       }, 4000)
 
       return () => clearInterval(auto)
 
-   }, [startIndex])
+   }, [attractions.length])
 
-   // Auto slide every 5 seconds
+
+   /* Hero slider */
    useEffect(() => {
+
       const timer = setInterval(() => {
          setCurrentSlide((prev) => (prev + 1) % slides.length)
       }, 5000)
 
       return () => clearInterval(timer)
+
    }, [slides.length])
+
 
    const goToSlide = (index) => {
       setCurrentSlide(index)

@@ -11,16 +11,16 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Top contact bar */
+/* ---------------- TOP BAR ---------------- */
+
 .top-bar {
-  background-color: #2d3748;
-  color: white;
+  background: #2d3748;
+  color: #fff;
   padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
-  font-weight: 400;
 }
 
 .contact-info {
@@ -33,7 +33,6 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-weight: 400;
 }
 
 .contact-item .icon {
@@ -52,75 +51,65 @@
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  font-weight: 400;
-  transition: opacity 0.3s ease;
-}
-
-.action-item .icon {
-  font-size: 14px;
-  color: #ffd700;
+  transition: opacity .3s;
 }
 
 .action-item:hover {
-  opacity: 0.8;
+  opacity: .8;
+}
+
+.action-item .icon {
+  color: #ffd700;
 }
 
 .social-icons {
   display: flex;
   gap: 12px;
-  align-items: center;
 }
 
 .social-icon {
   cursor: pointer;
   font-size: 14px;
-  color: white;
-  transition: color 0.3s ease;
+  transition: color .3s;
 }
 
 .social-icon:hover {
   color: #ffd700;
 }
 
-/* Main navigation */
+/* ---------------- MAIN NAV ---------------- */
+
 .main-nav {
-  background-color: white;
-  padding: 25px 40px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  position: relative;
+  background: #fff;
+  padding: 22px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
 }
 
 .nav-container {
+  max-width: 1400px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.logo {
-  cursor: pointer;
 }
 
 .logo img {
   height: 50px;
-  width: auto;
-  object-fit: contain;
+  cursor: pointer;
 }
 
-/* Mobile menu button - hidden by default */
+/* mobile button */
+
 .mobile-menu-btn {
   display: none;
-  background: none;
   border: none;
-  font-size: 24px;
-  color: #666;
+  background: none;
+  font-size: 26px;
   cursor: pointer;
-  padding: 5px;
-  z-index: 1001;
 }
 
-/* Navigation right side - menu + button */
+/* nav right */
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -132,22 +121,18 @@
   list-style: none;
   gap: 30px;
   align-items: center;
-  margin: 0;
 }
 
 .nav-link {
-  background: none;
   border: none;
-  text-decoration: none;
+  background: none;
+  font-size: 14px;
   color: #666;
   font-weight: 500;
-  font-size: 14px;
-  transition: color 0.3s ease;
-  padding: 8px 0;
-  position: relative;
-  white-space: nowrap;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  position: relative;
+  padding: 6px 0;
+  transition: color .3s;
 }
 
 .nav-link:hover,
@@ -158,183 +143,148 @@
 .nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: -2px;
   left: 0;
+  bottom: -3px;
   width: 100%;
   height: 2px;
-  background-color: #c8860d;
+  background: #c8860d;
 }
 
+/* book button */
+
 .book-btn {
-  background-color: #c8860d;
-  color: white;
+  background: #c8860d;
+  color: #fff;
   border: none;
   padding: 12px 24px;
-  font-weight: 600;
   font-size: 13px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-weight: 600;
   border-radius: 3px;
-  text-transform: uppercase;
-  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: .5px;
+  transition: .3s;
 }
 
 .book-btn:hover {
-  background-color: #b8760c;
+  background: #b8760c;
   transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(200, 134, 13, 0.3);
+  box-shadow: 0 4px 8px rgba(200, 134, 13, .3);
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
+/* ---------------- TABLET ---------------- */
+
+@media(max-width:1024px) {
+
+  .main-nav {
+    padding: 18px 25px;
+  }
+
   .nav-menu {
     gap: 20px;
   }
-  
-  .nav-right {
-    gap: 30px;
-  }
-  
-  .nav-link {
-    font-size: 13px;
-  }
-}
 
-@media (max-width: 1024px) {
-  .top-bar {
-    padding: 8px 20px;
-    font-size: 12px;
-  }
-  
-  .contact-info {
+  .nav-right {
     gap: 25px;
   }
-  
-  .top-actions {
-    gap: 20px;
-  }
-  
-  .main-nav {
-    padding: 12px 20px;
-  }
-  
-  .nav-menu {
-    gap: 15px;
-  }
-  
-  .nav-right {
-    gap: 20px;
-  }
+
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  /* Hide top bar on mobile */
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:768px) {
+
   .top-bar {
     display: none;
   }
-  
-  /* Show mobile menu button */
+
   .mobile-menu-btn {
     display: block;
   }
-  
+
   .main-nav {
-    padding: 15px 20px;
+    padding: 14px 20px;
   }
-  
-  /* Hide nav-right by default on mobile */
+
+  .logo img {
+    height: 42px;
+  }
+
+  /* sidebar */
+
   .nav-right {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 260px;
     height: 100vh;
-    background-color: white;
+    background: #fff;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 80px 30px 30px;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    transition: right 0.3s ease;
-    z-index: 1000;
+    align-items: flex-start;
+    padding: 90px 25px 30px;
+    transition: .35s ease;
     gap: 0;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, .12);
+    z-index: 1000;
   }
-  
-  /* Show nav when open */
+
   .nav-right.nav-open {
     right: 0;
   }
-  
+
   .nav-menu {
     flex-direction: column;
-    gap: 0;
     width: 100%;
-    margin-bottom: 30px;
+    gap: 0;
   }
-  
+
   .nav-menu li {
     width: 100%;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #eee;
   }
-  
+
   .nav-link {
     display: block;
-    padding: 15px 0;
-    font-size: 16px;
     width: 100%;
-    border-bottom: none;
-    text-align: left;
+    padding: 16px 0;
+    font-size: 16px;
   }
-  
+
   .nav-link.active::after {
     display: none;
   }
-  
+
   .nav-link.active {
-    background-color: #f8f9fa;
-    padding-left: 15px;
-    margin-left: -15px;
-    margin-right: -15px;
+    font-weight: 600;
     color: #c8860d;
   }
-  
+
   .book-btn {
     width: 100%;
-    padding: 15px;
-    font-size: 14px;
-    margin-top: 10px;
+    margin-top: 25px;
+    padding: 14px;
   }
-  
-  /* Overlay when menu is open */
-  .nav-right.nav-open::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    z-index: -1;
-  }
+
 }
 
-@media (max-width: 480px) {
-  .logo img {
-    height: 40px;
+/* ---------------- SMALL MOBILE ---------------- */
+
+@media(max-width:480px) {
+
+  .main-nav {
+    padding: 12px 16px;
   }
-  
+
+  .logo img {
+    height: 38px;
+  }
+
   .nav-right {
     width: 100%;
-    right: -100%;
+    padding: 90px 20px 30px;
   }
-  
-  .nav-right.nav-open {
-    right: 0;
-  }
-  
+
   .nav-link {
     font-size: 15px;
   }
+
 }
