@@ -107,7 +107,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Get in Touch</span>
-                   <a href="https://wa.me/ +17724658600" className="pwf-contact-value pwf-contact-link">crossroadsinnflorida@gmail.com</a>
+                   <a href="https://wa.me/ +17724658600" className="pwf-contact-value pwf-contact-link">+17724658600</a>
                 </div>
               </div>
             </div>
