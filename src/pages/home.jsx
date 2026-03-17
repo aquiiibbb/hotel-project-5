@@ -9,7 +9,7 @@ import image3 from "../Assets/3.jpg";
 import image5 from "../Assets/5.jpg";
 import image6 from "../Assets/6.jpg";
 import image8 from "../Assets/8.jpg";
-
+import { useNavigate } from "react-router-dom"
 export default function Home() {
 
    const [currentSlide, setCurrentSlide] = useState(0)
@@ -69,7 +69,7 @@ export default function Home() {
          attractions[(startIndex + i) % attractions.length]
       )
    }
-
+   const navigate = useNavigate();
    /* Auto slide attractions */
    useEffect(() => {
 
@@ -198,7 +198,12 @@ export default function Home() {
                         </div>
                      </div>
 
-                     <button className="book-now-button">BOOK NOW</button>
+                     <button
+                        className="about-view-rooms-btn"
+                        onClick={() => navigate("/room")}
+                     >
+                        VIEW ROOMS
+                     </button>
                   </div>
                </div>
             </div>
@@ -373,7 +378,12 @@ export default function Home() {
                </div>
 
                <div className="rooms-footer">
-                  <button className="view-all-button">VIEW ALL ROOMS</button>
+                  <button
+                     className="about-view-rooms-btn"
+                     onClick={() => navigate("/room")}
+                  >
+                     VIEW ROOMS
+                  </button>
                </div>
             </div>
          </section>
