@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -13,6 +14,10 @@ import Room from "./pages/room";
 function App() {
   return (
     <Router>
+
+      {/* ✅ ADD THIS LINE */}
+      <ScrollToTop />
+
       <Header />
 
       <Routes>

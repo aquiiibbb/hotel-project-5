@@ -19,7 +19,7 @@ export default function Room(){
    const rooms = [
      {
        id: 1,
-       name: "Small Double Room",
+       name: "NK- King Bed (Non-Smoking)",
        price: 93.50,
        area: 17,
        person: 2,
@@ -28,7 +28,7 @@ export default function Room(){
      },
      {
        id: 2,
-       name: "Twin Room",
+       name: "NDD - Double Room  (2 Beds, Non-Smoking)",
        price: 104.50,
        area: 17,
        person: 2,
@@ -37,7 +37,7 @@ export default function Room(){
      },
      {
        id: 3,
-       name: "Double Room",
+       name: "HNK - King Room (Disability Access, Non-Smoking)",
        price: 113.30,
        area: 17,
        person: 2,
@@ -46,7 +46,7 @@ export default function Room(){
      },
      {
        id: 4,
-       name: "Deluxe Superking Room",
+       name: "HNDD - Double Room ( Disability Access, 2 beds, Non-Smoking)",
        price: 134.20,
        area: 22,
        person: 2,
@@ -55,7 +55,7 @@ export default function Room(){
      },
      {
        id: 5,
-       name: "Family Suite",
+       name: "HDD - Double Room (Disability Access, 2 beds)",
        price: 177.10,
        area: 50,
        person: 4,
@@ -64,11 +64,29 @@ export default function Room(){
      },
      {
        id: 6,
-       name: "Honeymoon Suite",
+       name: "DD - Double Room (2 beds)",
        price: 267.30,
        area: 33,
        person: 4,
        image: "https://princeofwaleshotels.co.uk/wp-content/uploads/2026/02/Honeymoon-Suite1.png",
+       featured: true
+     },
+     {
+       id: 7,
+       name: "D - Double Room (1 bed)",
+       price: 298.30,
+       area: 61,
+       person: 1,
+       image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
+       featured: true
+     },
+     {
+       id: 8,
+       name: "ND - Double Room (1 bed, Non-Smoking)",
+       price: 367.30,
+       area: 61,
+       person: 1,
+       image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
        featured: true
      }
    ];
@@ -131,7 +149,7 @@ export default function Room(){
                 <div className="room-content">
                   <h3 className="room-title">{room.name}</h3>
                   <div className="room-price">
-                    <span className="room-price-amount">£{room.price}</span>
+                    <span className="room-price-amount">${room.price}</span>
                     <span className="room-price-period">/ night</span>
                   </div>
                   <div className="room-details">

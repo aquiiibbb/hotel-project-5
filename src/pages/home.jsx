@@ -10,32 +10,61 @@ import image5 from "../Assets/5.jpg";
 import image6 from "../Assets/6.jpg";
 import image8 from "../Assets/8.jpg";
 import { useNavigate } from "react-router-dom"
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
+import './room.css'
 export default function Home() {
 
    const [currentSlide, setCurrentSlide] = useState(0)
    const [startIndex, setStartIndex] = useState(0)
-
+   const [favorites, setFavorites] = useState([]);
    const slides = [
       {
          id: 1,
-         subtitle: "WELCOME TO",
-         title: "THE PRINCE OF WALES BERKELEY",
-         description: "A CLASSIC STAY, THOUGHTFULLY REFINED",
          bgImage: `url(${image1})`
       },
       {
          id: 2,
-         subtitle: "RELAX & UNWIND",
-         title: "COUNTRYSIDE",
-         description: "PEACEFUL STAY IN UK",
          bgImage: `url(${image2})`
       },
       {
          id: 3,
-         subtitle: "COMFORTABLE ROOMS FOR EVERY STAY",
-         title: "CLEAN, MODERN & RELAXING",
-         description: "",
          bgImage: `url(${image3})`
+      }
+   ]
+   const toggleFavorite = (id) => {
+      if (favorites.includes(id)) {
+         setFavorites(favorites.filter((fav) => fav !== id));
+      } else {
+         setFavorites([...favorites, id]);
+      }
+   };
+   const rooms = [
+      {
+         id: 1,
+         name: "NK- King Bed (Non-Smoking)",
+         price: 93.50,
+         area: 12,
+         person: 2,
+         image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+         featured: true
+      },
+      {
+         id: 2,
+         name: "NDD - Double Room  (2 Beds, Non-Smoking)",
+         price: 104.50,
+         area: 19,
+         person: 1,
+         image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+         featured: false
+      },
+      {
+         id: 3,
+         name: "HNK - King Room (Disability Access, Non-Smoking)",
+         price: 113.30,
+         area: 22,
+         person: 2,
+         image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop",
+         featured: false
       }
    ]
 
@@ -140,7 +169,7 @@ export default function Home() {
                <div className="hotel-info-content">
                   <div className="hotel-image">
                      <img
-                        src={image8}
+                        src={image1}
                         alt=" of Wales Hotel"
                      />
                   </div>
@@ -239,7 +268,12 @@ export default function Home() {
                         just £150, with bespoke packages to suit your event and budget.
                      </p>
 
-                     <button className="venue-button">VIEW EVENTS & VENUE HIRE</button>
+                     <button
+                        className="about-view-rooms-btn"
+                        onClick={() => navigate("/amenities")}
+                     >
+                        VIEW Amenities & Facilities
+                     </button>
                   </div>
 
                   <div className="venue-images">
@@ -275,116 +309,67 @@ export default function Home() {
          </section>
 
          {/* Discover Our Rooms Section */}
-         <section className="rooms-section">
-            <div className="container">
-               <div className="rooms-header">
-                  <div className="crown-icon">
-                     <svg width="40" height="30" viewBox="0 0 40 30" fill="none">
-                        <path d="M20 5L25 15H15L20 5Z" fill="#D4AF37" />
-                        <circle cx="8" cy="15" r="3" fill="#D4AF37" />
-                        <circle cx="32" cy="15" r="3" fill="#D4AF37" />
-                        <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
-                     </svg>
-                  </div>
-                  <p className="rooms-subtitle">FEATURED ROOMS</p>
-                  <h2 className="rooms-title">Discover Our Rooms</h2>
+         <section className="lux-rooms-section">
+            <div className="lux-container">
+
+               <div className="lux-header">
+                  <p className="lux-subtitle">FEATURED ROOMS</p>
+                  <h2 className="lux-title">Discover Our Rooms</h2>
                </div>
 
-               <div className="rooms-grid">
-                  <div className="room-card">
-                     <div className="room-image">
-                        <div className="featured-badge">FEATURED</div>
-                        <div className="heart-icon">♡</div>
-                        <img
-                           src={image3}
-                           alt="Small Double Room"
-                        />
-                        <div className="room-link-icon">🔗</div>
-                     </div>
-                     <div className="room-details">
-                        <h3 className="room-name">Small Double Room</h3>
-                        <div className="room-price">
-                           <span className="price">£93.50</span>
-                           <span className="per-night">/ night</span>
+              <div className="room-grid">
+                          {rooms.map((room) => (
+                            <div key={room.id} className="room-card">
+                              <div className="room-image-container">
+                                <img 
+                                  src={room.image} 
+                                  alt={room.name} 
+                                  className="room-image"
+                                />
+                                {room.featured && (
+                                  <div className="room-featured-badge">FEATURED</div>
+                                )}
+                                <button 
+                                  className="room-favorite-btn"
+                                  onClick={() => toggleFavorite(room.id)}
+                                >
+                                  {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
+                                </button>
+                                <div className="room-rating">
+                                  <span className="room-rating-icon">⭐</span>
+                                </div>
+                              </div>
+                              <div className="room-content">
+                                <h3 className="room-title">{room.name}</h3>
+                                <div className="room-price">
+                                  <span className="room-price-amount">${room.price}</span>
+                                  <span className="room-price-period">/ night</span>
+                                </div>
+                                <div className="room-details">
+                                  <div className="room-detail">
+                                    <span className="room-detail-label">Area:</span>
+                                    <span className="room-detail-value">{room.area} m²</span>
+                                  </div>
+                                  <div className="room-detail">
+                                    <span className="room-detail-label">Person:</span>
+                                    <span className="room-detail-value">{room.person}</span>
+                                  </div>
+                                </div>
+                                <button className="room-book-btn">BOOK NOW</button>
+                              </div>
+                            </div>
+                          ))}
                         </div>
-                        <div className="room-info">
-                           <div className="room-info-item">
-                              <span className="info-label">Area:</span>
-                              <span className="info-value">17 m²</span>
-                           </div>
-                           <div className="room-info-item">
-                              <span className="info-label">Person:</span>
-                              <span className="info-value">2</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
 
-                  <div className="room-card">
-                     <div className="room-image">
-                        <div className="heart-icon">♡</div>
-                        <img
-                           src={image5}
-                           alt="Twin Room"
-                        />
-                        <div className="room-link-icon">🔗</div>
-                     </div>
-                     <div className="room-details">
-                        <h3 className="room-name">Twin Room</h3>
-                        <div className="room-price">
-                           <span className="price">£104.50</span>
-                           <span className="per-night">/ night</span>
-                        </div>
-                        <div className="room-info">
-                           <div className="room-info-item">
-                              <span className="info-label">Area:</span>
-                              <span className="info-value">17 m²</span>
-                           </div>
-                           <div className="room-info-item">
-                              <span className="info-label">Person:</span>
-                              <span className="info-value">2</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="room-card">
-                     <div className="room-image">
-                        <div className="heart-icon">♡</div>
-                        <img
-                           src={image6}
-                           alt="Double Room"
-                        />
-                        <div className="room-link-icon">🔗</div>
-                     </div>
-                     <div className="room-details">
-                        <h3 className="room-name">Double Room</h3>
-                        <div className="room-price">
-                           <span className="price">£113.30</span>
-                           <span className="per-night">/ night</span>
-                        </div>
-                        <div className="room-info">
-                           <div className="room-info-item">
-                              <span className="info-label">Area:</span>
-                              <span className="info-value">17 m²</span>
-                           </div>
-                           <div className="room-info-item">
-                              <span className="info-label">Person:</span>
-                              <span className="info-value">2</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div className="rooms-footer">
+               <div className="lux-footer">
                   <button
-                     className="about-view-rooms-btn"
+                     className="lux-view-btn"
                      onClick={() => navigate("/room")}
                   >
-                     VIEW ROOMS
+                     VIEW ALL ROOMS
                   </button>
                </div>
+
             </div>
          </section>
 
