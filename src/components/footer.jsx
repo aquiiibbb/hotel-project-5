@@ -87,7 +87,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Send Email</span>
-                   <a href="crossroadsinnflorida@gmail.com" className="pwf-contact-value pwf-contact-link">+17724658600</a>
+                   <a href="crossroadsinnflorida@gmail.com" className="pwf-contact-value pwf-contact-link">crossroadsinnflorida@gmail.com</a>
                 </div>
               </div>
               
@@ -107,7 +107,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Get in Touch</span>
-                   <a href="https://wa.me/ +17724658600" className="pwf-contact-value pwf-contact-link">+17724658600</a>
+                   <a href="https://wa.me/ +17724658600" className="pwf-contact-value pwf-contact-link">crossroadsinnflorida@gmail.com</a>
                 </div>
               </div>
             </div>
