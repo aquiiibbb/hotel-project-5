@@ -30,7 +30,7 @@ export default function Header() {
         <div className="top-contact">
           <span className="top-contact-item">
             <MdLocationOn className="icon" />
-            7050 Okeechobee Rd, Fort Pierce, FL 34945, USA St. Lucie County, Florida, United States - 34945
+            7050 Okeechobee Rd, Fort Pierce, FL 34945, USA
           </span>
           <span className="top-contact-item">
             <MdEmail className="icon" />
