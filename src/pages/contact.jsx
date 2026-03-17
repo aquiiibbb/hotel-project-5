@@ -84,8 +84,8 @@ export default function Contact(){
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">ADDRESS</h4>
                     <p className="contact-info-text">
-                      Bristol Road, A38, Berkeley,<br />
-                      Gloucestershire, GL13 9HD
+                       7050 Okeechobee Rd, Fort Pierce, FL 34945, <br />
+                       USA St. Lucie County, Florida, United States - 34945
                     </p>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function Contact(){
                   </div>
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">PHONE</h4>
-                    <p className="contact-info-text">+44 1453 810474</p>
+                     <p className="contact-info-text">+17724658600</p>
                   </div>
                 </div>
 
@@ -106,7 +106,7 @@ export default function Contact(){
                   </div>
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">EMAIL</h4>
-                    <p className="contact-info-text">info@princeofwaleshotels.co.uk</p>
+                     <p className="contact-info-text">crossroadsinnflorida@gmail.com</p>
                   </div>
                 </div>
 
