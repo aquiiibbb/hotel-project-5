@@ -11,10 +11,7 @@ export default function About(){
     "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=500&fit=crop",
     "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=500&fit=crop"
   ];
-  const handleViewRooms = () => {
-    navigate('/room');
-    window.scrollTo(0, 0); // Scroll to top
-  };
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % historyImages.length);
@@ -112,9 +109,7 @@ export default function About(){
                   </div>
                 </div>
 
-                 <button className="about-view-rooms-btn" onClick={handleViewRooms}>
-                   VIEW ROOMS
-                 </button>
+                <button className="about-view-rooms-btn">VIEW ROOMS</button>
               </div>
 
               <div className="about-years-badge">
