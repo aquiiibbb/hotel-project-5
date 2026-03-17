@@ -97,7 +97,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Call Anytime</span>
-                   <a href="tel: +17724658600" className="pwf-contact-value pwf-contact-link"> +17724658600</a>
+                   <a href="tel: +17724658600" className="pwf-contact-value pwf-contact-link">+17724658600</a>
                 </div>
               </div>
               
