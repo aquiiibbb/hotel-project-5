@@ -85,10 +85,15 @@ export default function Footer(){
                 <div className="pwf-contact-icon pwf-email-icon">
                   <MdEmail />
                 </div>
-                <div className="pwf-contact-details">
-                  <span className="pwf-contact-label">Send Email</span>
-                   <a href="crossroadsinnflorida@gmail.com" className="pwf-contact-value pwf-contact-link">crossroadsinnflorida@gmail.com</a>
-                </div>
+                 <div className="pwf-contact-details">
+                   <span className="pwf-contact-label">Send Email</span>
+                   <a
+                     href="mailto:crossroadsinnflorida@gmail.com"
+                     className="pwf-contact-value pwf-contact-link"
+                   >
+                     crossroadsinnflorida@gmail.com
+                   </a>
+                 </div>
               </div>
               
               <div className="pwf-contact-item">
