@@ -77,7 +77,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Locations</span>
-                   <span className="pwf-contact-value">7050 Okeechobee Rd, Fort Pierce, FL 34945, USA St. Lucie County, Florida, United States - 34945</span>
+                   <span className="pwf-contact-value">7050 Okeechobee Rd, Fort Pierce, FL 34945, USA</span>
                 </div>
               </div>
               
