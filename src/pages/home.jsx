@@ -141,7 +141,7 @@ export default function Home() {
                   <div className="hotel-image">
                      <img
                         src={image8}
-                        alt="Prince of Wales Hotel"
+                        alt=" of Wales Hotel"
                      />
                   </div>
 
@@ -155,13 +155,13 @@ export default function Home() {
                               <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
                            </svg>
                         </div>
-                        <p className="welcome-text">WELCOME TO PRINCE OF WALES HOTEL</p>
+                        <p className="welcome-text">WELCOME TO CROSSROADINN OF WALES HOTEL</p>
                      </div>
 
                      <h2 className="hotel-title">A Comfortable Country Hotel in Berkeley</h2>
 
                      <p className="hotel-description">
-                        Set just off the A38 and within easy reach of the M5 motorway, The Prince of Wales Hotel
+                        Set just off the A38 and within easy reach of the M5 motorway, The crossroadsinn of Wales Hotel
                         Berkeley offers a relaxed and convenient stay for business travellers, contractors, and leisure
                         guests. Recently refurbished, the hotel features comfortable en-suite rooms, free on-site
                         parking, free high-speed Wi-Fi, and a seamless self check-in option for late arrivals.
@@ -224,12 +224,12 @@ export default function Home() {
 
                      <div className="venue-subtitle">
                         <h3>Events, Conferences & Venue Hire at</h3>
-                        <h3>The Prince of Wales Hotel</h3>
+                        <h3>The crossroadsinn of Wales Hotel</h3>
                      </div>
 
                      <p className="venue-description">
                         From professional conferences and business meetings to weddings, parties and private
-                        celebrations, the Prince of Wales Hotel offers flexible event spaces, tailored catering and
+                        celebrations, the crossroadsinn of Wales Hotel offers flexible event spaces, tailored catering and
                         dedicated support — all in a convenient Gloucestershire location. Venue hire available from
                         just £150, with bespoke packages to suit your event and budget.
                      </p>
@@ -611,7 +611,7 @@ export default function Home() {
                            </div>
                            <div className="reviewer-details">
                               <h4 className="reviewer-name">John Smith</h4>
-                              <p className="reviewer-location">London, UK</p>
+                              <p className="reviewer-location">FL 34945, USA St</p>
                            </div>
                         </div>
                         <div className="review-rating">

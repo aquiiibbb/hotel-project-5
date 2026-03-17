@@ -5,6 +5,7 @@ import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa'
 import { MdLocationOn, MdEmail, MdPhone } from 'react-icons/md'
 import { FaWhatsapp } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
+import logo1 from "../Assets/logo.png";
 
 export default function Footer(){
    const navigate = useNavigate();
@@ -20,10 +21,10 @@ export default function Footer(){
           {/* Logo and Description */}
           <div className="pwf-section pwf-logo-section">
             <div className="pwf-logo">
-              <img src="https://princeofwaleshotels.co.uk/wp-content/uploads/2022/12/theprinceofwaleslogo.png" alt="The Prince of Wales Hotel" />
+               <img src={logo1} alt="The Prince of Wales Hotel" />
             </div>
             <p className="pwf-description">
-              The Prince of Wales Hotel Berkeley is a recently refurbished country hotel offering comfortable en-suite rooms, free parking, and easy access to the M5 and A38.
+              The Crossroadsinn of Wales Hotel Berkeley is a recently refurbished country hotel offering comfortable en-suite rooms, free parking, and easy access to the M5 and A38.
             </p>
             <div className="pwf-social-links">
               <div className="pwf-social-icon">
@@ -76,7 +77,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Locations</span>
-                  <span className="pwf-contact-value">Bristol Road, A38, Berkeley, Gloucestershire, GL13 9HD</span>
+                   <span className="pwf-contact-value">7050 Okeechobee Rd, Fort Pierce, FL 34945, USA St. Lucie County, Florida, United States - 34945</span>
                 </div>
               </div>
               
@@ -86,7 +87,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Send Email</span>
-                  <a href="mailto:info@princeofwaleshotels.co.uk" className="pwf-contact-value pwf-contact-link">info@princeofwaleshotels.co.uk</a>
+                   <a href="crossroadsinnflorida@gmail.com" className="pwf-contact-value pwf-contact-link">+17724658600</a>
                 </div>
               </div>
               
@@ -96,7 +97,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Call Anytime</span>
-                  <a href="tel:+441453810474" className="pwf-contact-value pwf-contact-link">+44 1453 810474</a>
+                   <a href="tel: +17724658600" className="pwf-contact-value pwf-contact-link"> +17724658600</a>
                 </div>
               </div>
               
@@ -106,7 +107,7 @@ export default function Footer(){
                 </div>
                 <div className="pwf-contact-details">
                   <span className="pwf-contact-label">Get in Touch</span>
-                  <a href="https://wa.me/441453810474" className="pwf-contact-value pwf-contact-link">+441453 810474</a>
+                   <a href="https://wa.me/ +17724658600" className="pwf-contact-value pwf-contact-link">+17724658600</a>
                 </div>
               </div>
             </div>
