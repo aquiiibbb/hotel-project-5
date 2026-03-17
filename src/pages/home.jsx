@@ -42,7 +42,7 @@ export default function Home() {
       {
          id: 1,
          name: "NK- King Bed (Non-Smoking)",
-         price: 93.50,
+         price: 114.99,
          area: 12,
          person: 2,
          image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
@@ -51,9 +51,9 @@ export default function Home() {
       {
          id: 2,
          name: "NDD - Double Room  (2 Beds, Non-Smoking)",
-         price: 104.50,
+         price: 109.99,
          area: 19,
-         person: 1,
+         person: 2,
          image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
          featured: false
       },
@@ -355,7 +355,15 @@ export default function Home() {
                                     <span className="room-detail-value">{room.person}</span>
                                   </div>
                                 </div>
-                                <button className="room-book-btn">BOOK NOW</button>
+                                   <a
+                                      href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="room-book-btn"
+                                      style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
+                                   >
+                                      BOOK NOW
+                                   </a>
                               </div>
                             </div>
                           ))}

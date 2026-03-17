@@ -20,7 +20,7 @@ export default function Room(){
      {
        id: 1,
        name: "NK- King Bed (Non-Smoking)",
-       price: 93.50,
+       price: 114.99,
        area: 17,
        person: 2,
        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
@@ -29,7 +29,7 @@ export default function Room(){
      {
        id: 2,
        name: "NDD - Double Room  (2 Beds, Non-Smoking)",
-       price: 104.50,
+       price: 109.99,
        area: 17,
        person: 2,
        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
@@ -56,7 +56,7 @@ export default function Room(){
      {
        id: 5,
        name: "HDD - Double Room (Disability Access, 2 beds)",
-       price: 177.10,
+       price: 109.99,
        area: 50,
        person: 4,
        image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop",
@@ -65,7 +65,7 @@ export default function Room(){
      {
        id: 6,
        name: "DD - Double Room (2 beds)",
-       price: 267.30,
+       price: 109.99,
        area: 33,
        person: 4,
        image: "https://princeofwaleshotels.co.uk/wp-content/uploads/2026/02/Honeymoon-Suite1.png",
@@ -74,9 +74,9 @@ export default function Room(){
      {
        id: 7,
        name: "D - Double Room (1 bed)",
-       price: 298.30,
+       price: 109.99,
        area: 61,
-       person: 1,
+       person: 2,
        image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
        featured: true
      },
@@ -85,7 +85,7 @@ export default function Room(){
        name: "ND - Double Room (1 bed, Non-Smoking)",
        price: 367.30,
        area: 61,
-       person: 1,
+       person: 2,
        image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
        featured: true
      }
@@ -162,7 +162,15 @@ export default function Room(){
                       <span className="room-detail-value">{room.person}</span>
                     </div>
                   </div>
-                  <button className="room-book-btn">BOOK NOW</button>
+                  <a
+                    href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="room-book-btn"
+                    style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
+                  >
+                    BOOK NOW
+                  </a>
                 </div>
               </div>
             ))}
