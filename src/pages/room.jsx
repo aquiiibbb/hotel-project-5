@@ -211,7 +211,15 @@ export default function Room(){
                 rooms provide a quiet and convenient base.
               </p>
             </div>
-            <button className="comfort-book-btn">BOOK NOW</button>
+             <a
+               href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="room-book-btn"
+               style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
+             >
+               BOOK NOW
+             </a>
           </div>
         </div>
       </section>

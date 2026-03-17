@@ -134,7 +134,15 @@ export default function Header() {
 
             </ul>
 
-            <button className="btn-booking">BOOK NOW</button>
+            <a
+              href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-booking"
+              style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
+            >
+              BOOK NOW
+            </a>
           </div>
 
         </div>

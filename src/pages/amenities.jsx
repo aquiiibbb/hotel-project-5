@@ -1,12 +1,13 @@
 import './amenities.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import { 
-  MdRestaurant, 
-  MdLocalParking, 
-  MdWifi, 
-  MdLocalBar, 
-  MdEvent, 
+import { useNavigate } from 'react-router-dom'
+import {
+  MdRestaurant,
+  MdLocalParking,
+  MdWifi,
+  MdLocalBar,
+  MdEvent,
   MdMobileFriendly,
   MdSecurity,
   MdLuggage,
@@ -24,8 +25,10 @@ import {
   MdFireExtinguisher
 } from 'react-icons/md'
 
-export default function Amenities(){
-   return(
+export default function Amenities() {
+  const navigate = useNavigate()
+
+  return (
     <>
       {/* Hero Section */}
       <section className="amenities-hero-section">
@@ -60,7 +63,7 @@ export default function Amenities(){
               </div>
               <h3 className="amenities-card-title">Continental Breakfast</h3>
               <p className="amenities-card-description">
-                Self-serve continental breakfast with a toastie bar, 
+                Self-serve continental breakfast with a toastie bar,
                 available at your chosen time for £9.95 per person.
               </p>
             </div>
@@ -72,7 +75,7 @@ export default function Amenities(){
               </div>
               <h3 className="amenities-card-title">Free On-Site Parking</h3>
               <p className="amenities-card-description">
-                Enjoy complimentary parking throughout your stay, 
+                Enjoy complimentary parking throughout your stay,
                 with ample space for cars, vans, and work vehicles.
               </p>
             </div>
@@ -84,7 +87,7 @@ export default function Amenities(){
               </div>
               <h3 className="amenities-card-title">Complimentary Wi-Fi</h3>
               <p className="amenities-card-description">
-                Connect to "Prince of Wales Guest" network fast, 
+                Connect to "Prince of Wales Guest" network fast,
                 open access and completely free to use.
               </p>
             </div>
@@ -96,7 +99,7 @@ export default function Amenities(){
               </div>
               <h3 className="amenities-card-title">Bar & Restaurant Nearby</h3>
               <p className="amenities-card-description">
-                The Ashville Bar & Restaurant is next door, serving 
+                The Ashville Bar & Restaurant is next door, serving
                 food and drinks in a relaxed setting.
               </p>
             </div>
@@ -108,7 +111,7 @@ export default function Amenities(){
               </div>
               <h3 className="amenities-card-title">Events & Function Space</h3>
               <p className="amenities-card-description">
-                Ideal venue for parties, weddings, and birthdays, 
+                Ideal venue for parties, weddings, and birthdays,
                 with flexible space for private gatherings.
               </p>
             </div>
@@ -120,7 +123,7 @@ export default function Amenities(){
               </div>
               <h3 className="amenities-card-title">Late Self Check-In</h3>
               <p className="amenities-card-description">
-                After 10pm, receive easy WhatsApp instructions, with 
+                After 10pm, receive easy WhatsApp instructions, with
                 videos and details for seamless arrival.
               </p>
             </div>
@@ -197,9 +200,14 @@ export default function Amenities(){
             <p className="amenities-cta-subtitle">THE PRINCE OF WALES HOTEL</p>
             <h2 className="amenities-cta-title">Recently Refurbished Rooms in Berkeley</h2>
           </div>
-          <button className="amenities-cta-btn">EXPLORE MORE</button>
+          <button
+            className="amenities-cta-btn"
+            onClick={() => navigate("/room")}
+          >
+            EXPLORE MORE
+          </button>
         </div>
       </section>
     </>
-   ) 
+  )
 }
