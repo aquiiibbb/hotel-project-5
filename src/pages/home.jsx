@@ -502,7 +502,7 @@ export default function Home() {
                         {/* Large Image */}
                         <div className="comfort-image-item main-image">
                            <img
-                              src={image8}
+                              src={image1}
                               alt="Hotel Room"
                            />
                         </div>

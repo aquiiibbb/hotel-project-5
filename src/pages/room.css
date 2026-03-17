@@ -104,6 +104,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  /* FIXED: Ensure consistent height */
+  min-height: 500px;
 }
 
 .room-card:hover {
@@ -197,7 +199,6 @@
   margin-bottom: 15px;
   line-height: 1.3;
   min-height: 3.6rem;
-  /* Fixed height for 2 lines */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -259,7 +260,6 @@
   font-weight: 500;
 }
 
-/* FIXED BUTTON POSITIONING */
 .room-book-btn {
   width: 100%;
   background-color: #c8860d;
@@ -274,9 +274,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   margin-top: auto;
-  /* This pushes button to bottom */
   flex-shrink: 0;
-  /* Prevents button from shrinking */
 }
 
 .room-book-btn:hover {
@@ -411,7 +409,7 @@
   transform: translateY(-2px);
 }
 
-/* ============== */
+/* ====================== */
 
 /* Large Desktop */
 @media (max-width: 1400px) {
@@ -425,7 +423,7 @@
 /* Desktop */
 @media (max-width: 1200px) {
   .room-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
   }
 
@@ -463,7 +461,7 @@
   }
 }
 
-/* Mobile Large */
+/* FIXED: Mobile Large - Consistent card sizes */
 @media (max-width: 768px) {
   .room-hero-section {
     height: 250px;
@@ -503,14 +501,18 @@
     max-width: 200px;
   }
 
+  /* FIXED: Single column with consistent sizing */
   .room-grid {
     grid-template-columns: 1fr;
     gap: 25px;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .room-card {
-    max-width: 500px;
-    margin: 0 auto;
+    width: 100%;
+    min-height: 480px;
+    /* Consistent height for mobile */
   }
 
   .room-image-container {
@@ -572,7 +574,7 @@
   }
 }
 
-/* Mobile Medium */
+/* FIXED: Mobile Medium - Consistent sizing */
 @media (max-width: 480px) {
   .room-hero-section {
     height: 200px;
@@ -612,10 +614,12 @@
 
   .room-grid {
     gap: 20px;
+    max-width: 100%;
   }
 
   .room-card {
-    max-width: 100%;
+    min-height: 450px;
+    /* Consistent height */
     border-radius: 6px;
   }
 
@@ -732,7 +736,7 @@
   }
 }
 
-/* Mobile Small */
+/* FIXED: Mobile Small - Consistent sizing */
 @media (max-width: 360px) {
   .room-hero-title {
     font-size: 1.8rem;
@@ -749,6 +753,11 @@
 
   .room-grid {
     gap: 15px;
+  }
+
+  .room-card {
+    min-height: 420px;
+    /* Consistent height */
   }
 
   .room-content {
@@ -805,7 +814,7 @@
   }
 }
 
-/* Extra Small Mobile */
+/* FIXED: Extra Small Mobile - Consistent sizing */
 @media (max-width: 320px) {
   .room-hero-title {
     font-size: 1.6rem;
@@ -813,6 +822,11 @@
 
   .room-container {
     padding: 0 10px;
+  }
+
+  .room-card {
+    min-height: 400px;
+    /* Consistent height */
   }
 
   .room-content {
