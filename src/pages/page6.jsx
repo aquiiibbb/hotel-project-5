@@ -4,21 +4,24 @@ export default function HotelRoomPageSix() {
     return (
         <>
             {/* Image Gallery */}
+        
             <div className="hotel-room-six-image-gallery">
                 <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
+                    <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Modern twin bed hotel room" />
                 </div>
+
                 <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
+                    <img src="https://images.unsplash.com/photo-1605346434674-a440ca4dc4c0?w=500&h=400&fit=crop" alt="Elegant hotel bedroom interior" />
                 </div>
+
                 <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
+                    <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Hotel room workspace setup" />
                 </div>
+
                 <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
+                    <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&h=400&fit=crop" alt="Luxury hotel bathroom design" />
                 </div>
             </div>
-
             {/* Room Details */}
             <div className="hotel-room-six-details-section">
                 <div className="hotel-room-six-header-container">

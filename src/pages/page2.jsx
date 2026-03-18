@@ -1,32 +1,72 @@
 import './page2.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function HotelRoomPageTwo() {
+    const navigate = useNavigate();
+
+    // Room data
+    const roomData = {
+        id: 2,
+        name: "NDD - Double Room (2 Beds, Non-Smoking)",
+        price: 109.99,
+        area: 17,
+        person: 2,
+        gallery: [
+            "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&h=400&fit=crop",
+            "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=500&h=400&fit=crop"
+        ],
+        view: "Garden"
+    };
+
+    // Other rooms for deals section
+    const otherRooms = [
+        {
+            id: 4,
+            name: "HNDD - Double Room (Disability Access, 2 beds, Non-Smoking)",
+            price: 134.20,
+            image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=80&h=60&fit=crop"
+        },
+        {
+            id: 5,
+            name: "HDD - Double Room (Disability Access, 2 beds)",
+            price: 109.99,
+            image: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=80&h=60&fit=crop"
+        },
+        {
+            id: 1,
+            name: "NK- King Bed (Non-Smoking)",
+            price: 114.99,
+            image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=80&h=60&fit=crop"
+        },
+        {
+            id: 5,
+            name: "HDD - Double Room (Disability Access, 2 beds)",
+            price: 109.99,
+            image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=80&h=60&fit=crop"
+        }
+    ];
+
     return (
         <>
             {/* Image Gallery */}
             <div className="hotel-room-two-image-gallery">
-                <div className="hotel-room-two-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
-                </div>
-                <div className="hotel-room-two-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
-                </div>
-                <div className="hotel-room-two-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
-                </div>
-                <div className="hotel-room-two-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
-                </div>
+                {roomData.gallery.map((image, index) => (
+                    <div key={index} className="hotel-room-two-gallery-item">
+                        <img src={image} alt={`Room view ${index + 1}`} />
+                    </div>
+                ))}
             </div>
 
             {/* Room Details */}
             <div className="hotel-room-two-details-section">
                 <div className="hotel-room-two-header-container">
                     <div className="hotel-room-two-info-block">
-                        <h1 className="hotel-room-two-title-text">Twin Room</h1>
+                        <h1 className="hotel-room-two-title-text">{roomData.name}</h1>
                         <div className="hotel-room-two-price-info-container">
                             <span className="hotel-room-two-price-label">From</span>
-                            <span className="hotel-room-two-price-amount">£104.50</span>
+                            <span className="hotel-room-two-price-amount">£{roomData.price}</span>
                             <span className="hotel-room-two-price-period">Per Night</span>
                         </div>
                     </div>
@@ -40,7 +80,7 @@ export default function HotelRoomPageTwo() {
                                 </svg>
                             </div>
                             <div className="hotel-room-two-feature-text-block">
-                                <span className="hotel-room-two-feature-number">2 Person</span>
+                                <span className="hotel-room-two-feature-number">{roomData.person} Person</span>
                                 <span className="hotel-room-two-feature-label">Guests</span>
                             </div>
                         </div>
@@ -53,7 +93,7 @@ export default function HotelRoomPageTwo() {
                                 </svg>
                             </div>
                             <div className="hotel-room-two-feature-text-block">
-                                <span className="hotel-room-two-feature-number">17 m²</span>
+                                <span className="hotel-room-two-feature-number">{roomData.area} m²</span>
                                 <span className="hotel-room-two-feature-label">Size</span>
                             </div>
                         </div>
@@ -66,7 +106,7 @@ export default function HotelRoomPageTwo() {
                                 </svg>
                             </div>
                             <div className="hotel-room-two-feature-text-block">
-                                <span className="hotel-room-two-feature-number">Garden</span>
+                                <span className="hotel-room-two-feature-number">{roomData.view}</span>
                                 <span className="hotel-room-two-feature-label">View</span>
                             </div>
                         </div>
@@ -101,13 +141,13 @@ export default function HotelRoomPageTwo() {
                     <section className="hotel-room-two-overview-section">
                         <h2 className="hotel-room-two-section-title">Overview</h2>
                         <p className="hotel-room-two-overview-text">
-                            This twin room is ideal for guests travelling together who prefer separate sleeping arrangements.
+                            This double room is ideal for guests travelling together who prefer comfortable sleeping arrangements.
                         </p>
                         <p className="hotel-room-two-overview-text">
-                            The room features <strong>two single beds</strong>, an <strong>en-suite bathroom with shower</strong>, <strong>flat-screen TV</strong>, <strong>free Wi-Fi</strong>, and <strong>tea and coffee making facilities</strong>. Towels and toiletries are included.
+                            The room features <strong>two double beds</strong>, an <strong>en-suite bathroom with shower</strong>, <strong>flat-screen TV</strong>, <strong>free Wi-Fi</strong>, and <strong>tea and coffee making facilities</strong>. Towels and toiletries are included.
                         </p>
                         <p className="hotel-room-two-overview-text">
-                            A practical and comfortable choice for friends, colleagues, or short stays.
+                            A practical and comfortable choice for families, friends, or extended stays.
                         </p>
                     </section>
 
@@ -197,47 +237,22 @@ export default function HotelRoomPageTwo() {
                     <div className="hotel-room-two-last-minute-deals">
                         <h3 className="hotel-room-two-deals-title">Last Minute Deals</h3>
 
-                        <div className="hotel-room-two-deal-item">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=80&h=60&fit=crop" alt="Honeymoon Suite" className="hotel-room-two-deal-image" />
-                            <div className="hotel-room-two-deal-info">
-                                <h4 className="hotel-room-two-deal-name">Honeymoon Suite</h4>
-                                <div className="hotel-room-two-deal-price">
-                                    <span className="hotel-room-two-current-price">From £267.30</span>
-                                    <span className="hotel-room-two-original-price">£267.30</span>
+                        {otherRooms.map((room) => (
+                            <div
+                                key={room.id}
+                                className="hotel-room-two-deal-item"
+                                onClick={() => navigate(`/page${room.id}`)}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <img src={room.image} alt={room.name} className="hotel-room-two-deal-image" />
+                                <div className="hotel-room-two-deal-info">
+                                    <h4 className="hotel-room-two-deal-name">{room.name}</h4>
+                                    <div className="hotel-room-two-deal-price">
+                                        <span className="hotel-room-two-current-price">From £{room.price}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className="hotel-room-two-deal-item">
-                            <img src="https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=80&h=60&fit=crop" alt="Family Suite" className="hotel-room-two-deal-image" />
-                            <div className="hotel-room-two-deal-info">
-                                <h4 className="hotel-room-two-deal-name">Family Suite</h4>
-                                <div className="hotel-room-two-deal-price">
-                                    <span className="hotel-room-two-current-price">From £177.10</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hotel-room-two-deal-item">
-                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=80&h=60&fit=crop" alt="Deluxe Superking Room" className="hotel-room-two-deal-image" />
-                            <div className="hotel-room-two-deal-info">
-                                <h4 className="hotel-room-two-deal-name">Deluxe Superking Room</h4>
-                                <div className="hotel-room-two-deal-price">
-                                    <span className="hotel-room-two-current-price">From £134.20</span>
-                                    <span className="hotel-room-two-original-price">£134.20</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hotel-room-two-deal-item">
-                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=80&h=60&fit=crop" alt="Double Room" className="hotel-room-two-deal-image" />
-                            <div className="hotel-room-two-deal-info">
-                                <h4 className="hotel-room-two-deal-name">Double Room</h4>
-                                <div className="hotel-room-two-deal-price">
-                                    <span className="hotel-room-two-current-price">From £113.30</span>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="hotel-room-two-breakfast-promo">

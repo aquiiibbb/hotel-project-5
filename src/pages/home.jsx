@@ -309,76 +309,76 @@ export default function Home() {
          </section>
 
          {/* Discover Our Rooms Section */}
-         <section className="lux-rooms-section">
-            <div className="lux-container">
+        <section className="lux-rooms-section">
+  <div className="lux-container">
 
-               <div className="lux-header">
-                  <p className="lux-subtitle">FEATURED ROOMS</p>
-                  <h2 className="lux-title">Discover Our Rooms</h2>
-               </div>
+    <div className="lux-header">
+      <p className="lux-subtitle">FEATURED ROOMS</p>
+      <h2 className="lux-title">Discover Our Rooms</h2>
+    </div>
 
-               <div className="room-grid">
-                  {rooms.map((room) => (
-                     <div key={room.id} className="room-card">
-                        <div className="room-image-container">
-                           <img
-                              src={room.image}
-                              alt={room.name}
-                              className="room-image"
-                              onClick={() => navigate(`/page${room.id}`)}
-                              style={{ cursor: 'pointer' }}
-                           />
-                           {room.featured && (
-                              <div className="room-featured-badge">FEATURED</div>
-                           )}
-                           <button
-                              className="room-favorite-btn"
-                              onClick={() => toggleFavorite(room.id)}
-                           >
-                              {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
-                           </button>
-                           <div className="room-rating">
-                              <span className="room-rating-icon">⭐</span>
-                           </div>
-                        </div>
-                        <div className="room-content">
-                           <h3
-                              className="room-title"
-                              onClick={() => navigate(`/page${room.id}`)}
-                              style={{ cursor: 'pointer' }}
-                           >
-                              {room.name}
-                           </h3>
-                           <div className="room-price">
-                              <span className="room-price-amount">${room.price}</span>
-                              <span className="room-price-period">/ night</span>
-                           </div>
-                           <div className="room-details">
-                              <div className="room-detail">
-                                 <span className="room-detail-label">Area:</span>
-                                 <span className="room-detail-value">{room.area} m²</span>
-                              </div>
-                              <div className="room-detail">
-                                 <span className="room-detail-label">Person:</span>
-                                 <span className="room-detail-value">{room.person}</span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  ))}
-               </div>
-
-               <div className="lux-footer">
-                  <button
-                     className="lux-view-btn"
-                     onClick={() => navigate("/room")}
-                  >
-                     VIEW ALL ROOMS
-                  </button>
-               </div>
-
+    <div className="room-grid">
+      {rooms.map((room) => (
+        <div key={room.id} className="room-card">
+          <div className="room-image-container">
+            <img 
+              src={room.image} 
+              alt={room.name} 
+              className="room-image"
+              onClick={() => navigate(`/page${room.id}`)}
+              style={{ cursor: 'pointer' }}
+            />
+            {room.featured && (
+              <div className="room-featured-badge">FEATURED</div>
+            )}
+            <button 
+              className="room-favorite-btn"
+              onClick={() => toggleFavorite(room.id)}
+            >
+              {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
+            </button>
+            <div className="room-rating">
+              <span className="room-rating-icon">⭐</span>
             </div>
-         </section>
+          </div>
+          <div className="room-content">
+            <h3 
+              className="room-title"
+              onClick={() => navigate(`/page${room.id}`)}
+              style={{ cursor: 'pointer' }}
+            >
+              {room.name}
+            </h3>
+            <div className="room-price">
+              <span className="room-price-amount">${room.price}</span>
+              <span className="room-price-period">/ night</span>
+            </div>
+            <div className="room-details">
+              <div className="room-detail">
+                <span className="room-detail-label">Area:</span>
+                <span className="room-detail-value">{room.area} m²</span>
+              </div>
+              <div className="room-detail">
+                <span className="room-detail-label">Person:</span>
+                <span className="room-detail-value">{room.person}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div className="lux-footer">
+      <button
+        className="lux-view-btn"
+        onClick={() => navigate("/room")}
+      >
+        VIEW ALL ROOMS
+      </button>
+    </div>
+
+  </div>
+</section>
 
          {/* Hotel Features Section */}
          <section className="features-section">
@@ -589,154 +589,293 @@ export default function Home() {
          </section>
 
          {/* Customer Reviews Section */}
-         {/* Customer Reviews Section */}
          <section className="reviews-section">
-            <div className="container">
-               <div className="reviews-header">
-                  <div className="crown-icon">
-                     <svg width="40" height="30" viewBox="0 0 40 30" fill="none">
-                        <path d="M20 5L25 15H15L20 5Z" fill="#D4AF37" />
-                        <circle cx="8" cy="15" r="3" fill="#D4AF37" />
-                        <circle cx="32" cy="15" r="3" fill="#D4AF37" />
-                        <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
-                     </svg>
+
+            <style>{`
+.reviews-section {
+  padding: 90px 0;
+  background: #f3f3f3;
+  text-align: center;
+}
+
+/* HEADER */
+.crown-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.reviews-subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #8a8a8a;
+  margin-bottom: 10px;
+}
+
+.reviews-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #2d2d2d;
+  margin-bottom: 50px;
+}
+
+/* SCROLL */
+.reviews-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.reviews-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD */
+.review-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background: #e6e6e6;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+}
+
+/* HEADER */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.reviewer-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.reviewer-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.reviewer-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.reviewer-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.reviewer-date {
+  font-size: 12px;
+  color: #777;
+}
+
+/* GOOGLE ICON */
+.google-icon {
+  width: 18px;
+}
+
+/* RATING */
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.stars {
+  color: #fbbc04;
+  font-size: 14px;
+}
+
+.verified {
+  width: 16px;
+  height: 16px;
+  background: #4285F4;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT */
+.review-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.read-more {
+  font-size: 13px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .review-card{width:240px;}
+  .reviews-title{font-size:34px;}
+}
+
+@media(max-width:480px){
+  .review-card{width:85%;}
+  .reviews-title{font-size:26px;}
+}
+`}</style>
+
+            {/* LOGO */}
+            <div className="crown-icon">
+               <svg width="50" height="30" viewBox="0 0 40 30">
+                  <path d="M20 5L25 15H15L20 5Z" fill="#D4AF37" />
+                  <circle cx="8" cy="15" r="3" fill="#D4AF37" />
+                  <circle cx="32" cy="15" r="3" fill="#D4AF37" />
+                  <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
+               </svg>
+            </div>
+
+            <p className="reviews-subtitle">CUSTOMERS REVIEWS</p>
+            <h2 className="reviews-title">What They’re Saying?</h2>
+
+            <div className="reviews-grid">
+
+               {/* CARD 1 */}
+               <div className="review-card">
+                  <div className="review-header">
+                     <div className="reviewer-info">
+                        <div className="reviewer-avatar">P</div>
+                        <div>
+                           <div className="reviewer-name">Patrick Goodenough</div>
+                           <div className="reviewer-date">2 months ago</div>
+                        </div>
+                     </div>
+                     <img className="google-icon" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" />
                   </div>
-                  <p className="reviews-subtitle">CUSTOMERS REVIEWS</p>
-                  <h2 className="reviews-title">What They're Saying?</h2>
+
+                  <div className="review-rating">
+                     <div className="stars">★★★★★</div>
+                     <div className="verified">✓</div>
+                  </div>
+
+                  <div className="review-text">
+                     Great location for exploring the Cotswolds... restaurant food 5 star...
+                     room is clean and comfortable... Excellent value for money...
+                  </div>
+                  <div className="read-more">Read more</div>
                </div>
 
-               <div className="reviews-grid">
-                  <div className="review-card">
-                     <div className="review-header">
-                        <div className="reviewer-info">
-                           <div className="reviewer-avatar">
-                              <span className="avatar-initial">P</span>
-                           </div>
-                           <div className="reviewer-details">
-                              <h4 className="reviewer-name">Patrick Goodenough</h4>
-                              <p className="reviewer-date">2 months ago</p>
-                           </div>
+               {/* CARD 2 */}
+               <div className="review-card">
+                  <div className="review-header">
+                     <div className="reviewer-info">
+                        <div className="reviewer-avatar">
+                           <img src="https://lh3.googleusercontent.com/a-/ALV-UjWjC134L2j7knJzFzSGlNfKXAhKyODdaaUXD_hiXx9thdgHqZWM=w40-h40-c-rp-mo-br100" />
                         </div>
-                        <div className="google-icon">
-                           <svg width="20" height="20" viewBox="0 0 24 24">
-                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                           </svg>
+                        <div>
+                           <div className="reviewer-name">Sean Hurley</div>
+                           <div className="reviewer-date">2 months ago</div>
                         </div>
                      </div>
-                     <div className="review-rating">
-                        <div className="stars">★★★★★</div>
-                        <div className="verified-badge">✓</div>
-                     </div>
-                     <div className="review-content">
-                        <p className="review-text">
-                           Great location for exploring the Cotswolds... restaurant food 5 star...
-                           room is clean and comfortable... Excellent value for money....it's not a 5...
-                        </p>
-                     </div>
+                     <img className="google-icon" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" />
                   </div>
 
-                  <div className="review-card">
-                     <div className="review-header">
-                        <div className="reviewer-info">
-                           <div className="reviewer-avatar">
-                              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWjC134L2j7knJzFzSGlNfKXAhKyODdaaUXD_hiXx9thdgHqZWM=w40-h40-c-rp-mo-br100" alt="Sean Hurley" />
-                           </div>
-                           <div className="reviewer-details">
-                              <h4 className="reviewer-name">Sean Hurley</h4>
-                              <p className="reviewer-date">2 months ago</p>
-                           </div>
-                        </div>
-                        <div className="google-icon">
-                           <svg width="20" height="20" viewBox="0 0 24 24">
-                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                           </svg>
-                        </div>
-                     </div>
-                     <div className="review-rating">
-                        <div className="stars">★★★★★</div>
-                        <div className="verified-badge">✓</div>
-                     </div>
-                     <div className="review-content">
-                        <p className="review-text">
-                           Rooms were immaculate, newly renovated so the door system and
-                           shower were the best on the market, we had a slight issue with water due t...
-                        </p>
-                        <button className="read-more-btn">Read more</button>
-                     </div>
+                  <div className="review-rating">
+                     <div className="stars">★★★★★</div>
+                     <div className="verified">✓</div>
                   </div>
 
-                  <div className="review-card">
-                     <div className="review-header">
-                        <div className="reviewer-info">
-                           <div className="reviewer-avatar">
-                              <span className="avatar-initial" style={{ backgroundColor: '#4A90E2', color: 'white' }}>M</span>
-                           </div>
-                           <div className="reviewer-details">
-                              <h4 className="reviewer-name">Mark Hughes</h4>
-                              <p className="reviewer-date">3 months ago</p>
-                           </div>
-                        </div>
-                        <div className="google-icon">
-                           <svg width="20" height="20" viewBox="0 0 24 24">
-                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                           </svg>
+                  <div className="review-text">
+                     Rooms were immaculate, newly renovated so the door system and shower...
+                  </div>
+                  <div className="read-more">Read more</div>
+               </div>
+
+               {/* CARD 3 */}
+               <div className="review-card">
+                  <div className="review-header">
+                     <div className="reviewer-info">
+                        <div className="reviewer-avatar" style={{ background: "#1a73e8" }}>M</div>
+                        <div>
+                           <div className="reviewer-name">Mark Hughes</div>
+                           <div className="reviewer-date">3 months ago</div>
                         </div>
                      </div>
-                     <div className="review-rating">
-                        <div className="stars">★★★★★</div>
-                        <div className="verified-badge">✓</div>
-                     </div>
-                     <div className="review-content">
-                        <p className="review-text">
-                           Dined in the steakhouse- BEST fillet steak I've ever eaten.
-                        </p>
-                     </div>
+                     <img className="google-icon" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" />
                   </div>
 
-                  <div className="review-card">
-                     <div className="review-header">
-                        <div className="reviewer-info">
-                           <div className="reviewer-avatar">
-                              <span className="avatar-initial" style={{ backgroundColor: '#8B5CF6', color: 'white' }}>M</span>
-                           </div>
-                           <div className="reviewer-details">
-                              <h4 className="reviewer-name">Macadam Mac</h4>
-                              <p className="reviewer-date">3 months ago</p>
-                           </div>
-                        </div>
-                        <div className="google-icon">
-                           <svg width="20" height="20" viewBox="0 0 24 24">
-                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                           </svg>
-                        </div>
-                     </div>
-                     <div className="review-rating">
-                        <div className="stars">★★★★★</div>
-                        <div className="verified-badge">✓</div>
-                     </div>
-                     <div className="review-content">
-                        <p className="review-text">Ok</p>
-                     </div>
+                  <div className="review-rating">
+                     <div className="stars">★★★★★</div>
+                     <div className="verified">✓</div>
+                  </div>
+
+                  <div className="review-text">
+                     Dined in the steakhouse- BEST fillet steak I've ever eaten.
                   </div>
                </div>
 
-               {/* Navigation arrows */}
-               <div className="reviews-navigation">
-                  <button className="nav-arrow nav-prev">‹</button>
-                  <button className="nav-arrow nav-next">›</button>
+               {/* CARD 4 */}
+               <div className="review-card">
+                  <div className="review-header">
+                     <div className="reviewer-info">
+                        <div className="reviewer-avatar" style={{ background: "#9333ea" }}>M</div>
+                        <div>
+                           <div className="reviewer-name">Macadam Mac</div>
+                           <div className="reviewer-date">3 months ago</div>
+                        </div>
+                     </div>
+                     <img
+                        className="google-icon"
+                        src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+                        alt="Google review"
+                     />
+                  </div>
+
+                  <div className="review-rating">
+                     <div className="stars">★★★★★</div>
+                     <div className="verified">✓</div>
+                  </div>
+
+                  <div className="review-text">Ok</div>
                </div>
+               {/* CARD 5 */}
+               <div className="review-card">
+                  <div className="review-header">
+                     <div className="reviewer-info">
+                        <div className="reviewer-avatar" style={{ background: "#9333ea" }}>G</div>
+                        <div>
+                           <div className="reviewer-name">Gordon Brumby</div>
+                           <div className="reviewer-date">3 months ago</div>
+                        </div>
+                     </div>
+                     <img
+                        className="google-icon"
+                        src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+                        alt="Google review"
+                     />
+                  </div>
+
+                  <div className="review-rating">
+                     <div className="stars">★★★★★</div>
+                     <div className="verified">✓</div>
+                  </div>
+
+                  <div className="review-text">Had a two day stay and very relaxed atmosphere, the manager Sophia went above and beyond to make sure we were comfortable.
+ </div>
+               </div>
+
             </div>
          </section>
          {/* Nearby Attractions Section */}

@@ -6,19 +6,22 @@ export default function HotelRoomPageSeven() {
             {/* Image Gallery */}
             <div className="hotel-room-seven-image-gallery">
                 <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
+                    <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Luxury hotel twin beds interior" />
                 </div>
+
                 <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
+                    <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&h=400&fit=crop" alt="Modern hotel bedroom lighting" />
                 </div>
+
                 <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
+                    <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Hotel desk and seating area" />
                 </div>
+
                 <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=500&h=400&fit=crop" alt="Elegant hotel bathroom interior" />
                 </div>
             </div>
-
+          
             {/* Room Details */}
             <div className="hotel-room-seven-details-section">
                 <div className="hotel-room-seven-header-container">

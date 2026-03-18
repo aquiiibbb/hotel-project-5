@@ -6,16 +6,19 @@ export default function HotelRoomPageThree() {
             {/* Image Gallery */}
             <div className="hotel-room-three-image-gallery">
                 <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=400&fit=crop" alt="Luxury hotel bed" />
                 </div>
+
                 <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=400&fit=crop" alt="Modern hotel room bed" />
                 </div>
+
                 <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=400&fit=crop" alt="King size bed room" />
                 </div>
+
                 <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
+                    <img src="https://images.unsplash.com/photo-1578898886225-c7c894047899?w=500&h=400&fit=crop" alt="Premium hotel bedroom" />
                 </div>
             </div>
 

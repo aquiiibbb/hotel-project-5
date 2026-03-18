@@ -6,16 +6,19 @@ export default function HotelRoomPageFour() {
             {/* Image Gallery */}
             <div className="hotel-room-four-image-gallery">
                 <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&h=400&fit=crop" alt="Elegant hotel twin beds" />
                 </div>
+
                 <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
+                    <img src="https://images.unsplash.com/photo-1560448075-bb485b067938?w=500&h=400&fit=crop" alt="Cozy hotel bedroom" />
                 </div>
+
                 <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500&h=400&fit=crop" alt="Hotel room with workspace" />
                 </div>
+
                 <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
+                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=500&h=400&fit=crop" alt="Modern hotel bathroom" />
                 </div>
             </div>
 

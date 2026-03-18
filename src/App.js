@@ -4,6 +4,8 @@ import ScrollToTop from "./ScrollToTop";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
+import WhatsAppChat from "./pages/WhatsAppChat"; // ✅ IMPORT
+
 import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
@@ -41,6 +43,9 @@ function App() {
         <Route path="/page7" element={<Page7 />} />
         <Route path="/page8" element={<Page8 />} />
       </Routes>
+
+      {/* ✅ GLOBAL WHATSAPP CHAT */}
+      <WhatsAppChat />
 
       <Footer />
     </Router>
