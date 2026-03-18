@@ -317,57 +317,56 @@ export default function Home() {
                   <h2 className="lux-title">Discover Our Rooms</h2>
                </div>
 
-              <div className="room-grid">
-                          {rooms.map((room) => (
-                            <div key={room.id} className="room-card">
-                              <div className="room-image-container">
-                                <img 
-                                  src={room.image} 
-                                  alt={room.name} 
-                                  className="room-image"
-                                />
-                                {room.featured && (
-                                  <div className="room-featured-badge">FEATURED</div>
-                                )}
-                                <button 
-                                  className="room-favorite-btn"
-                                  onClick={() => toggleFavorite(room.id)}
-                                >
-                                  {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
-                                </button>
-                                <div className="room-rating">
-                                  <span className="room-rating-icon">⭐</span>
-                                </div>
-                              </div>
-                              <div className="room-content">
-                                <h3 className="room-title">{room.name}</h3>
-                                <div className="room-price">
-                                  <span className="room-price-amount">${room.price}</span>
-                                  <span className="room-price-period">/ night</span>
-                                </div>
-                                <div className="room-details">
-                                  <div className="room-detail">
-                                    <span className="room-detail-label">Area:</span>
-                                    <span className="room-detail-value">{room.area} m²</span>
-                                  </div>
-                                  <div className="room-detail">
-                                    <span className="room-detail-label">Person:</span>
-                                    <span className="room-detail-value">{room.person}</span>
-                                  </div>
-                                </div>
-                                   <a
-                                      href="https://bookingengine.stayflexi.com/?hotel_id=35135"
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="room-book-btn"
-                                      style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
-                                   >
-                                      BOOK NOW
-                                   </a>
-                              </div>
-                            </div>
-                          ))}
+               <div className="room-grid">
+                  {rooms.map((room) => (
+                     <div key={room.id} className="room-card">
+                        <div className="room-image-container">
+                           <img
+                              src={room.image}
+                              alt={room.name}
+                              className="room-image"
+                              onClick={() => navigate(`/page${room.id}`)}
+                              style={{ cursor: 'pointer' }}
+                           />
+                           {room.featured && (
+                              <div className="room-featured-badge">FEATURED</div>
+                           )}
+                           <button
+                              className="room-favorite-btn"
+                              onClick={() => toggleFavorite(room.id)}
+                           >
+                              {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
+                           </button>
+                           <div className="room-rating">
+                              <span className="room-rating-icon">⭐</span>
+                           </div>
                         </div>
+                        <div className="room-content">
+                           <h3
+                              className="room-title"
+                              onClick={() => navigate(`/page${room.id}`)}
+                              style={{ cursor: 'pointer' }}
+                           >
+                              {room.name}
+                           </h3>
+                           <div className="room-price">
+                              <span className="room-price-amount">${room.price}</span>
+                              <span className="room-price-period">/ night</span>
+                           </div>
+                           <div className="room-details">
+                              <div className="room-detail">
+                                 <span className="room-detail-label">Area:</span>
+                                 <span className="room-detail-value">{room.area} m²</span>
+                              </div>
+                              <div className="room-detail">
+                                 <span className="room-detail-label">Person:</span>
+                                 <span className="room-detail-value">{room.person}</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  ))}
+               </div>
 
                <div className="lux-footer">
                   <button
@@ -590,6 +589,7 @@ export default function Home() {
          </section>
 
          {/* Customer Reviews Section */}
+         {/* Customer Reviews Section */}
          <section className="reviews-section">
             <div className="container">
                <div className="reviews-header">
@@ -610,25 +610,31 @@ export default function Home() {
                      <div className="review-header">
                         <div className="reviewer-info">
                            <div className="reviewer-avatar">
-                              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="John Smith" />
+                              <span className="avatar-initial">P</span>
                            </div>
                            <div className="reviewer-details">
-                              <h4 className="reviewer-name">John Smith</h4>
-                              <p className="reviewer-location">FL 34945, USA St</p>
+                              <h4 className="reviewer-name">Patrick Goodenough</h4>
+                              <p className="reviewer-date">2 months ago</p>
                            </div>
                         </div>
-                        <div className="review-rating">
-                           <div className="stars">★★★★★</div>
-                           <span className="rating-number">5.0</span>
+                        <div className="google-icon">
+                           <svg width="20" height="20" viewBox="0 0 24 24">
+                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                           </svg>
                         </div>
+                     </div>
+                     <div className="review-rating">
+                        <div className="stars">★★★★★</div>
+                        <div className="verified-badge">✓</div>
                      </div>
                      <div className="review-content">
                         <p className="review-text">
-                           "Excellent location just off the M5. The room was clean, comfortable, and recently refurbished.
-                           Free parking was a huge bonus, and the self check-in process worked perfectly for our late arrival.
-                           Would definitely stay again!"
+                           Great location for exploring the Cotswolds... restaurant food 5 star...
+                           room is clean and comfortable... Excellent value for money....it's not a 5...
                         </p>
-                        <div className="review-date">2 weeks ago</div>
                      </div>
                   </div>
 
@@ -636,25 +642,32 @@ export default function Home() {
                      <div className="review-header">
                         <div className="reviewer-info">
                            <div className="reviewer-avatar">
-                              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop" alt="Sarah Johnson" />
+                              <img src="https://lh3.googleusercontent.com/a-/ALV-UjWjC134L2j7knJzFzSGlNfKXAhKyODdaaUXD_hiXx9thdgHqZWM=w40-h40-c-rp-mo-br100" alt="Sean Hurley" />
                            </div>
                            <div className="reviewer-details">
-                              <h4 className="reviewer-name">Sarah Johnson</h4>
-                              <p className="reviewer-location">Bristol, UK</p>
+                              <h4 className="reviewer-name">Sean Hurley</h4>
+                              <p className="reviewer-date">2 months ago</p>
                            </div>
                         </div>
-                        <div className="review-rating">
-                           <div className="stars">★★★★★</div>
-                           <span className="rating-number">5.0</span>
+                        <div className="google-icon">
+                           <svg width="20" height="20" viewBox="0 0 24 24">
+                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                           </svg>
                         </div>
+                     </div>
+                     <div className="review-rating">
+                        <div className="stars">★★★★★</div>
+                        <div className="verified-badge">✓</div>
                      </div>
                      <div className="review-content">
                         <p className="review-text">
-                           "Perfect for business travel. The Wi-Fi was fast and reliable, room was quiet, and the continental
-                           breakfast was good value. Staff were helpful and the location made it easy to get to meetings
-                           in Gloucester and Bristol."
+                           Rooms were immaculate, newly renovated so the door system and
+                           shower were the best on the market, we had a slight issue with water due t...
                         </p>
-                        <div className="review-date">1 month ago</div>
+                        <button className="read-more-btn">Read more</button>
                      </div>
                   </div>
 
@@ -662,47 +675,70 @@ export default function Home() {
                      <div className="review-header">
                         <div className="reviewer-info">
                            <div className="reviewer-avatar">
-                              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Michael Brown" />
+                              <span className="avatar-initial" style={{ backgroundColor: '#4A90E2', color: 'white' }}>M</span>
                            </div>
                            <div className="reviewer-details">
-                              <h4 className="reviewer-name">Michael Brown</h4>
-                              <p className="reviewer-location">Birmingham, UK</p>
+                              <h4 className="reviewer-name">Mark Hughes</h4>
+                              <p className="reviewer-date">3 months ago</p>
                            </div>
                         </div>
-                        <div className="review-rating">
-                           <div className="stars">★★★★☆</div>
-                           <span className="rating-number">4.0</span>
+                        <div className="google-icon">
+                           <svg width="20" height="20" viewBox="0 0 24 24">
+                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                           </svg>
                         </div>
+                     </div>
+                     <div className="review-rating">
+                        <div className="stars">★★★★★</div>
+                        <div className="verified-badge">✓</div>
                      </div>
                      <div className="review-content">
                         <p className="review-text">
-                           "Great value for money. The room was clean and comfortable, parking was convenient, and the
-                           location is perfect for accessing the M5. The Ashville restaurant next door was a nice touch
-                           for dinner. Highly recommended!"
+                           Dined in the steakhouse- BEST fillet steak I've ever eaten.
                         </p>
-                        <div className="review-date">3 weeks ago</div>
+                     </div>
+                  </div>
+
+                  <div className="review-card">
+                     <div className="review-header">
+                        <div className="reviewer-info">
+                           <div className="reviewer-avatar">
+                              <span className="avatar-initial" style={{ backgroundColor: '#8B5CF6', color: 'white' }}>M</span>
+                           </div>
+                           <div className="reviewer-details">
+                              <h4 className="reviewer-name">Macadam Mac</h4>
+                              <p className="reviewer-date">3 months ago</p>
+                           </div>
+                        </div>
+                        <div className="google-icon">
+                           <svg width="20" height="20" viewBox="0 0 24 24">
+                              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                           </svg>
+                        </div>
+                     </div>
+                     <div className="review-rating">
+                        <div className="stars">★★★★★</div>
+                        <div className="verified-badge">✓</div>
+                     </div>
+                     <div className="review-content">
+                        <p className="review-text">Ok</p>
                      </div>
                   </div>
                </div>
 
-               <div className="reviews-stats">
-                  <div className="stats-card">
-                     <div className="stat-number">4.8</div>
-                     <div className="stat-label">Average Rating</div>
-                     <div className="stat-stars">★★★★★</div>
-                  </div>
-                  <div className="stats-card">
-                     <div className="stat-number">150+</div>
-                     <div className="stat-label">Happy Customers</div>
-                  </div>
-                  <div className="stats-card">
-                     <div className="stat-number">95%</div>
-                     <div className="stat-label">Recommend Us</div>
-                  </div>
+               {/* Navigation arrows */}
+               <div className="reviews-navigation">
+                  <button className="nav-arrow nav-prev">‹</button>
+                  <button className="nav-arrow nav-next">›</button>
                </div>
             </div>
-           
-      </section >
+         </section>
          {/* Nearby Attractions Section */}
          <section className="nearby-section">
             <div className="container">
