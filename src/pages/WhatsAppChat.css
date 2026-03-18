@@ -1,9 +1,16 @@
-/* Floating Button */
-.wa-button {
+/* Floating Buttons Container */
+.prince-floating-action-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #25D366;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+/* Book Now FAB */
+.prince-book-now-fab {
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -11,22 +18,50 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 9999;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    
+    text-decoration: none;
 }
 
-.wa-button img {
-    height: 30px;
-    width: 30px;
+.prince-book-now-fab img {
+    height: 65px;
+    width: 65px;
+    object-fit: contain;
 }
 
-.wa-button:hover {
+.prince-book-now-fab:hover {
     transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Chat Box */
-.wa-chat-box {
+/* WhatsApp FAB */
+.prince-whatsapp-fab {
+    position: relative;
+    
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.prince-whatsapp-fab img {
+    height: 55px;
+    width: 55px;
+}
+
+.prince-whatsapp-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Container */
+.prince-whatsapp-chat-container {
     position: fixed;
     bottom: 90px;
     right: 20px;
@@ -37,59 +72,91 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     z-index: 9999;
-    animation: fadeIn 0.3s ease;
+    animation: prince-chat-fadeIn 0.3s ease;
 }
 
-/* Header */
-.wa-header {
+/* Chat Header */
+.prince-chat-header-section {
     background: #25D366;
     color: white;
-    padding: 12px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 12px;
+}
+
+.prince-chat-title-text {
     font-size: 15px;
     font-weight: 500;
 }
 
-.wa-header button {
+.prince-chat-close-btn {
     background: transparent;
     border: none;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-/* Body */
-.wa-body {
-    padding: 12px;
+.prince-chat-close-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Chat Message Area */
+.prince-chat-message-area {
+    padding: 0;
     font-size: 14px;
     background: #f5f5f5;
+    min-height: 80px;
+    padding: 12px;
 }
 
-/* Footer */
-.wa-footer {
+.prince-chat-message-area p {
+    margin: 8px 0;
+}
+
+/* Chat Input Section */
+.prince-chat-input-section {
     display: flex;
     border-top: 1px solid #ddd;
 }
 
-.wa-footer input {
+.prince-chat-message-input {
     flex: 1;
     border: none;
-    padding: 12px;
+    padding: 0;
     outline: none;
     font-size: 14px;
+    font-family: inherit;
+    height: 45px;
+    padding: 0 12px;
 }
 
-.wa-footer button {
+.prince-chat-message-input::placeholder {
+    color: #999;
+}
+
+.prince-chat-send-btn {
     background: #25D366;
     border: none;
     color: white;
-    padding: 12px 16px;
+    padding: 0;
+    width: 60px;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    font-size: 13px;
+}
+
+.prince-chat-send-btn:hover {
+    background: #1fa857;
 }
 
 /* Animation */
-@keyframes fadeIn {
+@keyframes prince-chat-fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -101,48 +168,114 @@
     }
 }
 
-/* 🔥 Mobile Responsive */
+/* Tablet Responsive */
 @media (max-width: 768px) {
-    .wa-chat-box {
-        width: 95%;
-        right: 2.5%;
-        bottom: 80px;
-    }
-
-    .wa-button {
-        width: 50px;
-        height: 50px;
+    .prince-floating-action-container {
         bottom: 15px;
         right: 15px;
+        gap: 12px;
     }
 
-    .wa-button img {
+    .prince-whatsapp-fab,
+    .prince-book-now-fab {
+        width: 50px;
+        height: 50px;
+    }
+
+    .prince-whatsapp-fab img {
         height: 26px;
         width: 26px;
     }
 
-    .wa-footer input {
-        padding: 10px;
+    .prince-book-now-fab img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .prince-whatsapp-chat-container {
+        width: 95%;
+        right: 2.5%;
+        bottom: 75px;
+    }
+
+    .prince-chat-message-input {
         font-size: 13px;
     }
 
-    .wa-footer button {
-        padding: 10px 12px;
-        font-size: 13px;
+    .prince-chat-send-btn {
+        font-size: 12px;
     }
 }
 
-/* Extra Small Devices */
+/* Mobile Responsive */
 @media (max-width: 480px) {
-    .wa-chat-box {
+    .prince-floating-action-container {
+        bottom: 12px;
+        right: 12px;
+        gap: 10px;
+    }
+
+    .prince-whatsapp-fab,
+    .prince-book-now-fab {
+        width: 48px;
+        height: 48px;
+    }
+
+    .prince-whatsapp-fab img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .prince-book-now-fab img {
+        height: 28px;
+        width: 28px;
+    }
+
+    .prince-whatsapp-chat-container {
         width: 100%;
         right: 0;
         bottom: 0;
         border-radius: 12px 12px 0 0;
     }
 
-    .wa-button {
-        bottom: 12px;
-        right: 12px;
+    .prince-chat-header-section {
+        height: 40px;
+    }
+
+    .prince-chat-title-text {
+        font-size: 14px;
+    }
+
+    .prince-chat-message-area {
+        min-height: 70px;
+    }
+
+    .prince-chat-message-input {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    .prince-chat-send-btn {
+        width: 55px;
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .prince-floating-action-container {
+        bottom: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .prince-whatsapp-fab,
+    .prince-book-now-fab {
+        width: 45px;
+        height: 45px;
+    }
+
+    .prince-whatsapp-chat-container {
+        max-width: 100%;
     }
 }
