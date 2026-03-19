@@ -13,15 +13,24 @@ body {
 
 /* Image Gallery */
 .hotel-room-five-image-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    position: relative;
+    width: 100%;
     height: 400px;
     margin-bottom: 0;
 }
 
+.hotel-room-five-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    height: 100%;
+    width: 100%;
+}
+
 .hotel-room-five-gallery-item {
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .hotel-room-five-gallery-item img {
@@ -29,10 +38,36 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .hotel-room-five-gallery-item:hover img {
     transform: scale(1.02);
+}
+
+/* Gallery Indicators */
+.hotel-room-five-gallery-indicators {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #B8941F;
+    transform: scale(1.2);
 }
 
 /* Room Details */
@@ -107,6 +142,7 @@ body {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
 .hotel-room-five-feature-text-block {
@@ -151,6 +187,7 @@ body {
     transition: all 0.3s ease;
     letter-spacing: 0.8px;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .hotel-room-five-action-btn:hover {
@@ -160,6 +197,7 @@ body {
 .hotel-room-five-action-btn svg {
     width: 14px;
     height: 14px;
+    flex-shrink: 0;
 }
 
 /* Main Content */
@@ -267,12 +305,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* Location */
-.hotel-room-five-location-section {
-    margin-bottom: 60px;
-}
-
-/* Book Now Button (without card wrapper) */
+/* Book Now Button */
 .hotel-room-five-book-now-btn {
     width: 100%;
     padding: 18px;
@@ -366,6 +399,7 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    display: block;
 }
 
 .hotel-room-five-promo-content {
@@ -387,12 +421,15 @@ body {
     line-height: 1.3;
 }
 
-/* Responsive */
+/* Responsive - Tablet */
 @media (max-width: 768px) {
     .hotel-room-five-image-gallery {
-        grid-template-columns: repeat(2, 1fr);
         height: 300px;
-        gap: 2px;
+    }
+
+    .hotel-room-five-gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3px;
     }
 
     .hotel-room-five-header-container {
@@ -423,14 +460,11 @@ body {
     .hotel-room-five-main-content-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding-top: 40px;
     }
 
     .hotel-room-five-content-left-section {
         padding-right: 0;
-    }
-
-    .hotel-room-five-content-right-section {
-        padding: 30px 20px;
     }
 
     .hotel-room-five-amenities-grid {
@@ -444,7 +478,7 @@ body {
     }
 
     .hotel-room-five-title-text {
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .hotel-room-five-price-amount {
@@ -454,58 +488,296 @@ body {
     .hotel-room-five-section-title {
         font-size: 20px;
     }
+
+    .hotel-room-five-details-section {
+        padding: 40px 20px;
+    }
 }
 
+/* Responsive - Mobile */
 @media (max-width: 480px) {
+
+    /* Mobile Image Gallery - Horizontal Scroll */
     .hotel-room-five-image-gallery {
-        grid-template-columns: 1fr;
         height: 250px;
+        overflow: hidden;
+    }
+
+    .hotel-room-five-gallery-container {
+        display: flex;
+        width: 400%;
+        height: 100%;
+        gap: 0;
+        animation: slideShow 12s infinite;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .hotel-room-five-gallery-item {
+        flex: 0 0 25%;
+        width: 25%;
+        height: 100%;
+    }
+
+    .hotel-room-five-gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Show indicators on mobile */
+    .hotel-room-five-gallery-indicators {
+        display: flex;
+    }
+
+    /* Slide animation */
+    @keyframes slideShow {
+
+        0%,
+        20% {
+            transform: translateX(0);
+        }
+
+        25%,
+        45% {
+            transform: translateX(-25%);
+        }
+
+        50%,
+        70% {
+            transform: translateX(-50%);
+        }
+
+        75%,
+        95% {
+            transform: translateX(-75%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Pause animation on hover */
+    .hotel-room-five-gallery-container:hover {
+        animation-play-state: paused;
     }
 
     .hotel-room-five-details-section {
         padding: 30px 15px;
+        margin-bottom: 0;
+    }
+
+    .hotel-room-five-header-container {
+        margin-bottom: 30px;
     }
 
     .hotel-room-five-features-container {
         gap: 20px;
+        flex-direction: column;
     }
 
     .hotel-room-five-feature-item {
         gap: 12px;
+        width: 100%;
     }
 
     .hotel-room-five-feature-icon-wrapper {
         width: 40px;
         height: 40px;
+        min-width: 40px;
     }
 
     .hotel-room-five-action-buttons-container {
-        gap: 20px;
+        gap: 15px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hotel-room-five-action-btn {
+        font-size: 10px;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .hotel-room-five-title-text {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 10px;
     }
 
     .hotel-room-five-price-amount {
         font-size: 24px;
     }
 
-    .hotel-room-five-content-right-section {
-        padding: 20px 15px;
-        margin: 5px 0;
-    }
-
-    .hotel-room-five-deal-item {
-        gap: 10px;
-    }
-
-    .hotel-room-five-deal-image {
-        width: 60px;
-        height: 45px;
+    .hotel-room-five-price-label,
+    .hotel-room-five-price-period {
+        font-size: 14px;
     }
 
     .hotel-room-five-main-content-wrapper {
-        padding: 40px 15px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 15px;
     }
+
+    .hotel-room-five-content-left-section {
+        padding-right: 0;
+    }
+
+    .hotel-room-five-content-right-section {
+        padding: 30px 20px;
+        margin: 0;
+    }
+
+    .hotel-room-five-section-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .hotel-room-five-overview-text {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hotel-room-five-amenities-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .hotel-room-five-amenity-item {
+        gap: 12px;
+    }
+
+    .hotel-room-five-amenity-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hotel-room-five-amenity-text {
+        font-size: 13px;
+    }
+
+    .hotel-room-five-booking-rules-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hotel-room-five-rules-subtitle {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .hotel-room-five-rules-text {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .hotel-room-five-book-now-btn {
+        padding: 16px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .hotel-room-five-deals-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hotel-room-five-deal-item {
+        gap: 12px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .hotel-room-five-deal-image {
+        width: 70px;
+        height: 50px;
+    }
+
+    .hotel-room-five-deal-name {
+        font-size: 13px;
+    }
+
+    .hotel-room-five-current-price,
+    .hotel-room-five-original-price {
+        font-size: 11px;
+    }
+
+    .hotel-room-five-promo-image {
+        height: 150px;
+    }
+
+    .hotel-room-five-promo-content {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .hotel-room-five-promo-subtitle {
+        font-size: 11px;
+    }
+
+    .hotel-room-five-promo-title {
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .hotel-room-five-image-gallery {
+        height: 200px;
+    }
+
+    .hotel-room-five-details-section {
+        padding: 20px 12px;
+    }
+
+    .hotel-room-five-title-text {
+        font-size: 18px;
+    }
+
+    .hotel-room-five-price-amount {
+        font-size: 20px;
+    }
+
+    .hotel-room-five-feature-icon-wrapper {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hotel-room-five-main-content-wrapper {
+        padding: 20px 12px;
+        gap: 20px;
+    }
+
+    .hotel-room-five-content-right-section {
+        padding: 20px 15px;
+    }
+}
+
+/* Touch-friendly scrolling for mobile */
+@media (max-width: 480px) {
+    .hotel-room-five-gallery-container {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    /* Alternative: Manual scroll version (uncomment if you prefer manual scroll) */
+    /*
+    .hotel-room-five-gallery-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 0;
+        animation: none;
+        width: 100%;
+    }
+    
+    .hotel-room-five-gallery-item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+    
+    .hotel-room-five-gallery-container::-webkit-scrollbar {
+        display: none;
+    }
+    */
 }

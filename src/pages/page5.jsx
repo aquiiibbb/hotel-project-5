@@ -4,23 +4,30 @@ export default function HotelRoomPageFive() {
     return (
         <>
             {/* Image Gallery */}
-        <div className="hotel-room-five-image-gallery">
-  <div className="hotel-room-five-gallery-item">
-    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=500&h=400&fit=crop" alt="Luxury twin bed hotel room" />
-  </div>
+            <div className="hotel-room-five-image-gallery">
+                <div className="hotel-room-five-gallery-container">
+                    <div className="hotel-room-five-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=500&h=400&fit=crop" alt="Luxury twin bed hotel room" />
+                    </div>
+                    <div className="hotel-room-five-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&h=400&fit=crop" alt="Stylish modern hotel bedroom" />
+                    </div>
+                    <div className="hotel-room-five-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=500&h=400&fit=crop" alt="Hotel workspace desk area" />
+                    </div>
+                    <div className="hotel-room-five-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop" alt="Premium hotel bathroom interior" />
+                    </div>
+                </div>
 
-  <div className="hotel-room-five-gallery-item">
-    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&h=400&fit=crop" alt="Stylish modern hotel bedroom" />
-  </div>
-
-  <div className="hotel-room-five-gallery-item">
-    <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=500&h=400&fit=crop" alt="Hotel workspace desk area" />
-  </div>
-
-  <div className="hotel-room-five-gallery-item">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop" alt="Premium hotel bathroom interior" />
-  </div>
-</div>
+                {/* Scroll indicators */}
+                <div className="hotel-room-five-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                </div>
+            </div>
 
             {/* Room Details */}
             <div className="hotel-room-five-details-section">

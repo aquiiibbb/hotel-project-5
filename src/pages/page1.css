@@ -13,11 +13,17 @@ body {
 
 /* Image Gallery */
 .hotel-room-image-gallery {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+.hotel-room-gallery-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4px;
-    height: 400px;
-    margin-bottom: 0;
+    height: 100%;
     width: 100%;
 }
 
@@ -37,6 +43,31 @@ body {
 
 .hotel-room-gallery-item:hover img {
     transform: scale(1.02);
+}
+
+/* Gallery Indicators */
+.hotel-room-gallery-indicators {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #B8941F;
+    transform: scale(1.2);
 }
 
 /* Room Details */
@@ -274,11 +305,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Location */
-.hotel-room-location-section {
-    margin-bottom: 60px;
-}
-
 /* Book Now Button */
 .hotel-room-book-now-btn {
     width: 100%;
@@ -398,8 +424,11 @@ body {
 /* Responsive - Tablet */
 @media (max-width: 768px) {
     .hotel-room-image-gallery {
-        grid-template-columns: repeat(2, 1fr);
         height: 300px;
+    }
+
+    .hotel-room-gallery-container {
+        grid-template-columns: repeat(2, 1fr);
         gap: 3px;
     }
 
@@ -467,15 +496,70 @@ body {
 
 /* Responsive - Mobile */
 @media (max-width: 480px) {
+
+    /* Mobile Image Gallery - Horizontal Scroll */
     .hotel-room-image-gallery {
-        grid-template-columns: 1fr;
-        height: auto;
-        aspect-ratio: 16 / 9;
-        gap: 2px;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .hotel-room-gallery-container {
+        display: flex;
+        width: 400%;
+        height: 100%;
+        gap: 0;
+        animation: slideShow 12s infinite;
+        transition: transform 0.5s ease-in-out;
     }
 
     .hotel-room-gallery-item {
-        min-height: 200px;
+        flex: 0 0 25%;
+        width: 25%;
+        height: 100%;
+    }
+
+    .hotel-room-gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Show indicators on mobile */
+    .hotel-room-gallery-indicators {
+        display: flex;
+    }
+
+    /* Slide animation */
+    @keyframes slideShow {
+
+        0%,
+        20% {
+            transform: translateX(0);
+        }
+
+        25%,
+        45% {
+            transform: translateX(-25%);
+        }
+
+        50%,
+        70% {
+            transform: translateX(-50%);
+        }
+
+        75%,
+        95% {
+            transform: translateX(-75%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Pause animation on hover */
+    .hotel-room-gallery-container:hover {
+        animation-play-state: paused;
     }
 
     .hotel-room-details-section {
@@ -639,11 +723,7 @@ body {
 /* Extra Small Devices */
 @media (max-width: 360px) {
     .hotel-room-image-gallery {
-        aspect-ratio: 4 / 3;
-    }
-
-    .hotel-room-gallery-item {
-        min-height: 150px;
+        height: 200px;
     }
 
     .hotel-room-details-section {
@@ -671,4 +751,33 @@ body {
     .hotel-room-content-right-section {
         padding: 20px 15px;
     }
+}
+
+/* Touch-friendly scrolling for mobile */
+@media (max-width: 480px) {
+    .hotel-room-gallery-container {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    /* Alternative: Manual scroll version (uncomment if you prefer manual scroll) */
+    /*
+    .hotel-room-gallery-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 0;
+        animation: none;
+        width: 100%;
+    }
+    
+    .hotel-room-gallery-item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+    
+    .hotel-room-gallery-container::-webkit-scrollbar {
+        display: none;
+    }
+    */
 }

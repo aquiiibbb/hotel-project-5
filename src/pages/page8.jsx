@@ -4,24 +4,31 @@ export default function HotelRoomPageEight() {
     return (
         <>
             {/* Image Gallery */}
-          
             <div className="hotel-room-eight-image-gallery">
-                <div className="hotel-room-eight-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&h=400&fit=crop" alt="Luxury twin bed setup" />
+                <div className="hotel-room-eight-gallery-container">
+                    <div className="hotel-room-eight-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&h=400&fit=crop" alt="Luxury twin bed setup" />
+                    </div>
+                    <div className="hotel-room-eight-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=500&h=400&fit=crop" alt="Premium hotel bedroom interior" />
+                    </div>
+                    <div className="hotel-room-eight-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=500&h=400&fit=crop" alt="Hotel working desk area" />
+                    </div>
+                    <div className="hotel-room-eight-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Modern luxury bathroom" />
+                    </div>
                 </div>
 
-                <div className="hotel-room-eight-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=500&h=400&fit=crop" alt="Premium hotel bedroom interior" />
-                </div>
-
-                <div className="hotel-room-eight-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=500&h=400&fit=crop" alt="Hotel working desk area" />
-                </div>
-
-                <div className="hotel-room-eight-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Modern luxury bathroom" />
+                {/* Scroll indicators */}
+                <div className="hotel-room-eight-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
                 </div>
             </div>
+
             {/* Room Details */}
             <div className="hotel-room-eight-details-section">
                 <div className="hotel-room-eight-header-container">

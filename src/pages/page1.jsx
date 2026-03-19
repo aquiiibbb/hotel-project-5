@@ -5,17 +5,27 @@ export default function HotelRoomPage() {
         <>
             {/* Image Gallery */}
             <div className="hotel-room-image-gallery">
-                <div className="hotel-room-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
+                <div className="hotel-room-gallery-container">
+                    <div className="hotel-room-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Twin beds room" />
+                    </div>
+                    <div className="hotel-room-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
+                    </div>
+                    <div className="hotel-room-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
+                    </div>
+                    <div className="hotel-room-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
+                    </div>
                 </div>
-                <div className="hotel-room-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop" alt="Hotel bedroom" />
-                </div>
-                <div className="hotel-room-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop" alt="Work desk area" />
-                </div>
-                <div className="hotel-room-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=500&h=400&fit=crop" alt="Bathroom" />
+
+                {/* Scroll indicators */}
+                <div className="hotel-room-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
                 </div>
             </div>
 

@@ -5,20 +5,27 @@ export default function HotelRoomPageFour() {
         <>
             {/* Image Gallery */}
             <div className="hotel-room-four-image-gallery">
-                <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&h=400&fit=crop" alt="Elegant hotel twin beds" />
+                <div className="hotel-room-four-gallery-container">
+                    <div className="hotel-room-four-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&h=400&fit=crop" alt="Elegant hotel twin beds" />
+                    </div>
+                    <div className="hotel-room-four-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560448075-bb485b067938?w=500&h=400&fit=crop" alt="Cozy hotel bedroom" />
+                    </div>
+                    <div className="hotel-room-four-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500&h=400&fit=crop" alt="Hotel room with workspace" />
+                    </div>
+                    <div className="hotel-room-four-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=500&h=400&fit=crop" alt="Modern hotel bathroom" />
+                    </div>
                 </div>
 
-                <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560448075-bb485b067938?w=500&h=400&fit=crop" alt="Cozy hotel bedroom" />
-                </div>
-
-                <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500&h=400&fit=crop" alt="Hotel room with workspace" />
-                </div>
-
-                <div className="hotel-room-four-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=500&h=400&fit=crop" alt="Modern hotel bathroom" />
+                {/* Scroll indicators */}
+                <div className="hotel-room-four-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
                 </div>
             </div>
 

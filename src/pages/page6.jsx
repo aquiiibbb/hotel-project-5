@@ -4,24 +4,31 @@ export default function HotelRoomPageSix() {
     return (
         <>
             {/* Image Gallery */}
-        
             <div className="hotel-room-six-image-gallery">
-                <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Modern twin bed hotel room" />
+                <div className="hotel-room-six-gallery-container">
+                    <div className="hotel-room-six-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Modern twin bed hotel room" />
+                    </div>
+                    <div className="hotel-room-six-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1605346434674-a440ca4dc4c0?w=500&h=400&fit=crop" alt="Elegant hotel bedroom interior" />
+                    </div>
+                    <div className="hotel-room-six-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Hotel room workspace setup" />
+                    </div>
+                    <div className="hotel-room-six-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&h=400&fit=crop" alt="Luxury hotel bathroom design" />
+                    </div>
                 </div>
 
-                <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1605346434674-a440ca4dc4c0?w=500&h=400&fit=crop" alt="Elegant hotel bedroom interior" />
-                </div>
-
-                <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Hotel room workspace setup" />
-                </div>
-
-                <div className="hotel-room-six-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&h=400&fit=crop" alt="Luxury hotel bathroom design" />
+                {/* Scroll indicators */}
+                <div className="hotel-room-six-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
                 </div>
             </div>
+
             {/* Room Details */}
             <div className="hotel-room-six-details-section">
                 <div className="hotel-room-six-header-container">

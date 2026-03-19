@@ -5,20 +5,27 @@ export default function HotelRoomPageThree() {
         <>
             {/* Image Gallery */}
             <div className="hotel-room-three-image-gallery">
-                <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=400&fit=crop" alt="Luxury hotel bed" />
+                <div className="hotel-room-three-gallery-container">
+                    <div className="hotel-room-three-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=400&fit=crop" alt="Luxury hotel bed" />
+                    </div>
+                    <div className="hotel-room-three-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=400&fit=crop" alt="Modern hotel room bed" />
+                    </div>
+                    <div className="hotel-room-three-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=400&fit=crop" alt="King size bed room" />
+                    </div>
+                    <div className="hotel-room-three-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1578898886225-c7c894047899?w=500&h=400&fit=crop" alt="Premium hotel bedroom" />
+                    </div>
                 </div>
 
-                <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=400&fit=crop" alt="Modern hotel room bed" />
-                </div>
-
-                <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=400&fit=crop" alt="King size bed room" />
-                </div>
-
-                <div className="hotel-room-three-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578898886225-c7c894047899?w=500&h=400&fit=crop" alt="Premium hotel bedroom" />
+                {/* Scroll indicators */}
+                <div className="hotel-room-three-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
                 </div>
             </div>
 

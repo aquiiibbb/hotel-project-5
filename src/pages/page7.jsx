@@ -5,23 +5,30 @@ export default function HotelRoomPageSeven() {
         <>
             {/* Image Gallery */}
             <div className="hotel-room-seven-image-gallery">
-                <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Luxury hotel twin beds interior" />
+                <div className="hotel-room-seven-gallery-container">
+                    <div className="hotel-room-seven-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Luxury hotel twin beds interior" />
+                    </div>
+                    <div className="hotel-room-seven-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&h=400&fit=crop" alt="Modern hotel bedroom lighting" />
+                    </div>
+                    <div className="hotel-room-seven-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Hotel desk and seating area" />
+                    </div>
+                    <div className="hotel-room-seven-gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=500&h=400&fit=crop" alt="Elegant hotel bathroom interior" />
+                    </div>
                 </div>
 
-                <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&h=400&fit=crop" alt="Modern hotel bedroom lighting" />
-                </div>
-
-                <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Hotel desk and seating area" />
-                </div>
-
-                <div className="hotel-room-seven-gallery-item">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=500&h=400&fit=crop" alt="Elegant hotel bathroom interior" />
+                {/* Scroll indicators */}
+                <div className="hotel-room-seven-gallery-indicators">
+                    <div className="indicator active"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
+                    <div className="indicator"></div>
                 </div>
             </div>
-          
+
             {/* Room Details */}
             <div className="hotel-room-seven-details-section">
                 <div className="hotel-room-seven-header-container">
