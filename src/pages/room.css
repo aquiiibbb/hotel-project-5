@@ -8,9 +8,9 @@
 
 /* Hero Section */
 .room-hero-section {
-  height: 300px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&h=600&fit=crop');
+   height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                    url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/841168270.jpg?k=5d7c3599a22ff73f17437ecfc20481e72972b462c4ac5e3b1cd12c1bab89a7ae&o=');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -262,7 +262,7 @@
 
 .room-book-btn {
   width: 100%;
-  background-color: #c8860d;
+  background-color: #1e40af;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -278,7 +278,7 @@
 }
 
 .room-book-btn:hover {
-  background-color: #b8760c;
+  background-color: #1e40af;
   transform: translateY(-1px);
 }
 
@@ -315,7 +315,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: #c8860d;
+  background: #1e40af;
   padding: 20px;
   color: white;
 }
@@ -338,7 +338,7 @@
 .comfort-diamond-icon {
   width: 40px;
   height: 40px;
-  background-color: #c8860d;
+  background-color: #1e40af;
   transform: rotate(45deg);
   position: relative;
 }
@@ -377,7 +377,7 @@
 
 .comfort-highlight {
   font-size: 1.2rem;
-  color: #c8860d;
+  color: #1e40af;
   font-weight: 500;
   margin-bottom: 25px;
   line-height: 1.5;
@@ -391,7 +391,7 @@
 }
 
 .comfort-book-btn {
-  background-color: #c8860d;
+  background-color: #1e40af;
   color: white;
   border: none;
   padding: 18px 35px;
@@ -405,7 +405,7 @@
 }
 
 .comfort-book-btn:hover {
-  background-color: #b8760c;
+  background-color: #1e40af;
   transform: translateY(-2px);
 }
 

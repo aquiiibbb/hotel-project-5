@@ -6,9 +6,12 @@ import agoda from "../Assets/agoda.png";
 import image1 from "../Assets/1.jpg";
 import image2 from "../Assets/2.jpg";
 import image3 from "../Assets/3.jpg";
+import image4 from "../Assets/s1.jpg";
 import image5 from "../Assets/5.jpg";
-import image6 from "../Assets/6.jpg";
-import image8 from "../Assets/8.jpg";
+import image6 from "../Assets/rooom.jpg";
+import image9 from "../Assets/reception.JPG";
+import image10 from "../Assets/bahar.JPG";
+
 import { useNavigate } from "react-router-dom"
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import './room.css'
@@ -18,55 +21,57 @@ export default function Home() {
    const [startIndex, setStartIndex] = useState(0)
    const [favorites, setFavorites] = useState([]);
    const slides = [
-      {
-         id: 1,
-         bgImage: `url(${image1})`
-      },
-      {
-         id: 2,
-         bgImage: `url(${image2})`
-      },
-      {
-         id: 3,
-         bgImage: `url(${image3})`
-      }
-   ]
-   const toggleFavorite = (id) => {
-      if (favorites.includes(id)) {
-         setFavorites(favorites.filter((fav) => fav !== id));
-      } else {
-         setFavorites([...favorites, id]);
-      }
-   };
-   const rooms = [
-      {
-         id: 1,
-         name: "NK- King Bed (Non-Smoking)",
-         price: 114.99,
-         area: 12,
-         person: 2,
-         image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
-         featured: true
-      },
-      {
-         id: 2,
-         name: "NDD - Double Room  (2 Beds, Non-Smoking)",
-         price: 109.99,
-         area: 19,
-         person: 2,
-         image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
-         featured: false
-      },
-      {
-         id: 3,
-         name: "HNK - King Room (Disability Access, Non-Smoking)",
-         price: 113.30,
-         area: 22,
-         person: 2,
-         image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop",
-         featured: false
-      }
-   ]
+   {
+      id: 1,
+      bgImage: `url(${image1})`
+   },
+   {
+      id: 2,
+      bgImage: `url(${image2})`
+   },
+   {
+      id: 3,
+      bgImage: `url(${image3})`
+   }
+]
+
+const toggleFavorite = (id) => {
+   if (favorites.includes(id)) {
+      setFavorites(favorites.filter((fav) => fav !== id));
+   } else {
+      setFavorites([...favorites, id]);
+   }
+};
+
+const rooms = [
+   {
+      id: 1,
+      name: "NK- King Bed (Non-Smoking)",
+      price: 114.99,
+      area: 12,
+      person: 2,
+      image: image4, // Remove curly braces
+      featured: true
+   },
+   {
+      id: 2,
+      name: "NDD - Double Room  (2 Beds, Non-Smoking)",
+      price: 109.99,
+      area: 19,
+      person: 2,
+      image: image5, // Remove curly braces
+      featured: false
+   },
+   {
+      id: 3,
+      name: "HNK - King Room (Disability Access, Non-Smoking)",
+      price: 113.30,
+      area: 22,
+      person: 2,
+      image: image6, // Remove curly braces
+      featured: false
+   }
+]
 
    const attractions = [
       { title: "Edward Jenner Museum", time: "5 minutes", image: "https://source.unsplash.com/random/600x400?nature&sig=1" },
@@ -280,7 +285,7 @@ export default function Home() {
                      <div className="image-grid">
                         <div className="image-item">
                            <img
-                              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                              src={image9}
                               alt="Conference Room"
                            />
                         </div>
@@ -292,13 +297,13 @@ export default function Home() {
                         </div>
                         <div className="image-item">
                            <img
-                              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                              src={image10}
                               alt="Event Space"
                            />
                         </div>
                         <div className="image-item">
                            <img
-                              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                              src={image6}
                               alt="Dining Setup"
                            />
                         </div>
@@ -497,96 +502,7 @@ export default function Home() {
             </div>
          </section>
 
-         {/* Comfort & Convenience Section */}
-         <section className="comfort-section">
-            <div className="container">
-               <div className="comfort-content">
-
-                  {/* LEFT SIDE IMAGES */}
-                  <div className="comfort-images">
-                     <div className="comfort-image-grid">
-
-                        {/* Large Image */}
-                        <div className="comfort-image-item main-image">
-                           <img
-                              src={image1}
-                              alt="Hotel Room"
-                           />
-                        </div>
-
-                        {/* Small Image */}
-                        <div className="comfort-image-item small-image">
-                           <img
-                              src={image5}
-                              alt="Hotel Interior"
-                           />
-                        </div>
-
-                        {/* Decorative Empty Card */}
-                        <div className="comfort-image-item empty-card"></div>
-
-                     </div>
-
-                     {/* Recently Refurbished Card */}
-                     <div className="recently-refurbished">
-                        <div className="refurbished-icon">
-                           <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                              <path d="M30 10L35 25H25L30 10Z" fill="#D4AF37" />
-                              <circle cx="15" cy="25" r="5" fill="#D4AF37" />
-                              <circle cx="45" cy="25" r="5" fill="#D4AF37" />
-                              <path d="M10 25L50 25L45 45H15L10 25Z" fill="#D4AF37" />
-                           </svg>
-                        </div>
-
-                        <h3>Recently Refurbished</h3>
-                        <p>CONVENIENTLY LOCATED NEAR THE M5</p>
-
-                        <button className="more-button">MORE</button>
-                     </div>
-                  </div>
-
-                  {/* RIGHT SIDE CONTENT */}
-                  <div className="comfort-details">
-
-                     <div className="comfort-header">
-                        <p className="comfort-subtitle">HOTEL AMENITIES</p>
-                     </div>
-
-                     <h2 className="comfort-title">Comfort & Convenience Included</h2>
-
-                     <div className="comfort-amenities">
-
-                        <div className="comfort-amenity">
-                           <div className="comfort-amenity-icon">✓</div>
-                           <div>
-                              <h3>Venue Hire</h3>
-                              <p>Tailored layouts, catering options, and dedicated support for every occasion.</p>
-                           </div>
-                        </div>
-
-                        <div className="comfort-amenity">
-                           <div className="comfort-amenity-icon">☰</div>
-                           <div>
-                              <h3>Bar & Restaurant On-Site</h3>
-                              <p>Food and drinks at The Ashville Bar & Restaurant. Located conveniently next to the hotel.</p>
-                           </div>
-                        </div>
-
-                        <div className="comfort-amenity">
-                           <div className="comfort-amenity-icon">≡</div>
-                           <div>
-                              <h3>Events & Functions</h3>
-                              <p>Private events, parties, and celebrations welcome. Flexible space for small gatherings.</p>
-                           </div>
-                        </div>
-
-                     </div>
-
-                  </div>
-
-               </div>
-            </div>
-         </section>
+         
 
          {/* Customer Reviews Section */}
          <section className="reviews-section">
@@ -933,90 +849,7 @@ export default function Home() {
 
             </div>
          </section>
-         {/* Recent Blog Posts */}
-         <section className="blog-section">
-            <div className="container">
-
-               <div className="blog-header">
-                  <p className="blog-subtitle">NEWS & ARTICLES</p>
-                  <h2 className="blog-title">Recent Blog Posts</h2>
-               </div>
-
-               <div className="blog-grid">
-
-                  {/* Blog 1 */}
-                  <div className="blog-card">
-                     <img
-                        src="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1200&q=60"
-                        alt="Berkeley Village"
-                     />
-
-                     <div className="blog-content">
-                        <p className="blog-author">● POW</p>
-
-                        <h3>
-                           Why Berkeley Is the Perfect Base for Exploring Gloucestershire
-                        </h3>
-
-                        <p className="blog-text">
-                           Choosing where to stay can shape your entire travel experience.
-                           Berkeley offers a unique advantage.
-                        </p>
-
-                        <button className="blog-btn">READ MORE</button>
-                     </div>
-                  </div>
-
-                  {/* Blog 2 */}
-                  <div className="blog-card">
-                     <img
-                        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60"
-                        alt="Lake"
-                     />
-
-                     <div className="blog-content">
-                        <p className="blog-author">● POW</p>
-
-                        <h3>
-                           Why Staying Near the M5 Makes Business Travel Easier
-                        </h3>
-
-                        <p className="blog-text">
-                           Business travel can be demanding, with tight schedules, long
-                           drives, and the need for reliable accommodation.
-                        </p>
-
-                        <button className="blog-btn">READ MORE</button>
-                     </div>
-                  </div>
-
-                  {/* Blog 3 */}
-                  <div className="blog-card">
-                     <img
-                        src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=60"
-                        alt="City"
-                     />
-
-                     <div className="blog-content">
-                        <p className="blog-author">● POW</p>
-
-                        <h3>
-                           Day Trips from Berkeley: Explore the Cotswolds & Beyond
-                        </h3>
-
-                        <p className="blog-text">
-                           Berkeley's convenient location in Gloucestershire makes it an
-                           ideal base for exploring nearby attractions.
-                        </p>
-
-                        <button className="blog-btn">READ MORE</button>
-                     </div>
-                  </div>
-
-               </div>
-
-            </div>
-         </section>
+        
          {/* Partner Logos */}
          <section className="partners-section">
             <div className="partners-container">

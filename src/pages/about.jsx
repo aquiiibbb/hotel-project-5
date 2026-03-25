@@ -3,15 +3,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
+import image9 from "../Assets/reception.JPG";
+import image10 from "../Assets/bahar.JPG";
+import image11 from "../Assets/hm.JPG";
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate();
 
   const historyImages = [
-    "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=500&fit=crop",
-    "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=500&fit=crop"
+    image9,
+    image10,
+   image11
   ];
 
   useEffect(() => {

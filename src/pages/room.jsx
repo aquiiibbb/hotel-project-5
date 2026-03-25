@@ -4,6 +4,15 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { MdFavorite, MdFavoriteBorder } from 'react-icons/md'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import image2 from "../Assets/2.jpg";
+import image4 from "../Assets/s1.jpg";
+import image5 from "../Assets/5.jpg";
+import image6 from "../Assets/rooom.jpg";
+import image7 from "../Assets/db1.JPG";
+import image8 from "../Assets/doubleking.JPG";
+import image9 from "../Assets/dba.JPG";
+import image10 from "../Assets/6.jpg";
+import image11 from "../Assets/db4.JPG";
 
 export default function Room() {
   const navigate = useNavigate();
@@ -29,7 +38,7 @@ export default function Room() {
       price: 114.99,
       area: 17,
       person: 2,
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop",
+      image: image4,
       featured: true
     },
     {
@@ -38,7 +47,7 @@ export default function Room() {
       price: 109.99,
       area: 17,
       person: 2,
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+      image: image5,
       featured: false
     },
     {
@@ -47,7 +56,7 @@ export default function Room() {
       price: 113.30,
       area: 17,
       person: 2,
-      image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop",
+      image: image6,
       featured: false
     },
     {
@@ -56,7 +65,7 @@ export default function Room() {
       price: 134.20,
       area: 22,
       person: 2,
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop",
+      image: image7 ,
       featured: false
     },
     {
@@ -65,7 +74,7 @@ export default function Room() {
       price: 109.99,
       area: 50,
       person: 4,
-      image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop",
+      image: image8,
       featured: true
     },
     {
@@ -74,7 +83,7 @@ export default function Room() {
       price: 109.99,
       area: 33,
       person: 4,
-      image: "https://princeofwaleshotels.co.uk/wp-content/uploads/2026/02/Honeymoon-Suite1.png",
+      image: image9,
       featured: true
     },
     {
@@ -83,7 +92,7 @@ export default function Room() {
       price: 109.99,
       area: 61,
       person: 2,
-      image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80",
+      image: image10,
       featured: true
     },
     {
@@ -92,7 +101,7 @@ export default function Room() {
       price: 367.30,
       area: 61,
       person: 2,
-      image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image:image11,
       featured: true
     }
   ];
@@ -188,7 +197,7 @@ export default function Room() {
         <div className="room-comfort-container">
           <div className="room-comfort-image">
             <img
-              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=500&fit=crop"
+              src={image2}
               alt="Comfortable Room"
               className="comfort-image"
             />

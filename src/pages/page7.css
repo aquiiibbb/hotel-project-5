@@ -66,7 +66,7 @@ body {
 }
 
 .indicator.active {
-    background: #B8941F;
+    background: #1e40af;
     transform: scale(1.2);
 }
 
@@ -191,7 +191,7 @@ body {
 }
 
 .hotel-room-seven-action-btn:hover {
-    color: #B8941F;
+    color: #1e40af;
 }
 
 .hotel-room-seven-action-btn svg {
@@ -309,7 +309,7 @@ body {
 .hotel-room-seven-book-now-btn {
     width: 100%;
     padding: 18px;
-    background: #B8941F;
+    background: #1e40af;
     color: white;
     border: none;
     border-radius: 4px;
@@ -322,7 +322,7 @@ body {
 }
 
 .hotel-room-seven-book-now-btn:hover {
-    background: #9A7A1A;
+    background: #1e40af;
 }
 
 .hotel-room-seven-last-minute-deals {
@@ -378,7 +378,7 @@ body {
 
 .hotel-room-seven-current-price {
     font-size: 12px;
-    color: #B8941F;
+    color: #1e40af;
     font-weight: 400;
 }
 
@@ -411,7 +411,7 @@ body {
 
 .hotel-room-seven-promo-subtitle {
     font-size: 12px;
-    color: #B8941F;
+    color: #1e40af;
     margin-bottom: 5px;
 }
 

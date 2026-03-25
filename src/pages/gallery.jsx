@@ -2,6 +2,15 @@ import './gallery.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { useNavigate } from 'react-router-dom'
+import image2 from "../Assets/singleking.JPG";
+import image4 from "../Assets/tolet.JPG";
+import image5 from "../Assets/5.jpg";
+import image6 from "../Assets/rooom.jpg";
+import image7 from "../Assets/dba.JPG";
+import image8 from "../Assets/doubleking.JPG";
+import image9 from "../Assets/reception.JPG";
+import image10 from "../Assets/bathroom.JPG";
+import image11 from "../Assets/hm.JPG";
 
 export default function Gallery() {
   const navigate = useNavigate()
@@ -28,7 +37,7 @@ export default function Gallery() {
           <div className="gallery-grid">
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop"
+                src={image2}
                 alt="Single Room with Window"
                 className="gallery-image"
               />
@@ -41,7 +50,7 @@ export default function Gallery() {
 
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop"
+                src={image7}
                 alt="Double Room with Modern Decor"
                 className="gallery-image"
               />
@@ -54,20 +63,20 @@ export default function Gallery() {
 
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=400&h=300&fit=crop"
+              src={image8}
                 alt="Lounge Area with Seating"
                 className="gallery-image"
               />
               <div className="gallery-overlay">
                 <div className="gallery-overlay-content">
-                  <h3 className="gallery-overlay-title">Lounge Area</h3>
+                  <h3 className="gallery-overlay-title">Double King Room</h3>
                 </div>
               </div>
             </div>
 
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400&h=300&fit=crop"
+                src={image11}
                 alt="Restaurant and Bar Area"
                 className="gallery-image"
               />
@@ -80,21 +89,8 @@ export default function Gallery() {
 
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&h=300&fit=crop"
+                src={image10}
                 alt="Four Poster Bed Room"
-                className="gallery-image"
-              />
-              <div className="gallery-overlay">
-                <div className="gallery-overlay-content">
-                  <h3 className="gallery-overlay-title">Four Poster Room</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="gallery-item">
-              <img
-                src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=400&h=300&fit=crop"
-                alt="Modern Bathroom"
                 className="gallery-image"
               />
               <div className="gallery-overlay">
@@ -106,7 +102,20 @@ export default function Gallery() {
 
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop"
+                src={image9}
+                alt="Modern Bathroom"
+                className="gallery-image"
+              />
+              <div className="gallery-overlay">
+                <div className="gallery-overlay-content">
+                  <h3 className="gallery-overlay-title">Reception</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="gallery-item">
+              <img
+                src={image6}
                 alt="Deluxe Room Interior"
                 className="gallery-image"
               />
@@ -119,7 +128,7 @@ export default function Gallery() {
 
             <div className="gallery-item">
               <img
-                src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop"
+                src={image5 }
                 alt="Family Suite"
                 className="gallery-image"
               />
@@ -132,13 +141,13 @@ export default function Gallery() {
 
             <div className="gallery-item">
               <img
-                src="https://princeofwaleshotels.co.uk/wp-content/uploads/2026/02/Honeymoon-Suite1.png"
+                src={image4}
                 alt="Honeymoon Suite"
                 className="gallery-image"
               />
               <div className="gallery-overlay">
                 <div className="gallery-overlay-content">
-                  <h3 className="gallery-overlay-title">Honeymoon Suite</h3>
+                  <h3 className="gallery-overlay-title">Bathroom</h3>
                 </div>
               </div>
             </div>

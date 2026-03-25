@@ -13,16 +13,15 @@ html, body {
 
 /* Hero Section */
 .amenities-hero-section {
-  height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&h=800&fit=crop');
+    height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                    url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166708.jpg?k=8ec271085a6a5350f94bbfa28a700f96a2069bcee1d5bf0fa7936bbf1207af0f&o=');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 100%;
 }
 
 .amenities-hero-overlay {
@@ -82,7 +81,7 @@ html, body {
 .amenities-diamond-icon {
   width: 40px;
   height: 40px;
-  background-color: #c8860d;
+  background-color: #1e40af;
   transform: rotate(45deg);
   margin: 0 auto;
   position: relative;
@@ -138,12 +137,12 @@ html, body {
 
 .amenities-card:hover {
   transform: translateY(-5px);
-  border: 3px solid #c8860d;
+  border: 3px solid #1e40af;
   box-shadow: 0 10px 30px rgba(200, 134, 13, 0.2);
 }
 
 .amenities-card-featured {
-  border: 3px solid #c8860d;
+  border: 3px solid #1e40af;
 }
 
 .amenities-card-featured:hover {
@@ -155,19 +154,19 @@ html, body {
   width: 80px;
   height: 80px;
   background-color: transparent;
-  border: 2px solid #c8860d;
+  border: 2px solid #1e40af;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 30px;
   font-size: 32px;
-  color: #c8860d;
+  color: #1e40af;
   transition: all 0.3s ease;
 }
 
 .amenities-card:hover .amenities-card-icon {
-  background-color: #c8860d;
+  background-color: #1e40af;
   color: white;
 }
 
@@ -181,7 +180,7 @@ html, body {
 }
 
 .amenities-card:hover .amenities-card-title {
-  color: #c8860d;
+  color: #1e40af;
 }
 
 .amenities-card-description {
@@ -243,14 +242,14 @@ html, body {
 }
 
 .amenities-list-icon {
-  color: #c8860d;
+  color: #1e40af;
   font-size: 20px;
   flex-shrink: 0;
 }
 
 /* CTA Section */
 .amenities-cta-section {
-  background-color: #c8860d;
+  background-color: #1e40af;
   padding: 10px 0;
   width: 100%;
   overflow-x: hidden;
@@ -292,7 +291,7 @@ html, body {
 
 .amenities-cta-btn {
   background-color: white;
-  color: #c8860d;
+  color:gold;
   border: none;
   padding: 18px 35px;
   font-size: 13px;

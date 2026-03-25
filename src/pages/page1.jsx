@@ -204,59 +204,7 @@ export default function HotelRoomPage() {
                         BOOK NOW
                     </a>
 
-                    <div className="hotel-room-last-minute-deals">
-                        <h3 className="hotel-room-deals-title">Last Minute Deals</h3>
-
-                        <div className="hotel-room-deal-item">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=80&h=60&fit=crop" alt="Honeymoon Suite" className="hotel-room-deal-image" />
-                            <div className="hotel-room-deal-info">
-                                <h4 className="hotel-room-deal-name">Honeymoon Suite</h4>
-                                <div className="hotel-room-deal-price">
-                                    <span className="hotel-room-current-price">From £267.30</span>
-                                    <span className="hotel-room-original-price">£267.30</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hotel-room-deal-item">
-                            <img src="https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=80&h=60&fit=crop" alt="Family Suite" className="hotel-room-deal-image" />
-                            <div className="hotel-room-deal-info">
-                                <h4 className="hotel-room-deal-name">Family Suite</h4>
-                                <div className="hotel-room-deal-price">
-                                    <span className="hotel-room-current-price">From £177.10</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hotel-room-deal-item">
-                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=80&h=60&fit=crop" alt="Deluxe Superking Room" className="hotel-room-deal-image" />
-                            <div className="hotel-room-deal-info">
-                                <h4 className="hotel-room-deal-name">Deluxe Superking Room</h4>
-                                <div className="hotel-room-deal-price">
-                                    <span className="hotel-room-current-price">From £134.20</span>
-                                    <span className="hotel-room-original-price">£134.20</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="hotel-room-deal-item">
-                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=80&h=60&fit=crop" alt="Double Room" className="hotel-room-deal-image" />
-                            <div className="hotel-room-deal-info">
-                                <h4 className="hotel-room-deal-name">Double Room</h4>
-                                <div className="hotel-room-deal-price">
-                                    <span className="hotel-room-current-price">From £113.30</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="hotel-room-breakfast-promo">
-                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=300&h=200&fit=crop" alt="Continental Breakfast" className="hotel-room-promo-image" />
-                        <div className="hotel-room-promo-content">
-                            <p className="hotel-room-promo-subtitle">Start Your Day Right</p>
-                            <h3 className="hotel-room-promo-title">Self-Serve Continental Breakfast</h3>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
         </>
