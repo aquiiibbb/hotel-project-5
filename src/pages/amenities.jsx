@@ -193,21 +193,6 @@ export default function Amenities() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="amenities-cta-section">
-        <div className="amenities-cta-container">
-          <div className="amenities-cta-content">
-            <p className="amenities-cta-subtitle">THE PRINCE OF WALES HOTEL</p>
-            <h2 className="amenities-cta-title">Recently Refurbished Rooms in Berkeley</h2>
-          </div>
-          <button
-            className="amenities-cta-btn"
-            onClick={() => navigate("/room")}
-          >
-            EXPLORE MORE
-          </button>
-        </div>
-      </section>
     </>
   )
 }

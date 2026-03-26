@@ -122,21 +122,7 @@ export default function Room() {
       <section className="room-listing-section">
         <div className="room-container">
           {/* Header with count and sort */}
-          <div className="room-listing-header">
-            <h2 className="room-count">{rooms.length} Rooms</h2>
-            <div className="room-sort">
-              <span>Sort by</span>
-              <select
-                className="room-sort-select"
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-              >
-                <option value="price">Price</option>
-                <option value="name">Name</option>
-                <option value="size">Size</option>
-              </select>
-            </div>
-          </div>
+        
 
           {/* Rooms Grid */}
           <div className="room-grid">

@@ -154,22 +154,6 @@ export default function Gallery() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="gallery-cta-section">
-        <div className="gallery-cta-container">
-          <div className="gallery-cta-content">
-            <p className="gallery-cta-subtitle">THE PRINCE OF WALES HOTEL</p>
-            <h2 className="gallery-cta-title">Recently Refurbished Rooms in Berkeley</h2>
-          </div>
-          <button
-            className="gallery-cta-btn"
-            onClick={() => navigate("/room")}
-          >
-            EXPLORE MORE
-          </button>
-        </div>
-      </section>
     </>
   )
 }

@@ -81,11 +81,7 @@ export default function HotelRoomPageTwo() {
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
                         <h1 className="hotel-room-title-text">NDD - Double Room (2 Beds, Non-Smoking)</h1>
-                        <div className="hotel-room-price-info-container">
-                            <span className="hotel-room-price-label">From</span>
-                            <span className="hotel-room-price-amount">£109.99</span>
-                            <span className="hotel-room-price-period">Per Night</span>
-                        </div>
+                        
                     </div>
 
                     <div className="hotel-room-features-container">
@@ -130,26 +126,7 @@ export default function HotelRoomPageTwo() {
                     </div>
                 </div>
 
-                <div className="hotel-room-action-buttons-container">
-                    <button className="hotel-room-action-btn">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.34C15.11 18.55 15.08 18.77 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z" fill="currentColor" />
-                        </svg>
-                        SHARE
-                    </button>
-                    <button className="hotel-room-action-btn">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="currentColor" />
-                        </svg>
-                        REVIEWS
-                    </button>
-                    <button className="hotel-room-action-btn">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                            <path d="M20.84 4.61C19.32 3.04 17.16 3.04 15.64 4.61L12 8.69L8.36 4.61C6.84 3.04 4.68 3.04 3.16 4.61C1.61 6.27 1.61 8.95 3.16 10.61L12 20.54L20.84 10.61C22.39 8.95 22.39 6.27 20.84 4.61Z" fill="currentColor" />
-                        </svg>
-                        WISHLIST
-                    </button>
-                </div>
+               
             </div>
 
             {/* Main Content */}

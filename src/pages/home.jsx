@@ -10,7 +10,8 @@ import image4 from "../Assets/s1.jpg";
 import image5 from "../Assets/5.jpg";
 import image6 from "../Assets/rooom.jpg";
 import image9 from "../Assets/reception.JPG";
-import image10 from "../Assets/bahar.JPG";
+import image10 from "../Assets/bahar1.JPG";
+import image12 from "../Assets/reception.JPG";
 
 import { useNavigate } from "react-router-dom"
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
@@ -32,7 +33,16 @@ export default function Home() {
    {
       id: 3,
       bgImage: `url(${image3})`
+   },
+   {
+      id: 3,
+      bgImage: `url(${image12})`
+   },
+   {
+      id: 3,
+      bgImage: `url(${image10})`
    }
+
 ]
 
 const toggleFavorite = (id) => {
@@ -174,7 +184,7 @@ const rooms = [
                <div className="hotel-info-content">
                   <div className="hotel-image">
                      <img
-                        src={image1}
+                        src={image10}
                         alt=" of Wales Hotel"
                      />
                   </div>
@@ -189,16 +199,17 @@ const rooms = [
                               <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
                            </svg>
                         </div>
-                        <p className="welcome-text">WELCOME TO CROSSROADINN OF WALES HOTEL</p>
+                        <p className="welcome-text">ABOUT THIS PROPERTY</p>
                      </div>
 
                      <h2 className="hotel-title">A Comfortable Country Hotel in Berkeley</h2>
 
                      <p className="hotel-description">
-                        Set just off the A38 and within easy reach of the M5 motorway, The crossroadsinn of Wales Hotel
-                        Berkeley offers a relaxed and convenient stay for business travellers, contractors, and leisure
-                        guests. Recently refurbished, the hotel features comfortable en-suite rooms, free on-site
-                        parking, free high-speed Wi-Fi, and a seamless self check-in option for late arrivals.
+                     <b>Comfortable Accommodations:</b>  Crossroads Inn in Fort Pierce offers air-conditioned rooms with private bathrooms, walk-in showers, and free WiFi. Each room includes a refrigerator, microwave, work desk, and TV.<br></br>
+
+ <b>Convenient Facilities:</b>  Guests benefit from a 24-hour front desk, daily housekeeping service, and free on-site private parking. Additional amenities include a bath, carpeted floors, and a work desk.<br></br>
+
+ <b>Local Attractions:</b> Nearby attractions include Fort Pierce City Marina (9 km), Fort Pierce Inlet State Park (15 km), and the Vero Beach Museum of Art (31 km). The Vero Beach Municipal Airport is 28 km away.
                      </p>
 
                      <p className="location-text">A short drive from Junction 13/14 of the M5.</p>
@@ -243,75 +254,7 @@ const rooms = [
             </div>
          </section>
 
-         {/* Why Choose Our Venue Section */}
-         <section className="venue-section">
-            <div className="container">
-               <div className="venue-content">
-                  <div className="venue-text">
-                     <div className="venue-header">
-                        <div className="crown-icon">
-                           <svg width="40" height="30" viewBox="0 0 40 30" fill="none">
-                              <path d="M20 5L25 15H15L20 5Z" fill="#D4AF37" />
-                              <circle cx="8" cy="15" r="3" fill="#D4AF37" />
-                              <circle cx="32" cy="15" r="3" fill="#D4AF37" />
-                              <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
-                           </svg>
-                        </div>
-                     </div>
-
-                     <h2 className="venue-title">Why Choose Our Venue</h2>
-
-                     <div className="venue-subtitle">
-                        <h3>Events, Conferences & Venue Hire at</h3>
-                        <h3>The crossroadsinn of Wales Hotel</h3>
-                     </div>
-
-                     <p className="venue-description">
-                        From professional conferences and business meetings to weddings, parties and private
-                        celebrations, the crossroadsinn of Wales Hotel offers flexible event spaces, tailored catering and
-                        dedicated support — all in a convenient Gloucestershire location. Venue hire available from
-                        just £150, with bespoke packages to suit your event and budget.
-                     </p>
-
-                     <button
-                        className="about-view-rooms-btn"
-                        onClick={() => navigate("/amenities")}
-                     >
-                        VIEW Amenities & Facilities
-                     </button>
-                  </div>
-
-                  <div className="venue-images">
-                     <div className="image-grid">
-                        <div className="image-item">
-                           <img
-                              src={image9}
-                              alt="Conference Room"
-                           />
-                        </div>
-                        <div className="image-item">
-                           <img
-                              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2098&q=80"
-                              alt="Wedding Reception"
-                           />
-                        </div>
-                        <div className="image-item">
-                           <img
-                              src={image10}
-                              alt="Event Space"
-                           />
-                        </div>
-                        <div className="image-item">
-                           <img
-                              src={image6}
-                              alt="Dining Setup"
-                           />
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+        
 
          {/* Discover Our Rooms Section */}
         <section className="lux-rooms-section">
@@ -857,7 +800,7 @@ const rooms = [
                <img src={booking} alt="Booking" />
                <img src={tripadvisor} alt="Tripadvisor" />
                <img src={agoda} alt="Agoda" />
-               <img src={booking} alt="Booking" />
+              
 
             </div>
          </section>
