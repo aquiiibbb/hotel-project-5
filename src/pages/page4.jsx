@@ -1,4 +1,8 @@
 import './page1.css'
+import image8 from "../Assets/db1.JPG";
+import image9 from "../Assets/db2.JPG";
+import image10 from "../Assets/db3.JPG";
+import image11 from "../Assets/anotherside.JPG";
 
 export default function HotelRoomPageFour() {
     return (
@@ -7,16 +11,16 @@ export default function HotelRoomPageFour() {
             <div className="hotel-room-image-gallery">
                 <div className="hotel-room-gallery-container">
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&h=400&fit=crop" alt="Elegant hotel twin beds" />
+                        <img src={image8} alt="Elegant hotel twin beds" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1560448075-bb485b067938?w=500&h=400&fit=crop" alt="Cozy hotel bedroom" />
+                        <img src={image9} alt="Cozy hotel bedroom" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500&h=400&fit=crop" alt="Hotel room with workspace" />
+                        <img src={image10} alt="Hotel room with workspace" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=500&h=400&fit=crop" alt="Modern hotel bathroom" />
+                        <img src={image11} alt="Modern hotel bathroom" />
                     </div>
                 </div>
 
@@ -33,7 +37,7 @@ export default function HotelRoomPageFour() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">Twin Room</h1>
+                        <h1 className="hotel-room-title-text">HNDD - Double Room ( Disability Access, 2 beds, Non-Smoking)</h1>
                         
                     </div>
 

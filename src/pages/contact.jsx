@@ -1,10 +1,57 @@
+import { useState } from 'react'
 import './contact.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from 'react-icons/md'
+import { MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md'
 
-export default function Contact(){
-   return(
+const faqs = [
+  {
+    question: "What type of room can I book at Crossroads Inn?",
+    answer: (
+      <>
+        Room options at Crossroads Inn include:
+        <ul className="faq-list">
+          <li>Double</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    question: "How much does it cost to stay at Crossroads Inn?",
+    answer: "The prices at Crossroads Inn may vary depending on your stay (e.g. dates you select, hotel's policy etc.). See the prices by entering your dates.",
+  },
+  {
+    question: "What are the check-in and check-out times at Crossroads Inn?",
+    answer: "Check-in at Crossroads Inn is from 15:00, and check-out is until 11:00.",
+  },
+  {
+    question: "How far is Crossroads Inn from the centre of Fort Pierce?",
+    answer: "Crossroads Inn is 8 km from the centre of Fort Pierce.",
+  },
+]
+
+function FAQItem({ faq }) {
+  const [open, setOpen] = useState(true)
+
+  return (
+    <div className="faq-item">
+      <div className="faq-header" onClick={() => setOpen(!open)}>
+        <span className="faq-question">{faq.question}</span>
+        <span className="faq-chevron">
+          {open ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
+        </span>
+      </div>
+      {open && (
+        <div className="faq-body">
+          {faq.answer}
+        </div>
+      )}
+    </div>
+  )
+}
+
+export default function Contact() {
+  return (
     <>
       {/* Hero Section */}
       <section className="contact-hero-section">
@@ -24,7 +71,7 @@ export default function Contact(){
       <section className="contact-main-section">
         <div className="contact-container">
           <div className="contact-content-wrapper">
-            
+
             {/* Left Side - Contact Form */}
             <div className="contact-form-section">
               <div className="contact-form-header">
@@ -35,37 +82,18 @@ export default function Contact(){
 
               <form className="contact-form">
                 <div className="contact-form-row">
-                  <input 
-                    type="text" 
-                    placeholder="Your Name" 
-                    className="contact-input"
-                  />
-                  <input 
-                    type="email" 
-                    placeholder="Email Address" 
-                    className="contact-input"
-                  />
+                  <input type="text" placeholder="Your Name" className="contact-input" />
+                  <input type="email" placeholder="Email Address" className="contact-input" />
                 </div>
-                
                 <div className="contact-form-row">
-                  <input 
-                    type="tel" 
-                    placeholder="Phone Number" 
-                    className="contact-input"
-                  />
-                  <input 
-                    type="text" 
-                    placeholder="Subject" 
-                    className="contact-input"
-                  />
+                  <input type="tel" placeholder="Phone Number" className="contact-input" />
+                  <input type="text" placeholder="Subject" className="contact-input" />
                 </div>
-
-                <textarea 
-                  placeholder="Write a Message" 
+                <textarea
+                  placeholder="Write a Message"
                   className="contact-textarea"
                   rows="6"
                 ></textarea>
-
                 <button type="submit" className="contact-submit-btn">
                   SEND A MESSAGE
                 </button>
@@ -76,44 +104,36 @@ export default function Contact(){
             <div className="contact-info-section">
               <div className="contact-info-card">
                 <h3 className="contact-info-title">Reach Us</h3>
-                
+
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">
-                    <MdLocationOn />
-                  </div>
+                  <div className="contact-info-icon"><MdLocationOn /></div>
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">ADDRESS</h4>
                     <p className="contact-info-text">
-                       7050 Okeechobee Rd, Fort Pierce, FL 34945, <br />
-                       USA St. Lucie County, Florida, United States - 34945
+                      7050 Okeechobee Rd, Fort Pierce, FL 34945, <br />
+                      USA St. Lucie County, Florida, United States - 34945
                     </p>
                   </div>
                 </div>
 
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">
-                    <MdPhone />
-                  </div>
+                  <div className="contact-info-icon"><MdPhone /></div>
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">PHONE</h4>
-                     <p className="contact-info-text">+17724658600</p>
+                    <p className="contact-info-text">+17724658600</p>
                   </div>
                 </div>
 
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">
-                    <MdEmail />
-                  </div>
+                  <div className="contact-info-icon"><MdEmail /></div>
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">EMAIL</h4>
-                     <p className="contact-info-text">crossroadsinnflorida@gmail.com</p>
+                    <p className="contact-info-text">crossroadsinnflorida@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="contact-info-item">
-                  <div className="contact-info-icon">
-                    <MdAccessTime />
-                  </div>
+                  <div className="contact-info-icon"><MdAccessTime /></div>
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">RECEPTION HOURS</h4>
                     <p className="contact-info-text">
@@ -124,6 +144,7 @@ export default function Contact(){
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -143,6 +164,19 @@ export default function Contact(){
           ></iframe>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="faq-wrapper">
+          <h2 className="faq-heading">FAQs about Crossroads Inn</h2>
+          <div className="faq-grid">
+            {faqs.map((faq, index) => (
+              <FAQItem key={index} faq={faq} />
+            ))}
+          </div>
+        </div>
+      </section>
+
     </>
-   ) 
+  )
 }

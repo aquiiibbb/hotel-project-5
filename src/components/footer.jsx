@@ -6,7 +6,7 @@ import { MdLocationOn, MdEmail, MdPhone } from 'react-icons/md'
 import { FaWhatsapp } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import logo1 from "../Assets/logo.png";
-
+import "../pages/home"
 export default function Footer(){
    const navigate = useNavigate();
 
@@ -46,10 +46,8 @@ export default function Footer(){
               <li><button onClick={() => handleLinkClick('/')}>Home</button></li>
               <li><button onClick={() => handleLinkClick('/about')}>About</button></li>
               <li><button onClick={() => handleLinkClick('/contact')}>Contact</button></li>
-              <li><button onClick={() => handleLinkClick('/blog')}>Blog</button></li>
-              <li><button onClick={() => handleLinkClick('/policies')}>Hotel Policies</button></li>
-              <li><button onClick={() => handleLinkClick('/privacy')}>Privacy policy</button></li>
-              <li><button onClick={() => handleLinkClick('/terms')}>Terms & Condition</button></li>
+              <li><button onClick={() => handleLinkClick('/')}>Privacy policy</button></li>
+              <li><button onClick={() => handleLinkClick('/')}>Terms & Condition</button></li>
             </ul>
           </div>
 
@@ -57,13 +55,13 @@ export default function Footer(){
           <div className="pwf-section">
             <h3 className="pwf-title">Facilities</h3>
             <ul className="pwf-links">
-              <li><button onClick={() => handleLinkClick('/room')}>Hotel Rooms</button></li>
-              <li><button onClick={() => handleLinkClick('/event')}>Events & Venue Hire</button></li>
-              <li><button onClick={() => handleLinkClick('/gallery')}>Gallery</button></li>
-              <li><button onClick={() => handleLinkClick('/amenities')}>Amenities/Facilities</button></li>
-              <li><button onClick={() => handleLinkClick('/local-guide')}>Local Area Guide</button></li>
-              <li><button onClick={() => handleLinkClick('/transport')}>Transport Links & Accessibility</button></li>
-              <li><button onClick={() => handleLinkClick('/offers')}>Offers/Corporate Rates</button></li>
+               <li><button onClick={() => handleLinkClick('/room')}>Great for your stay</button></li>
+               <li><button onClick={() => handleLinkClick('/')}>Internet</button></li>
+               <li><button onClick={() => handleLinkClick('/room')}>Bedroom</button></li>
+               <li><button onClick={() => handleLinkClick('/')}>Kitchen</button></li>
+               <li><button onClick={() => handleLinkClick('/room')}>Living Area</button></li>
+               <li><button onClick={() => handleLinkClick('/')}>Family friendly</button></li>
+               <li><button onClick={() => handleLinkClick('/')}>Safety & security</button></li>
             </ul>
           </div>
 

@@ -7,16 +7,16 @@ export default function HotelRoomPageEight() {
             <div className="hotel-room-image-gallery">
                 <div className="hotel-room-gallery-container">
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=500&h=400&fit=crop" alt="Luxury twin bed setup" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841165719.jpg?k=cb3fed3b7a6b1345715589cc43a163c73854044fd23511eeb9f0e25abbf3f98d&o=" alt="Luxury twin bed setup" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=500&h=400&fit=crop" alt="Premium hotel bedroom interior" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166090.jpg?k=4003251f3dc861555e260a33b04265a7d5f101e4a70f2ba16f201b4d3c391b33&o=" alt="Premium hotel bedroom interior" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=500&h=400&fit=crop" alt="Hotel working desk area" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166359.jpg?k=51553a626694d8c80b8dc6cb68044d2170840e96847d1043516b133d8472bb83&o=" alt="Hotel working desk area" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1629079447777-1e605162dc8d?w=500&h=400&fit=crop" alt="Modern luxury bathroom" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167339.jpg?k=ab469853dc26eba3c6ee846e7240d9708803f024c0b2237de539cb37c2848735&o=" alt="Modern luxury bathroom" />
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@ export default function HotelRoomPageEight() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">Twin Room</h1>
+                        <h1 className="hotel-room-title-text">ND - Double Room (1 bed, Non-Smoking)</h1>
                       
                     </div>
 

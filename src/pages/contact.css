@@ -6,16 +6,17 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   width: 100%;
 }
 
 /* Hero Section */
 .contact-hero-section {
- height: 400px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                    url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166709.jpg?k=5561a1839f9f1315f6252e7474dd2e1e7da91c2cd204f53a81fb73a8b1f0561d&o=');
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166709.jpg?k=5561a1839f9f1315f6252e7474dd2e1e7da91c2cd204f53a81fb73a8b1f0561d&o=');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -321,20 +322,101 @@ html, body {
   filter: grayscale(0%);
 }
 
+/* ===== FAQ Section ===== */
+.faq-section {
+  padding: 48px 40px;
+  background: #fff;
+  width: 100%;
+}
+
+.faq-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.faq-heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  cursor: pointer;
+  gap: 12px;
+  user-select: none;
+}
+
+.faq-header:hover {
+  background: #fafafa;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.faq-body {
+  padding: 4px 16px 14px 16px;
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-list {
+  list-style: none;
+  padding-left: 12px;
+  margin-top: 4px;
+}
+
+.faq-list li::before {
+  content: "○  ";
+  font-size: 11px;
+  color: #555;
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 1200px) {
   .contact-container {
     padding: 0 30px;
   }
-  
+
   .contact-form-section {
     padding: 60px 40px;
   }
-  
+
   .contact-info-title {
     padding: 30px 40px;
   }
-  
+
   .contact-info-item {
     padding: 30px 40px;
   }
@@ -344,20 +426,20 @@ html, body {
   .contact-form-section {
     padding: 50px 35px;
   }
-  
+
   .contact-form-title {
     font-size: 2.4rem;
   }
-  
+
   .contact-info-title {
     padding: 25px 35px;
     font-size: 1.8rem;
   }
-  
+
   .contact-info-item {
     padding: 25px 35px;
   }
-  
+
   .contact-info-icon {
     width: 45px;
     height: 45px;
@@ -369,93 +451,101 @@ html, body {
   .contact-hero-section {
     height: 300px;
   }
-  
+
   .contact-hero-title {
     font-size: 3rem;
   }
-  
+
   .contact-breadcrumb {
     font-size: 12px;
     letter-spacing: 2px;
   }
-  
+
   .contact-main-section {
     padding: 80px 0;
   }
-  
+
   .contact-container {
     padding: 0 20px;
   }
-  
+
   .contact-content-wrapper {
     grid-template-columns: 1fr;
     gap: 0;
     min-height: auto;
   }
-  
+
   .contact-form-section {
     padding: 50px 30px;
     order: 1;
   }
-  
+
   .contact-info-section {
     order: 2;
   }
-  
+
   .contact-info-card {
     border-left: none;
     border-top: 1px solid #e0e0e0;
   }
-  
+
   .contact-form-row {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .contact-form-title {
     font-size: 2.2rem;
   }
-  
+
   .contact-input {
     padding: 18px 20px;
     font-size: 14px;
   }
-  
+
   .contact-textarea {
     padding: 18px 20px;
     font-size: 14px;
     margin-bottom: 30px;
   }
-  
+
   .contact-submit-btn {
     padding: 16px 30px;
     font-size: 12px;
     width: 100%;
     text-align: center;
   }
-  
+
   .contact-info-title {
     padding: 25px 30px;
     font-size: 1.8rem;
   }
-  
+
   .contact-info-item {
     padding: 25px 30px;
     gap: 15px;
   }
-  
+
   .contact-info-icon {
     width: 40px;
     height: 40px;
     font-size: 20px;
   }
-  
+
   .contact-info-text {
     font-size: 15px;
   }
-  
+
   .contact-map-container {
     height: 400px;
+  }
+
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -463,96 +553,104 @@ html, body {
   .contact-hero-section {
     height: 250px;
   }
-  
+
   .contact-hero-title {
     font-size: 2.5rem;
     margin-bottom: 15px;
   }
-  
+
   .contact-breadcrumb {
     font-size: 11px;
     letter-spacing: 1px;
   }
-  
+
   .contact-main-section {
     padding: 60px 0;
   }
-  
+
   .contact-container {
     padding: 0 15px;
   }
-  
+
   .contact-form-section {
     padding: 40px 25px;
   }
-  
+
   .contact-form-header {
     margin-bottom: 40px;
   }
-  
+
   .contact-decorative-line {
     width: 50px;
     height: 2px;
   }
-  
+
   .contact-subtitle {
     font-size: 12px;
     letter-spacing: 1px;
   }
-  
+
   .contact-form-title {
     font-size: 1.8rem;
   }
-  
+
   .contact-form-row {
     gap: 12px;
     margin-bottom: 15px;
   }
-  
+
   .contact-input {
     padding: 15px 18px;
     font-size: 13px;
   }
-  
+
   .contact-textarea {
     padding: 15px 18px;
     font-size: 13px;
     margin-bottom: 25px;
     min-height: 120px;
   }
-  
+
   .contact-submit-btn {
     padding: 14px 25px;
     font-size: 11px;
   }
-  
+
   .contact-info-title {
     padding: 20px 25px;
     font-size: 1.6rem;
   }
-  
+
   .contact-info-item {
     padding: 20px 25px;
     gap: 12px;
   }
-  
+
   .contact-info-icon {
     width: 35px;
     height: 35px;
     font-size: 18px;
   }
-  
+
   .contact-info-label {
     font-size: 12px;
     margin-bottom: 10px;
   }
-  
+
   .contact-info-text {
     font-size: 14px;
   }
-  
+
   .contact-map-container {
     height: 300px;
+  }
+
+  .faq-section {
+    padding: 32px 15px;
+  }
+
+  .faq-heading {
+    font-size: 18px;
   }
 }
 
@@ -560,35 +658,35 @@ html, body {
   .contact-hero-title {
     font-size: 2rem;
   }
-  
+
   .contact-form-title {
     font-size: 1.6rem;
   }
-  
+
   .contact-info-title {
     font-size: 1.4rem;
   }
-  
+
   .contact-form-section {
     padding: 30px 20px;
   }
-  
+
   .contact-info-title {
     padding: 18px 20px;
   }
-  
+
   .contact-info-item {
     padding: 18px 20px;
   }
-  
+
   .contact-input {
     padding: 12px 15px;
   }
-  
+
   .contact-textarea {
     padding: 12px 15px;
   }
-  
+
   .contact-info-icon {
     width: 30px;
     height: 30px;

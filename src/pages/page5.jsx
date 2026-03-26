@@ -7,16 +7,16 @@ export default function HotelRoomPageFive() {
             <div className="hotel-room-image-gallery">
                 <div className="hotel-room-gallery-container">
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=500&h=400&fit=crop" alt="Luxury twin bed hotel room" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167516.jpg?k=8d78ad6710025271ee2417f923c89b4804748b60db26a3a91caf02c8c26f4f20&o=" alt="Luxury twin bed hotel room" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=500&h=400&fit=crop" alt="Stylish modern hotel bedroom" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166708.jpg?k=8ec271085a6a5350f94bbfa28a700f96a2069bcee1d5bf0fa7936bbf1207af0f&o=" alt="Stylish modern hotel bedroom" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=500&h=400&fit=crop" alt="Hotel workspace desk area" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167386.jpg?k=012523779170de7a240f9884b6b14be1aaa784630dd5c65e1fd17557cc75afef&o=" alt="Hotel workspace desk area" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop" alt="Premium hotel bathroom interior" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167744.jpg?k=08eb06acf04fc443588b0f1d28f5536c9cff4fcc2ad0519d0b37decb57d37baf&o=" alt="Premium hotel bathroom interior" />
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@ export default function HotelRoomPageFive() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">Twin Room</h1>
+                        <h1 className="hotel-room-title-text">HDD - Double Room (Disability Access, 2 beds)</h1>
                         
                     </div>
 

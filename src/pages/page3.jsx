@@ -1,4 +1,5 @@
 import './page1.css'
+import image4 from "../Assets/tolet.JPG";
 
 export default function HotelRoomPageThree() {
     return (
@@ -7,16 +8,16 @@ export default function HotelRoomPageThree() {
             <div className="hotel-room-image-gallery">
                 <div className="hotel-room-gallery-container">
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=500&h=400&fit=crop" alt="Luxury hotel bed" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166359.jpg?k=51553a626694d8c80b8dc6cb68044d2170840e96847d1043516b133d8472bb83&o=" alt="Luxury hotel bed" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&h=400&fit=crop" alt="Modern hotel room bed" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166090.jpg?k=4003251f3dc861555e260a33b04265a7d5f101e4a70f2ba16f201b4d3c391b33&o=" alt="Modern hotel room bed" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&h=400&fit=crop" alt="King size bed room" />
+                        <img src={image4} alt="King size bed room" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1578898886225-c7c894047899?w=500&h=400&fit=crop" alt="Premium hotel bedroom" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166708.jpg?k=8ec271085a6a5350f94bbfa28a700f96a2069bcee1d5bf0fa7936bbf1207af0f&o=" alt="Premium hotel bedroom" />
                     </div>
                 </div>
 
@@ -33,7 +34,7 @@ export default function HotelRoomPageThree() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">Twin Room</h1>
+                        <h1 className="hotel-room-title-text">HNK - King Room (Disability Access, Non-Smoking)</h1>
                        
                     </div>
 

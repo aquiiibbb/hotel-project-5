@@ -5,7 +5,9 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import image9 from "../Assets/reception.JPG";
 import image10 from "../Assets/bahar.JPG";
+import image13 from "../Assets/bahar1.JPG";
 import image11 from "../Assets/hm.JPG";
+
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -51,7 +53,7 @@ export default function About() {
 
                 <div className="about-room-container">
                   <img
-                    src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=450&h=400&fit=crop"
+                    src={image13}
                     alt="Hotel Room"
                     className="about-room-image"
                   />
@@ -62,7 +64,7 @@ export default function About() {
 
                 <div className="about-hotel-container">
                   <img
-                    src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=450&h=400&fit=crop"
+                    src={image9}
                     alt="Hotel"
                     className="about-hotel-image"
                   />
@@ -117,10 +119,7 @@ export default function About() {
                 </button>
               </div>
 
-              <div className="about-years-badge">
-                <div className="years-number">150+</div>
-                <div className="years-text">Years of History</div>
-              </div>
+             
             </div>
 
           </div>

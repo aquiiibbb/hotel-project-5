@@ -22,7 +22,7 @@
 /* logo */
 
 .pwf-logo-section {
-  max-width: 340px;
+  max-width: 300px;
 }
 
 .pwf-logo {
@@ -31,11 +31,11 @@
 
 .pwf-logo img {
   height: 100px;
-
-  object-fit: contain;
-  background: #fff;
-  
-  border: 2px solid #1e40af;
+  background: white;
+  padding: 0;
+  border-radius: 18px;
+  border-color: transparent;
+  margin-left: -5px;
 }
 
 .pwf-description {
@@ -218,7 +218,7 @@
   /* LOGO SECTION - MOBILE */
   .pwf-logo-section {
     text-align: center;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(16, 9, 9, 0.05);
     padding: 25px 20px;
     border-radius: 12px;
     border: 1px solid rgba(212, 175, 55, 0.2);
@@ -230,19 +230,17 @@
   }
 
   .pwf-logo {
-    margin-bottom: 20px;
+
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .pwf-logo img {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border: 2px solid #1e40af;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     display: block;
-    margin: 0 auto;
   }
 
   .pwf-description {
@@ -275,7 +273,7 @@
   }
 
   .pwf-social-icon:hover {
-    background:#1e40af;
+    background: #1e40af;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
   }
@@ -466,7 +464,7 @@
   }
 
   .pwf-logo img {
-    width: 70px;
+    width: 150px;
     height: 70px;
   }
 
@@ -538,16 +536,13 @@
     gap: 20px;
   }
 
-  .pwf-logo-section,
+
   .pwf-links-section,
   .pwf-contact-section {
     padding: 18px 12px;
   }
 
-  .pwf-logo img {
-    width: 60px;
-    height: 60px;
-  }
+  .pwf-logo img {}
 
   .pwf-description {
     font-size: 12px;

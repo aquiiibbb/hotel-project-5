@@ -742,53 +742,25 @@ const rooms = [
             <div className="container">
 
                <div className="nearby-header">
-                  <p className="nearby-subtitle">EXPLORE THE LOCAL AREA</p>
-                  <h2 className="nearby-title">Nearby attraction</h2>
+                
+                  <h2 className="nearby-title">Top attractions</h2>
                </div>
 
-               <div className="nearby-grid">
-
-                  <div className="nearby-card">
-                     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" alt="Edward Jenner Museum" />
-                     <div className="nearby-info">
-                        <span className="time">5 minutes</span>
-                        <h4>Edward Jenner Museum</h4>
-                     </div>
-                  </div>
-
-                  <div className="nearby-card">
-                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="Cotswold Way" />
-                     <div className="nearby-info">
-                        <span className="time">10 minutes</span>
-                        <h4>Cotswold Way National Trail</h4>
-                     </div>
-                  </div>
-
-                  <div className="nearby-card">
-                     <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=60" alt="Wetland Centre" />
-                     <div className="nearby-info">
-                        <span className="time">10 minutes</span>
-                        <h4>Slimbridge Wetland Centre</h4>
-                     </div>
-                  </div>
-
-                  <div className="nearby-card">
-                     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" alt="Berkeley Marina" />
-                     <div className="nearby-info">
-                        <span className="time">8 minutes</span>
-                        <h4>Berkeley Marina</h4>
-                     </div>
-                  </div>
-
-                  <div className="nearby-card">
-                     <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=60" alt="Thornbury Castle" />
-                     <div className="nearby-info">
-                        <span className="time">15 minutes</span>
-                        <h4>Thornbury Castle</h4>
-                     </div>
-                  </div>
-
-               </div>
+               <div className="amenities-list">
+                           <div className="amenity-item">
+                              <span className="check-icon">✓</span>
+                              <span>🍴 Restaurants & cafes</span>
+                           </div>
+                           <div className="amenity-item">
+                              <span className="check-icon">✓</span>
+                              <span>✈️ Closest airports</span>
+                           </div>
+                           <div className="amenity-item">
+                              <span className="check-icon">✓</span>
+                              <span>🏖️ Beaches in the neighbourhood</span>
+                           </div>
+                           
+                        </div>
 
             </div>
          </section>

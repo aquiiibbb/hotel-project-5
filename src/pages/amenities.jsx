@@ -7,13 +7,10 @@ import {
   MdLocalParking,
   MdWifi,
   MdLocalBar,
-  MdEvent,
-  MdMobileFriendly,
   MdSecurity,
   MdLuggage,
   MdCleaningServices,
   MdKitchen,
-  MdLocalDining,
   MdWeekend,
   MdHotTub,
   MdChair,
@@ -22,8 +19,13 @@ import {
   MdCoffee,
   MdSmokeFree,
   MdSensors,
-  MdFireExtinguisher
+  MdFireExtinguisher,
 } from 'react-icons/md'
+import {
+  FaBath,
+  FaTv,
+  FaTshirt
+} from 'react-icons/fa'
 
 export default function Amenities() {
   const navigate = useNavigate()
@@ -56,75 +58,111 @@ export default function Amenities() {
           </div>
 
           <div className="amenities-grid">
-            {/* Continental Breakfast */}
+            {/* Great for your stay */}
             <div className="amenities-card amenities-card-featured">
               <div className="amenities-card-icon">
                 <MdRestaurant />
               </div>
-              <h3 className="amenities-card-title">Continental Breakfast</h3>
+              <h3 className="amenities-card-title">Great for your stay</h3>
               <p className="amenities-card-description">
-                Self-serve continental breakfast with a toastie bar,
-                available at your chosen time for £9.95 per person.
+                Parking, private bathroom, air conditioning, bath, free WiFi, flat-screen TV,
+                free parking, facilities for disabled guests, private parking, and non-smoking rooms.
               </p>
             </div>
 
-            {/* Free Parking */}
+            {/* Bathroom */}
             <div className="amenities-card">
               <div className="amenities-card-icon">
-                <MdLocalParking />
+                <FaBath />
               </div>
-              <h3 className="amenities-card-title">Free On-Site Parking</h3>
+              <h3 className="amenities-card-title">Bathroom</h3>
               <p className="amenities-card-description">
-                Enjoy complimentary parking throughout your stay,
-                with ample space for cars, vans, and work vehicles.
+                Toilet paper, towels, bath or shower, private bathroom, toilet,
+                and bath facilities with lower bathroom sink available.
               </p>
             </div>
 
-            {/* Wi-Fi */}
+            {/* Bedroom */}
+            <div className="amenities-card">
+              <div className="amenities-card-icon">
+                <FaTshirt />
+              </div>
+              <h3 className="amenities-card-title">Bedroom</h3>
+              <p className="amenities-card-description">
+                Quality linen provided for comfortable and restful sleep
+                throughout your stay at our property.
+              </p>
+            </div>
+
+            {/* Kitchen */}
+            <div className="amenities-card">
+              <div className="amenities-card-icon">
+                <MdKitchen />
+              </div>
+              <h3 className="amenities-card-title">Kitchen</h3>
+              <p className="amenities-card-description">
+                Microwave and refrigerator available for your convenience
+                to prepare and store food during your stay.
+              </p>
+            </div>
+
+            {/* Living Area */}
+            <div className="amenities-card">
+              <div className="amenities-card-icon">
+                <MdChair />
+              </div>
+              <h3 className="amenities-card-title">Living Area</h3>
+              <p className="amenities-card-description">
+                Comfortable desk area provided for work or personal use,
+                creating a productive space in your room.
+              </p>
+            </div>
+
+            {/* Media & Technology */}
+            <div className="amenities-card">
+              <div className="amenities-card-icon">
+                <FaTv />
+              </div>
+              <h3 className="amenities-card-title">Media & Technology</h3>
+              <p className="amenities-card-description">
+                Cable channels and telephone services available for
+                entertainment and communication needs during your stay.
+              </p>
+            </div>
+
+            {/* Internet */}
             <div className="amenities-card">
               <div className="amenities-card-icon">
                 <MdWifi />
               </div>
-              <h3 className="amenities-card-title">Complimentary Wi-Fi</h3>
+              <h3 className="amenities-card-title">Internet</h3>
               <p className="amenities-card-description">
-                Connect to "Prince of Wales Guest" network fast,
-                open access and completely free to use.
+                WiFi is available in all areas and is free of charge
+                for all guests throughout the property.
               </p>
             </div>
 
-            {/* Bar & Restaurant */}
+            {/* Parking */}
             <div className="amenities-card">
               <div className="amenities-card-icon">
-                <MdLocalBar />
+                <MdLocalParking />
               </div>
-              <h3 className="amenities-card-title">Bar & Restaurant Nearby</h3>
+              <h3 className="amenities-card-title">Parking</h3>
               <p className="amenities-card-description">
-                The Ashville Bar & Restaurant is next door, serving
-                food and drinks in a relaxed setting.
+                Free private parking is possible on site and reservation
+                is not needed for your convenience.
               </p>
             </div>
 
-            {/* Events */}
+            {/* Safety & Security */}
             <div className="amenities-card">
               <div className="amenities-card-icon">
-                <MdEvent />
+                <MdSecurity />
               </div>
-              <h3 className="amenities-card-title">Events & Function Space</h3>
+              <h3 className="amenities-card-title">Safety & Security</h3>
               <p className="amenities-card-description">
-                Ideal venue for parties, weddings, and birthdays,
-                with flexible space for private gatherings.
-              </p>
-            </div>
-
-            {/* Self Check-in */}
-            <div className="amenities-card">
-              <div className="amenities-card-icon">
-                <MdMobileFriendly />
-              </div>
-              <h3 className="amenities-card-title">Late Self Check-In</h3>
-              <p className="amenities-card-description">
-                After 10pm, receive easy WhatsApp instructions, with
-                videos and details for seamless arrival.
+                Fire extinguishers, CCTV outside property, CCTV in common areas,
+                and smoke alarms ensure your safety and security.
               </p>
             </div>
           </div>
@@ -147,44 +185,43 @@ export default function Amenities() {
             <div className="amenities-feature-column">
               <h3 className="amenities-feature-title">Services</h3>
               <ul className="amenities-feature-list">
-                <li><MdSecurity className="amenities-list-icon" /> 24-hour security</li>
-                <li><MdLuggage className="amenities-list-icon" /> Luggage storage</li>
-                <li><MdCleaningServices className="amenities-list-icon" /> Housekeeping</li>
+                <li><MdSecurity className="amenities-list-icon" /> 24-hour front desk</li>
+                <li><MdLuggage className="amenities-list-icon" /> Wake-up service</li>
+                <li><MdCleaningServices className="amenities-list-icon" />Daily housekeeping</li>
               </ul>
             </div>
 
             {/* Dining */}
             <div className="amenities-feature-column">
-              <h3 className="amenities-feature-title">Dining</h3>
+              <h3 className="amenities-feature-title">Kitchen</h3>
               <ul className="amenities-feature-list">
-                <li><MdRestaurant className="amenities-list-icon" /> Restaurant</li>
-                <li><MdLocalBar className="amenities-list-icon" /> Bar/Lounge area</li>
-              </ul>
-
-              <h3 className="amenities-feature-title amenities-feature-title-spacing">Kitchen has</h3>
-              <ul className="amenities-feature-list">
-                <li><MdKitchen className="amenities-list-icon" /> Electric kettle</li>
+                <li><MdRestaurant className="amenities-list-icon" /> Microwave</li>
+                <li><MdLocalBar className="amenities-list-icon" /> Refrigerator</li>
               </ul>
             </div>
 
             {/* Rooms have */}
             <div className="amenities-feature-column">
-              <h3 className="amenities-feature-title">Rooms have</h3>
+              <h3 className="amenities-feature-title">Bedroom</h3>
               <ul className="amenities-feature-list">
-                <li><MdHotTub className="amenities-list-icon" /> Heating</li>
-                <li><MdChair className="amenities-list-icon" /> Sitting area</li>
-                <li><MdDeck className="amenities-list-icon" /> Patio</li>
-                <li><MdOutdoorGrill className="amenities-list-icon" /> Garden furniture</li>
-                <li><MdCoffee className="amenities-list-icon" /> Tea and coffee facilities</li>
+                <li><MdHotTub className="amenities-list-icon" />Linen</li>
+              </ul>
+              <h3 className="amenities-feature-title">Bathroom</h3>
+              <ul className="amenities-feature-list">
+                <li><MdHotTub className="amenities-list-icon" />Toilet paper</li>
+                <li><FaBath className="amenities-list-icon" />Towels</li>
+                <li><FaBath className="amenities-list-icon" />Bath or shower</li>
+                <li><MdHotTub className="amenities-list-icon" />Private bathroom</li>
+                <li><MdHotTub className="amenities-list-icon" />Toilet</li>
               </ul>
             </div>
 
             {/* General facilities */}
             <div className="amenities-feature-column">
-              <h3 className="amenities-feature-title">General facilities</h3>
+              <h3 className="amenities-feature-title">Great for your stay</h3>
               <ul className="amenities-feature-list">
-                <li><MdSmokeFree className="amenities-list-icon" /> No smoking on site</li>
-                <li><MdWeekend className="amenities-list-icon" /> Allergy-free rooms</li>
+                <li><MdSmokeFree className="amenities-list-icon" /> Non-smoking rooms</li>
+                <li><MdWeekend className="amenities-list-icon" /> Air conditioning</li>
                 <li><MdSensors className="amenities-list-icon" /> Smoke detectors</li>
                 <li><MdFireExtinguisher className="amenities-list-icon" /> Fire extinguishers</li>
               </ul>

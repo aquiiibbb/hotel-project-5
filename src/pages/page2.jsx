@@ -1,69 +1,23 @@
 import './page1.css'
-import { useNavigate } from 'react-router-dom'
+import image5 from "../Assets/5.jpg";
 
-export default function HotelRoomPageTwo() {
-    const navigate = useNavigate();
-
-    // Room data
-    const roomData = {
-        id: 2,
-        name: "NDD - Double Room (2 Beds, Non-Smoking)",
-        price: 109.99,
-        area: 17,
-        person: 2,
-        gallery: [
-            "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop",
-            "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&h=400&fit=crop",
-            "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&h=400&fit=crop",
-            "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=500&h=400&fit=crop"
-        ],
-        view: "Garden"
-    };
-
-    // Other rooms for deals section
-    const otherRooms = [
-        {
-            id: 4,
-            name: "HNDD - Double Room (Disability Access, 2 beds, Non-Smoking)",
-            price: 134.20,
-            image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=80&h=60&fit=crop"
-        },
-        {
-            id: 5,
-            name: "HDD - Double Room (Disability Access, 2 beds)",
-            price: 109.99,
-            image: "https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=80&h=60&fit=crop"
-        },
-        {
-            id: 1,
-            name: "NK- King Bed (Non-Smoking)",
-            price: 114.99,
-            image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=80&h=60&fit=crop"
-        },
-        {
-            id: 5,
-            name: "HDD - Double Room (Disability Access, 2 beds)",
-            price: 109.99,
-            image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=80&h=60&fit=crop"
-        }
-    ];
-
+export default function HotelRoomPageThree() {
     return (
         <>
             {/* Image Gallery */}
             <div className="hotel-room-image-gallery">
                 <div className="hotel-room-gallery-container">
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=400&fit=crop" alt="Double room beds" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167377.jpg?k=6e76f042b8b2bc6a7039bcbef3d080d8b4545b4fed97849a4b90b436b5a3db64&o=" alt="Luxury hotel bed" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&h=400&fit=crop" alt="Hotel bedroom" />
+                        <img src={image5} alt="Modern hotel room bed" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&h=400&fit=crop" alt="Work desk area" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167744.jpg?k=08eb06acf04fc443588b0f1d28f5536c9cff4fcc2ad0519d0b37decb57d37baf&o=" alt="King size bed room" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=500&h=400&fit=crop" alt="Bathroom" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841168151.jpg?k=01e93358bcccd0ea880aca3a9ef193b6d4b383e5cd246c268275900c7ddf9d6b&o=" alt="Premium hotel bedroom" />
                     </div>
                 </div>
 
@@ -80,8 +34,8 @@ export default function HotelRoomPageTwo() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">NDD - Double Room (2 Beds, Non-Smoking)</h1>
-                        
+                        <h1 className="hotel-room-title-text">TNDD - Double Room (2 Beds, Non-Smoking)</h1>
+                       
                     </div>
 
                     <div className="hotel-room-features-container">
@@ -135,13 +89,13 @@ export default function HotelRoomPageTwo() {
                     <section className="hotel-room-overview-section">
                         <h2 className="hotel-room-section-title">Overview</h2>
                         <p className="hotel-room-overview-text">
-                            This double room is ideal for guests travelling together who prefer comfortable sleeping arrangements.
+                            This twin room is ideal for guests travelling together who prefer separate sleeping arrangements.
                         </p>
                         <p className="hotel-room-overview-text">
-                            The room features <strong>two double beds</strong>, an <strong>en-suite bathroom with shower</strong>, <strong>flat-screen TV</strong>, <strong>free Wi-Fi</strong>, and <strong>tea and coffee making facilities</strong>. Towels and toiletries are included.
+                            The room features <strong>two single beds</strong>, an <strong>en-suite bathroom with shower</strong>, <strong>flat-screen TV</strong>, <strong>free Wi-Fi</strong>, and <strong>tea and coffee making facilities</strong>. Towels and toiletries are included.
                         </p>
                         <p className="hotel-room-overview-text">
-                            A practical and comfortable choice for families, friends, or extended stays.
+                            A practical and comfortable choice for friends, colleagues, or short stays.
                         </p>
                     </section>
 

@@ -7,16 +7,16 @@ export default function HotelRoomPageSix() {
             <div className="hotel-room-image-gallery">
                 <div className="hotel-room-gallery-container">
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Modern twin bed hotel room" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167781.jpg?k=9fe52a348aa2a1a44559f119297fcdca1f481cba702d185061c73acd5165e653&o=" alt="Modern twin bed hotel room" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1605346434674-a440ca4dc4c0?w=500&h=400&fit=crop" alt="Elegant hotel bedroom interior" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167744.jpg?k=08eb06acf04fc443588b0f1d28f5536c9cff4fcc2ad0519d0b37decb57d37baf&o=" alt="Elegant hotel bedroom interior" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1559599238-308793637427?w=500&h=400&fit=crop" alt="Hotel room workspace setup" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841167339.jpg?k=ab469853dc26eba3c6ee846e7240d9708803f024c0b2237de539cb37c2848735&o=" alt="Hotel room workspace setup" />
                     </div>
                     <div className="hotel-room-gallery-item">
-                        <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&h=400&fit=crop" alt="Luxury hotel bathroom design" />
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/841166359.jpg?k=51553a626694d8c80b8dc6cb68044d2170840e96847d1043516b133d8472bb83&o=" alt="Luxury hotel bathroom design" />
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@ export default function HotelRoomPageSix() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">Twin Room</h1>
+                        <h1 className="hotel-room-title-text">TDD - Double Room (2 beds)</h1>
                         
                     </div>
 
