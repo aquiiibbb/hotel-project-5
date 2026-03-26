@@ -157,10 +157,7 @@ export default function Room() {
                   >
                     {room.name}
                   </h3>
-                  <div className="room-price">
-                    <span className="room-price-amount">${room.price}</span>
-                    <span className="room-price-period">/ night</span>
-                  </div>
+                  
                   <div className="room-details">
                     <div className="room-detail">
                       <span className="room-detail-label">Area:</span>
@@ -171,6 +168,45 @@ export default function Room() {
                       <span className="room-detail-value">{room.person}</span>
                     </div>
                   </div>
+                  <div style={{
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100%"
+}}>
+  <a 
+    href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      background: "blue",
+      color: "white",
+      padding: "clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px)",
+      textAlign: "center",
+      cursor: "pointer",
+      fontSize: "clamp(14px, 3vw, 16px)",
+      fontWeight: "500",
+      border: "none",
+      display: "inline-block",
+      minWidth: "clamp(100px, 20vw, 120px)",
+      transition: "all 0.3s ease",
+      boxSizing: "border-box",
+      textDecoration: "none"
+    }}
+    onMouseEnter={(e) => {
+      e.target.style.background = "#3052c3";
+      e.target.style.transform = "translateY(-2px)";
+      e.target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+    }}
+    onMouseLeave={(e) => {
+      e.target.style.background = "blue";
+      e.target.style.transform = "translateY(0)";
+      e.target.style.boxShadow = "none";
+    }}
+  >
+    Book now
+  </a>
+</div>
                 </div>
               </div>
             ))}
