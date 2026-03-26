@@ -61,7 +61,7 @@ export default function Room() {
     },
     {
       id: 4,
-      name: "HNDD - Double Room ( Disability Access, 2 beds, Non-Smoking)",
+      name: "HNDD - Double Room ( Disability Access, 2 Beds, Non-Smoking)",
       price: 134.20,
       area: 22,
       person: 2,
@@ -70,7 +70,7 @@ export default function Room() {
     },
     {
       id: 5,
-      name: "HDD - Double Room (Disability Access, 2 beds)",
+      name: "HDD - Double Room (Disability Access, 2 Beds)",
       price: 109.99,
       area: 50,
       person: 4,
@@ -79,7 +79,7 @@ export default function Room() {
     },
     {
       id: 6,
-      name: "DD - Double Room (2 beds)",
+      name: "DD - Double Room (2 Beds)",
       price: 109.99,
       area: 33,
       person: 4,
@@ -88,7 +88,7 @@ export default function Room() {
     },
     {
       id: 7,
-      name: "D - Double Room (1 bed)",
+      name: "D - Double Room (1 Bed)",
       price: 109.99,
       area: 61,
       person: 2,
@@ -97,7 +97,7 @@ export default function Room() {
     },
     {
       id: 8,
-      name: "ND - Double Room (1 bed, Non-Smoking)",
+      name: "ND - Double Room (1 Bed, Non-Smoking)",
       price: 367.30,
       area: 61,
       person: 2,
@@ -168,7 +168,7 @@ export default function Room() {
                       <span className="room-detail-value">{room.person}</span>
                     </div>
                   </div>
-                  <div style={{
+                <div style={{
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -188,13 +188,14 @@ export default function Room() {
       fontWeight: "500",
       border: "none",
       display: "inline-block",
-      minWidth: "clamp(100px, 20vw, 120px)",
+      width: "90%",
+      borderRadius: "10px",
       transition: "all 0.3s ease",
       boxSizing: "border-box",
       textDecoration: "none"
     }}
     onMouseEnter={(e) => {
-      e.target.style.background = "#3052c3";
+      e.target.style.background = "#1e40af";
       e.target.style.transform = "translateY(-2px)";
       e.target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
     }}

@@ -308,7 +308,7 @@ const rooms = [
                 <span className="room-detail-value">{room.person}</span>
               </div>
             </div>
-<div style={{
+ <div style={{
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -328,13 +328,14 @@ const rooms = [
       fontWeight: "500",
       border: "none",
       display: "inline-block",
-      minWidth: "clamp(100px, 20vw, 120px)",
+      width: "90%",
+      borderRadius: "10px",
       transition: "all 0.3s ease",
       boxSizing: "border-box",
       textDecoration: "none"
     }}
     onMouseEnter={(e) => {
-      e.target.style.background = "#3052c3";
+      e.target.style.background = "#1e40af";
       e.target.style.transform = "translateY(-2px)";
       e.target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
     }}
@@ -346,7 +347,8 @@ const rooms = [
   >
     Book now
   </a>
-</div>          </div>
+</div>     
+     </div>
         </div>
       ))}
     </div>

@@ -37,7 +37,7 @@ export default function HotelRoomPageFour() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">HNDD - Double Room ( Disability Access, 2 beds, Non-Smoking)</h1>
+                        <h1 className="hotel-room-title-text">HNDD - Double Room ( Disability Access, 2 Beds, Non-Smoking)</h1>
                         
                     </div>
 

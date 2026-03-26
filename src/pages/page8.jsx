@@ -33,7 +33,7 @@ export default function HotelRoomPageEight() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">ND - Double Room (1 bed, Non-Smoking)</h1>
+                        <h1 className="hotel-room-title-text">ND - Double Room (1 Bed, Non-Smoking)</h1>
                       
                     </div>
 

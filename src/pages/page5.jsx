@@ -33,7 +33,7 @@ export default function HotelRoomPageFive() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">HDD - Double Room (Disability Access, 2 beds)</h1>
+                        <h1 className="hotel-room-title-text">HDD - Double Room (Disability Access, 2 Beds)</h1>
                         
                     </div>
 

@@ -37,7 +37,7 @@ export default function HotelRoomPageSeven() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">D - Double Room (1 bed)</h1>
+                        <h1 className="hotel-room-title-text">D - Double Room (1 Bed)</h1>
                         
                     </div>
 
