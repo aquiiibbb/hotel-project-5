@@ -64,7 +64,7 @@
 .subtitle {
     font-size: clamp(0.6rem, 1.8vw, 0.8rem);
     letter-spacing: 6px;
-    color: gray;
+    color: rgb(49, 47, 47);
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 5px;
@@ -75,7 +75,7 @@
 .main-title {
     font-size: 50px;
     font-weight: 600;
-    color: gray;
+    color: rgb(49, 47, 47);
     letter-spacing: 5px;
     text-transform: uppercase;
     text-shadow: 0 4px 20px rgba(132, 130, 130, 0);
@@ -86,7 +86,7 @@
 /* DESCRIPTION — italic line below hotel name */
 .description {
     font-size: clamp(0.85rem, 2.2vw, 1.1rem);
-    color: gray;
+    color: rgb(49, 47, 47);
     font-style: italic;
     font-weight: 400;
     text-shadow: 0 2px 12px rgba(255, 255, 255, 0.338);
