@@ -25,35 +25,35 @@ export default function Home() {
       {
          id: 1,
          bgImage: `url(${image1})`,
-         title: "CrossInn Hotel",
+         title: "Crossroads Inn Hotel",
          subtitle: "WHERE COMFORT MEETS ELEGANCE",
          description: "Experience luxury redefined in every corner"
       },
       {
          id: 2,
          bgImage: `url(${image2})`,
-         title: "CrossInn Hotel",
+         title: "Crossroads Inn Hotel",
          subtitle: "YOUR HOME AWAY FROM HOME",
          description: "Unwind in our beautifully crafted spaces"
       },
       {
          id: 3,
          bgImage: `url(${image3})`,
-         title: "CrossInn Hotel",
+         title: "Crossroads Inn Hotel",
          subtitle: "BREATHTAKING VIEWS AWAIT",
          description: "Wake up to scenery that takes your breath away"
       },
       {
          id: 4,
          bgImage: `url(${image12})`,
-         title: "CrossInn Hotel",
+         title: "Crossroads Inn Hotel",
          subtitle: "WARM HOSPITALITY, EVERY STAY",
          description: "Our team is here to make every moment perfect"
       },
       {
          id: 5,
          bgImage: `url(${image10})`,
-         title: "CrossInn Hotel",
+         title: "Crossroads Inn Hotel",
          subtitle: "DISCOVER SERENITY",
          description: "Escape the ordinary — step into tranquility"
       }
