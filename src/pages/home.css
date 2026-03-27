@@ -64,7 +64,7 @@
 .subtitle {
     font-size: clamp(0.6rem, 1.8vw, 0.8rem);
     letter-spacing: 6px;
-    color:gray;
+    color: gray;
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 5px;
@@ -73,9 +73,9 @@
 
 /* MAIN HOTEL NAME */
 .main-title {
-    font-size: clamp(1.rem, 7vw, 5.5rem);
+    font-size: 50px;
     font-weight: 600;
-    color:gray;
+    color: gray;
     letter-spacing: 5px;
     text-transform: uppercase;
     text-shadow: 0 4px 20px rgba(132, 130, 130, 0);
