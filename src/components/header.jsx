@@ -8,6 +8,7 @@ import { FaWhatsapp, FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa'
 import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import logo from "../Assets/logo.png";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -25,13 +26,43 @@ export default function Header() {
   return (
     <header className="header-wrapper">
 
-      {/* TOP BAR */}
+      {/* MOBILE TOP BAR - Only visible on mobile */}
+      <div className="mobile-top-bar">
+        <a 
+          href="https://maps.google.com/?q=7050+Okeechobee+Rd,+Fort+Pierce,+FL+34945,+USA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-top-item"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <MdLocationOn className="mobile-icon" />
+          <span>Locate Us</span>
+        </a>
+        <a 
+          href="https://wa.me/17724658600"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-top-item"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          <FaWhatsapp className="mobile-icon" />
+          <span>Get In Touch</span>
+        </a>
+      </div>
+
+      {/* DESKTOP TOP BAR */}
       <div className="header-top">
         <div className="top-contact">
-          <span className="top-contact-item">
+          <a 
+            href="https://maps.google.com/?q=7050+Okeechobee+Rd,+Fort+Pierce,+FL+34945,+USA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="top-contact-item"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <MdLocationOn className="icon" />
             7050 Okeechobee Rd, Fort Pierce, FL 34945, USA
-          </span>
+          </a>
           <span className="top-contact-item">
             <MdEmail className="icon" />
             crossroadsinnflorida@gmail.com
@@ -43,14 +74,26 @@ export default function Header() {
         </div>
 
         <div className="top-actions-group">
-          <span className="top-contact-item">
+          <a 
+            href="https://maps.google.com/?q=7050+Okeechobee+Rd,+Fort+Pierce,+FL+34945,+USA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="top-contact-item"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <MdLocationOn className="icon" />
             Locate Us
-          </span>
-          <span className="top-contact-item">
+          </a>
+          <a 
+            href="https://wa.me/17724658600"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="top-contact-item"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
             <FaWhatsapp className="icon" />
             Get In Touch
-          </span>
+          </a>
 
           <div className="social-icons">
             <FaFacebookF />
@@ -114,8 +157,6 @@ export default function Header() {
                 </button>
               </li>
 
-             
-
               <li>
                 <button
                   className={`menu-link ${location.pathname === '/contact' ? 'active' : ''}`}
@@ -127,15 +168,17 @@ export default function Header() {
 
             </ul>
 
-            <a
-              href="https://bookingengine.stayflexi.com/?hotel_id=35135"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-booking"
-              style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
-            >
-              BOOK NOW
-            </a>
+            <div className="booking-button-wrapper">
+              <a
+                href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-booking"
+                style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
+              >
+                BOOK NOW
+              </a>
+            </div>
           </div>
 
         </div>

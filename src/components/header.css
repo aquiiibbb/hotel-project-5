@@ -12,7 +12,43 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* ---------- TOP BAR ---------- */
+/* ---------- MOBILE TOP BAR ---------- */
+.mobile-top-bar {
+  display: none;
+  background: #4a5568;
+  color: #fff;
+  padding: 4px 0;
+  justify-content: center;
+  gap: 0;
+}
+
+.mobile-top-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex: 1;
+  justify-content: center;
+}
+
+.mobile-top-item:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-top-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-icon {
+  color: #1eaf36;
+  font-size: 14px;
+}
+
+/* ---------- DESKTOP TOP BAR ---------- */
 .header-top {
   background: #2d3748;
   color: #fff;
@@ -193,6 +229,11 @@
 /* ---------- MOBILE ONLY ---------- */
 @media (max-width: 768px) {
 
+  /* Show mobile top bar, hide desktop */
+  .mobile-top-bar {
+    display: flex;
+  }
+
   .header-top {
     display: none;
   }
@@ -209,8 +250,7 @@
 
   /* ADD BODY PADDING TO PREVENT CONTENT OVERLAP */
   body {
-    padding-top: 77px;
-    /* Adjust based on your header height */
+    padding-top: 110px; /* Increased for mobile top bar */
   }
 
   .menu-toggle-btn {
@@ -222,7 +262,6 @@
     background: #fff;
     position: relative;
     z-index: 999;
-    /* Add shadow for better visibility */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -241,7 +280,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 30px 20px;
+    padding: 10px 20px;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     transform: translateY(-100%);
@@ -255,7 +294,6 @@
     opacity: 1;
     visibility: visible;
   }
-
 
   .menu-list {
     flex-direction: column;
@@ -304,6 +342,16 @@
     display: none;
   }
 
+  /* Center the booking button */
+  .booking-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding-left: 20px; /* Button ko right side shift karne ke liye */
+  }
+
   .btn-booking {
     width: 250px;
     padding: 14px 28px;
@@ -314,6 +362,8 @@
     box-shadow: 0 6px 20px rgba(200, 134, 13, 0.3);
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
+    display: block;
   }
 
   .btn-booking:hover {
@@ -349,14 +399,10 @@
     animation-delay: 0.3s;
   }
 
-  .nav-section.open .menu-list li:nth-child(6) {
-    animation-delay: 0.35s;
-  }
-
-  .nav-section.open .btn-booking {
+  .nav-section.open .booking-button-wrapper {
     opacity: 0;
     transform: translateY(20px);
-    animation: slideInUp 0.5s ease 0.4s forwards;
+    animation: slideInUp 0.5s ease 0.35s forwards;
   }
 
   @keyframes slideInUp {
@@ -370,9 +416,8 @@
 /* ---------- SMALL MOBILE ---------- */
 @media (max-width: 480px) {
 
-  /* Adjust body padding for smaller header */
   body {
-    padding-top: 70px;
+    padding-top: 105px;
   }
 
   .header-nav {
@@ -383,20 +428,23 @@
     height: 40px;
   }
 
+  .mobile-top-item {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .mobile-icon {
+    font-size: 13px;
+  }
+
   .menu-link {
     font-size: 15px;
     padding: 16px 25px;
   }
 
   .btn-booking {
-    width: 220px;
+    width: 220px !important;
     font-size: 14px;
-  }
-
-  .nav-section::before {
-    width: 150px;
-    height: 50px;
-    margin-bottom: 25px;
   }
 
   .nav-section {
