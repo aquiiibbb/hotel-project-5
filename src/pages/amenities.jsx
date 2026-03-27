@@ -20,12 +20,26 @@ import {
   MdSmokeFree,
   MdSensors,
   MdFireExtinguisher,
+  MdDesktopWindows,
+  MdLocalPhone,
+  MdTv,
+  MdCameraAlt,
+  MdHeat,
+  MdLanguage,
+  MdReceipt,
+  MdAccessible,
+  MdHealing,
 } from 'react-icons/md'
 import {
   FaBath,
   FaTv,
-  FaTshirt
+  FaTshirt,
+  FaWheelchair,
+  FaParking,
+  FaSnowflake,
+  FaEnglish,
 } from 'react-icons/fa'
+import { GiVendingMachine } from 'react-icons/gi'
 
 export default function Amenities() {
   const navigate = useNavigate()
@@ -181,51 +195,119 @@ export default function Amenities() {
           </div>
 
           <div className="amenities-features-grid">
-            {/* Services */}
+
+            {/* Column 1 — Great for your stay + Bathroom */}
             <div className="amenities-feature-column">
-              <h3 className="amenities-feature-title">Services</h3>
+              <h3 className="amenities-feature-title">Great for your stay</h3>
               <ul className="amenities-feature-list">
-                <li><MdSecurity className="amenities-list-icon" /> 24-hour front desk</li>
-                <li><MdLuggage className="amenities-list-icon" /> Wake-up service</li>
-                <li><MdCleaningServices className="amenities-list-icon" />Daily housekeeping</li>
+                <li><MdLocalParking className="amenities-list-icon" /> Parking</li>
+                <li><FaBath className="amenities-list-icon" /> Private bathroom</li>
+                <li><MdWeekend className="amenities-list-icon" /> Air conditioning</li>
+                <li><FaBath className="amenities-list-icon" /> Bath</li>
+                <li><MdWifi className="amenities-list-icon" /> Free WiFi</li>
+                <li><FaTv className="amenities-list-icon" /> Flat-screen TV</li>
+                <li><MdLocalParking className="amenities-list-icon" /> Free parking</li>
+                <li><MdAccessible className="amenities-list-icon" /> Facilities for disabled guests</li>
+                <li><MdLocalParking className="amenities-list-icon" /> Private parking</li>
+                <li><MdSmokeFree className="amenities-list-icon" /> Non-smoking rooms</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">Bathroom</h3>
+              <ul className="amenities-feature-list">
+                <li><MdHotTub className="amenities-list-icon" /> Toilet paper</li>
+                <li><FaBath className="amenities-list-icon" /> Towels</li>
+                <li><FaBath className="amenities-list-icon" /> Bath or shower</li>
+                <li><MdHotTub className="amenities-list-icon" /> Private bathroom</li>
+                <li><MdHotTub className="amenities-list-icon" /> Toilet</li>
+                <li><FaBath className="amenities-list-icon" /> Bath</li>
               </ul>
             </div>
 
-            {/* Dining */}
+            {/* Column 2 — Bedroom + Kitchen + Living Area + Media & Technology */}
             <div className="amenities-feature-column">
+              <h3 className="amenities-feature-title">Bedroom</h3>
+              <ul className="amenities-feature-list">
+                <li><MdHotTub className="amenities-list-icon" /> Linen</li>
+              </ul>
+
               <h3 className="amenities-feature-title">Kitchen</h3>
               <ul className="amenities-feature-list">
                 <li><MdRestaurant className="amenities-list-icon" /> Microwave</li>
                 <li><MdLocalBar className="amenities-list-icon" /> Refrigerator</li>
               </ul>
-            </div>
 
-            {/* Rooms have */}
-            <div className="amenities-feature-column">
-              <h3 className="amenities-feature-title">Bedroom</h3>
+              <h3 className="amenities-feature-title">Living Area</h3>
               <ul className="amenities-feature-list">
-                <li><MdHotTub className="amenities-list-icon" />Linen</li>
+                <li><MdChair className="amenities-list-icon" /> Desk</li>
               </ul>
-              <h3 className="amenities-feature-title">Bathroom</h3>
+
+              <h3 className="amenities-feature-title">Media & Technology</h3>
               <ul className="amenities-feature-list">
-                <li><MdHotTub className="amenities-list-icon" />Toilet paper</li>
-                <li><FaBath className="amenities-list-icon" />Towels</li>
-                <li><FaBath className="amenities-list-icon" />Bath or shower</li>
-                <li><MdHotTub className="amenities-list-icon" />Private bathroom</li>
-                <li><MdHotTub className="amenities-list-icon" />Toilet</li>
+                <li><FaTv className="amenities-list-icon" /> Flat-screen TV</li>
+                <li><MdTv className="amenities-list-icon" /> Cable channels</li>
+                <li><MdLocalPhone className="amenities-list-icon" /> Telephone</li>
+                <li><MdTv className="amenities-list-icon" /> TV</li>
               </ul>
             </div>
 
-            {/* General facilities */}
+            {/* Column 3 — Internet + Parking + Services + Reception */}
             <div className="amenities-feature-column">
-              <h3 className="amenities-feature-title">Great for your stay</h3>
+              <h3 className="amenities-feature-title">Internet</h3>
               <ul className="amenities-feature-list">
-                <li><MdSmokeFree className="amenities-list-icon" /> Non-smoking rooms</li>
-                <li><MdWeekend className="amenities-list-icon" /> Air conditioning</li>
-                <li><MdSensors className="amenities-list-icon" /> Smoke detectors</li>
+                <li><MdWifi className="amenities-list-icon" /> WiFi is available in all areas and is free of charge.</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">Parking</h3>
+              <ul className="amenities-feature-list">
+                <li><MdLocalParking className="amenities-list-icon" /> Free private parking is possible on site (reservation is not needed).</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">Services</h3>
+              <ul className="amenities-feature-list">
+                <li><MdCleaningServices className="amenities-list-icon" /> Daily housekeeping</li>
+                <li><MdKitchen className="amenities-list-icon" /> Vending machine (drinks)</li>
+                <li><MdLuggage className="amenities-list-icon" /> Wake-up service</li>
+                <li><MdSecurity className="amenities-list-icon" /> 24-hour front desk</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">Reception services</h3>
+              <ul className="amenities-feature-list">
+                <li><MdReceipt className="amenities-list-icon" /> Invoice provided</li>
+              </ul>
+            </div>
+
+            {/* Column 4 — Safety & Security + General + Accessibility + Languages */}
+            <div className="amenities-feature-column">
+              <h3 className="amenities-feature-title">Safety & Security</h3>
+              <ul className="amenities-feature-list">
                 <li><MdFireExtinguisher className="amenities-list-icon" /> Fire extinguishers</li>
+                <li><MdCameraAlt className="amenities-list-icon" /> CCTV outside property</li>
+                <li><MdCameraAlt className="amenities-list-icon" /> CCTV in common areas</li>
+                <li><MdSensors className="amenities-list-icon" /> Smoke alarms</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">General</h3>
+              <ul className="amenities-feature-list">
+                <li><MdWeekend className="amenities-list-icon" /> Air conditioning</li>
+                <li><MdDeck className="amenities-list-icon" /> Carpeted</li>
+                <li><MdHotTub className="amenities-list-icon" /> Heating</li>
+                <li><MdAccessible className="amenities-list-icon" /> Facilities for disabled guests</li>
+                <li><MdSmokeFree className="amenities-list-icon" /> Non-smoking rooms</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">Accessibility</h3>
+              <ul className="amenities-feature-list">
+                <li><FaBath className="amenities-list-icon" /> Lower bathroom sink</li>
+                <li><MdHotTub className="amenities-list-icon" /> Toilet with grab rails</li>
+                <li><MdAccessible className="amenities-list-icon" /> Wheelchair accessible</li>
+              </ul>
+
+              <h3 className="amenities-feature-title">Languages spoken</h3>
+              <ul className="amenities-feature-list">
+                <li><MdLanguage className="amenities-list-icon" /> English</li>
               </ul>
             </div>
+
           </div>
         </div>
       </section>

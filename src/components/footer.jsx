@@ -24,7 +24,7 @@ export default function Footer(){
                <img src={logo1} alt="The Prince of Wales Hotel" />
             </div>
             <p className="pwf-description">
-              The Crossroadsinn of Wales Hotel Berkeley is a recently refurbished country hotel offering comfortable en-suite rooms, free parking, and easy access to the M5 and A38.
+            The Crossroads Inn Hotel Berkeley is near Fort Pierce City Marina (9 km), Inlet State Park (15 km), and Vero Beach Airport (28 km).
             </p>
             <div className="pwf-social-links">
               <div className="pwf-social-icon">

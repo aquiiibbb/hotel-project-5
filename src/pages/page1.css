@@ -78,7 +78,7 @@ body {
 .hotel-room-details-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 14px 20px;
+    padding: 10px 20px;
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
@@ -86,7 +86,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 40px;
     background: white;
     border-radius: 12px;
@@ -104,6 +104,39 @@ body {
     color: #1a202c;
     margin-bottom: 16px;
     letter-spacing: -0.6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hotel-room-title-text:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+    text-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+.hotel-room-title-text:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40%; /* Line ko chota kar diya */
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.hotel-room-title-text::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40%; /* Line ko chota kar diya */
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .hotel-room-price-info-container {
@@ -251,7 +284,6 @@ body {
     
    
     border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
     height: fit-content;
     position: sticky;
     top: 20px;

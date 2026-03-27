@@ -34,77 +34,77 @@ export default function Room() {
   const rooms = [
     {
       id: 1,
-      name: "NK- King Bed (Non-Smoking)",
+      name: "King Bed",
       price: 114.99,
-      area: 17,
+      area: "28", // Wrap in quotes
       person: 2,
       image: image4,
       featured: true
     },
     {
       id: 2,
-      name: "NDD - Double Room  (2 Beds, Non-Smoking)",
+      name: " Double Room  (2 Beds)",
       price: 109.99,
-      area: 17,
+      area: "28", // Wrap in quotes
       person: 2,
       image: image5,
       featured: false
     },
     {
       id: 3,
-      name: "HNK - King Room (Disability Access, Non-Smoking)",
+      name: " King Room (Disability Access)",
       price: 113.30,
-      area: 17,
+      area: "28", // Wrap in quotes
       person: 2,
       image: image6,
       featured: false
     },
     {
       id: 4,
-      name: "HNDD - Double Room ( Disability Access, 2 Beds, Non-Smoking)",
+      name: " Double Room ( Disability Access, 2 Beds)",
       price: 134.20,
-      area: 22,
+      area: "28 ", // Wrap in quotes
       person: 2,
-      image: image7 ,
+      image: image7,
       featured: false
     },
     {
       id: 5,
-      name: "HDD - Double Room (Disability Access, 2 Beds)",
+      name: " Double Room (Disability Access, 2 Beds)",
       price: 109.99,
-      area: 50,
+      area: "28 ", // Wrap in quotes
       person: 4,
       image: image8,
       featured: true
     },
     {
       id: 6,
-      name: "DD - Double Room (2 Beds)",
+      name: " Double Room (2 Beds)",
       price: 109.99,
-      area: 33,
+      area: "28", // Wrap in quotes
       person: 4,
       image: image9,
       featured: true
     },
     {
       id: 7,
-      name: "D - Double Room (1 Bed)",
+      name: " Double Room (1 Bed)",
       price: 109.99,
-      area: 61,
+      area: "28 ", // Wrap in quotes
       person: 2,
       image: image10,
       featured: true
     },
     {
       id: 8,
-      name: "ND - Double Room (1 Bed, Non-Smoking)",
+      name: "Double Room (1 Bed)",
       price: 367.30,
-      area: 61,
+      area: "28 ", // Wrap in quotes
       person: 2,
-      image:image11,
+      image: image11, // Added missing space
       featured: true
     }
-  ];
+];
 
   return (
     <>
@@ -113,7 +113,7 @@ export default function Room() {
         <div className="room-hero-overlay">
           <div className="room-hero-content">
             <h1 className="room-hero-title">Our Rooms</h1>
-            <p className="room-hero-subtitle">Modern rooms designed for restful nights near the A38 and M5</p>
+            <p className="room-hero-subtitle">HOME / ROOM</p>
           </div>
         </div>
       </section>
@@ -239,7 +239,7 @@ export default function Room() {
             <div className="comfort-description">
               <p className="comfort-highlight">Recently refurbished rooms designed for comfort, convenience, and a restful stay.</p>
               <p className="comfort-text">
-                All rooms at The Prince of Wales Hotel are recently refurbished and thoughtfully
+                All rooms at The Crossroads Inn Hotel are recently refurbished and thoughtfully
                 equipped to ensure a comfortable stay. Guests enjoy en-suite bathrooms, free Wi-Fi, flat-
                 screen TVs, tea and coffee facilities, fresh towels, and complimentary toiletries.
               </p>

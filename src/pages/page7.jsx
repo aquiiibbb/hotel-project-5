@@ -37,7 +37,7 @@ export default function HotelRoomPageSeven() {
             <div className="hotel-room-details-section">
                 <div className="hotel-room-header-container">
                     <div className="hotel-room-info-block">
-                        <h1 className="hotel-room-title-text">D - Double Room (1 Bed)</h1>
+                        <h1 className="hotel-room-title-text">Double Room (1 Bed)</h1>
                         
                     </div>
 
@@ -63,7 +63,7 @@ export default function HotelRoomPageSeven() {
                                 </svg>
                             </div>
                             <div className="hotel-room-feature-text-block">
-                                <span className="hotel-room-feature-number">17 m²</span>
+                                <span className="hotel-room-feature-number">28 m²</span>
                                 <span className="hotel-room-feature-label">Size</span>
                             </div>
                         </div>

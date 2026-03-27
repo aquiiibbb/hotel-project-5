@@ -137,12 +137,11 @@ html, body {
 
 .amenities-card:hover {
   transform: translateY(-5px);
-  border: 3px solid #1e40af;
+  border: 3px solid gold;
   box-shadow: 0 10px 30px rgba(200, 134, 13, 0.2);
 }
 
 .amenities-card-featured {
-  border: 3px solid #1e40af;
 }
 
 .amenities-card-featured:hover {
@@ -154,19 +153,19 @@ html, body {
   width: 80px;
   height: 80px;
   background-color: transparent;
-  border: 2px solid #1e40af;
+  border: 2px solid gold;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 30px;
   font-size: 32px;
-  color: #1e40af;
+  color: gold;
   transition: all 0.3s ease;
 }
 
 .amenities-card:hover .amenities-card-icon {
-  background-color: #1e40af;
+  background-color: gold;
   color: white;
 }
 

@@ -114,14 +114,7 @@ export default function Header() {
                 </button>
               </li>
 
-              <li>
-                <button
-                  className={`menu-link ${location.pathname === '/about' ? 'active' : ''}`}
-                  onClick={() => handleLinkClick('/about')}
-                >
-                  About
-                </button>
-              </li>
+             
 
               <li>
                 <button

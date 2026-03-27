@@ -22,66 +22,80 @@ export default function Home() {
    const [startIndex, setStartIndex] = useState(0)
    const [favorites, setFavorites] = useState([]);
    const slides = [
-   {
-      id: 1,
-      bgImage: `url(${image1})`
-   },
-   {
-      id: 2,
-      bgImage: `url(${image2})`
-   },
-   {
-      id: 3,
-      bgImage: `url(${image3})`
-   },
-   {
-      id: 3,
-      bgImage: `url(${image12})`
-   },
-   {
-      id: 3,
-      bgImage: `url(${image10})`
-   }
+      {
+         id: 1,
+         bgImage: `url(${image1})`,
+         title: "CrossInn Hotel",
+         subtitle: "WHERE COMFORT MEETS ELEGANCE",
+         description: "Experience luxury redefined in every corner"
+      },
+      {
+         id: 2,
+         bgImage: `url(${image2})`,
+         title: "CrossInn Hotel",
+         subtitle: "YOUR HOME AWAY FROM HOME",
+         description: "Unwind in our beautifully crafted spaces"
+      },
+      {
+         id: 3,
+         bgImage: `url(${image3})`,
+         title: "CrossInn Hotel",
+         subtitle: "BREATHTAKING VIEWS AWAIT",
+         description: "Wake up to scenery that takes your breath away"
+      },
+      {
+         id: 4,
+         bgImage: `url(${image12})`,
+         title: "CrossInn Hotel",
+         subtitle: "WARM HOSPITALITY, EVERY STAY",
+         description: "Our team is here to make every moment perfect"
+      },
+      {
+         id: 5,
+         bgImage: `url(${image10})`,
+         title: "CrossInn Hotel",
+         subtitle: "DISCOVER SERENITY",
+         description: "Escape the ordinary — step into tranquility"
+      }
+   ]
 
-]
+   const toggleFavorite = (id) => {
+      if (favorites.includes(id)) {
+         setFavorites(favorites.filter((fav) => fav !== id));
+      } else {
+         setFavorites([...favorites, id]);
+      }
+   };
 
-const toggleFavorite = (id) => {
-   if (favorites.includes(id)) {
-      setFavorites(favorites.filter((fav) => fav !== id));
-   } else {
-      setFavorites([...favorites, id]);
-   }
-};
-
-const rooms = [
-   {
-      id: 1,
-      name: "NK- King Bed (Non-Smoking)",
-      price: 114.99,
-      area: 12,
-      person: 2,
-      image: image4, // Remove curly braces
-      featured: true
-   },
-   {
-      id: 2,
-      name: "NDD - Double Room  (2 Beds, Non-Smoking)",
-      price: 109.99,
-      area: 19,
-      person: 2,
-      image: image5, // Remove curly braces
-      featured: false
-   },
-   {
-      id: 3,
-      name: "HNK - King Room (Disability Access, Non-Smoking)",
-      price: 113.30,
-      area: 22,
-      person: 2,
-      image: image6, // Remove curly braces
-      featured: false
-   }
-]
+   const rooms = [
+      {
+         id: 1,
+         name: "King Bed",
+         price: 114.99,
+         area: 28,
+         person: 2,
+         image: image4, // Remove curly braces
+         featured: true
+      },
+      {
+         id: 2,
+         name: "Double Room  (2 Beds)",
+         price: 109.99,
+         area: 28,
+         person: 2,
+         image: image5, // Remove curly braces
+         featured: false
+      },
+      {
+         id: 3,
+         name: "King Room (Disability Access)",
+         price: 113.30,
+         area: 28,
+         person: 2,
+         image: image6, // Remove curly braces
+         featured: false
+      }
+   ]
 
    const attractions = [
       { title: "Edward Jenner Museum", time: "5 minutes", image: "https://source.unsplash.com/random/600x400?nature&sig=1" },
@@ -174,6 +188,7 @@ const rooms = [
                      className={`indicator ${index === currentSlide ? 'active' : ''}`}
                      onClick={() => goToSlide(index)}
                   ></button>
+
                ))}
             </div>
          </div>
@@ -199,20 +214,20 @@ const rooms = [
                               <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
                            </svg>
                         </div>
-                        <p className="welcome-text">ABOUT THIS PROPERTY</p>
+
                      </div>
 
-                     <h2 className="hotel-title">A Comfortable Country Hotel in Berkeley</h2>
+                     <h2 className="hotel-title">ABOUT THIS PROPERTY</h2>
 
                      <p className="hotel-description">
-                     <b>Comfortable Accommodations:</b>  Crossroads Inn in Fort Pierce offers air-conditioned rooms with private bathrooms, walk-in showers, and free WiFi. Each room includes a refrigerator, microwave, work desk, and TV.<br></br>
+                        <b>Comfortable Accommodations:</b>  Crossroads Inn in Fort Pierce offers air-conditioned rooms with private bathrooms, walk-in showers, and free WiFi. Each room includes a refrigerator, microwave, work desk, and TV.<br></br>
 
- <b>Convenient Facilities:</b>  Guests benefit from a 24-hour front desk, daily housekeeping service, and free on-site private parking. Additional amenities include a bath, carpeted floors, and a work desk.<br></br>
+                        <b>Convenient Facilities:</b>  Guests benefit from a 24-hour front desk, daily housekeeping service, and free on-site private parking. Additional amenities include a bath, carpeted floors, and a work desk.<br></br>
 
- <b>Local Attractions:</b> Nearby attractions include Fort Pierce City Marina (9 km), Fort Pierce Inlet State Park (15 km), and the Vero Beach Museum of Art (31 km). The Vero Beach Municipal Airport is 28 km away.
+                        <b>Local Attractions:</b> Nearby attractions include Fort Pierce City Marina (9 km), Fort Pierce Inlet State Park (15 km), and the Vero Beach Museum of Art (31 km). The Vero Beach Municipal Airport is 28 km away.
                      </p>
 
-                     <p className="location-text">A short drive from Junction 13/14 of the M5.</p>
+
 
                      <div className="amenities-section">
                         <div className="quality-badge">
@@ -226,11 +241,19 @@ const rooms = [
                         <div className="amenities-list">
                            <div className="amenity-item">
                               <span className="check-icon">✓</span>
-                              <span>Meeting Rooms Available</span>
+                              <span>Free parking</span>
                            </div>
                            <div className="amenity-item">
                               <span className="check-icon">✓</span>
-                              <span>Arrange Wedding Destinations</span>
+                              <span>Free WiFi</span>
+                           </div>
+                           <div className="amenity-item">
+                              <span className="check-icon">✓</span>
+                              <span>Non-smoking rooms</span>
+                           </div>
+                           <div className="amenity-item">
+                              <span className="check-icon">✓</span>
+                              <span>Facilities for disabled guests</span>
                            </div>
                            <div className="amenity-item">
                               <span className="check-icon">✓</span>
@@ -254,235 +277,118 @@ const rooms = [
             </div>
          </section>
 
-        
+
 
          {/* Discover Our Rooms Section */}
-        <section className="lux-rooms-section">
-  <div className="lux-container">
+         <section className="lux-rooms-section">
+            <div className="lux-container">
 
-    <div className="lux-header">
-      <p className="lux-subtitle">FEATURED ROOMS</p>
-      <h2 className="lux-title">Discover Our Rooms</h2>
-    </div>
-
-    <div className="room-grid">
-      {rooms.map((room) => (
-        <div key={room.id} className="room-card">
-          <div className="room-image-container">
-            <img 
-              src={room.image} 
-              alt={room.name} 
-              className="room-image"
-              onClick={() => navigate(`/page${room.id}`)}
-              style={{ cursor: 'pointer' }}
-            />
-            {room.featured && (
-              <div className="room-featured-badge">FEATURED</div>
-            )}
-            <button 
-              className="room-favorite-btn"
-              onClick={() => toggleFavorite(room.id)}
-            >
-              {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
-            </button>
-            <div className="room-rating">
-              <span className="room-rating-icon">⭐</span>
-            </div>
-          </div>
-          <div className="room-content">
-            <h3 
-              className="room-title"
-              onClick={() => navigate(`/page${room.id}`)}
-              style={{ cursor: 'pointer' }}
-            >
-              {room.name}
-            </h3>
-          
-            <div className="room-details">
-              <div className="room-detail">
-                <span className="room-detail-label">Area:</span>
-                <span className="room-detail-value">{room.area} m²</span>
-              </div>
-              <div className="room-detail">
-                <span className="room-detail-label">Person:</span>
-                <span className="room-detail-value">{room.person}</span>
-              </div>
-            </div>
- <div style={{
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "100%"
-}}>
-  <a 
-    href="https://bookingengine.stayflexi.com/?hotel_id=35135"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      background: "blue",
-      color: "white",
-      padding: "clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px)",
-      textAlign: "center",
-      cursor: "pointer",
-      fontSize: "clamp(14px, 3vw, 16px)",
-      fontWeight: "500",
-      border: "none",
-      display: "inline-block",
-      width: "90%",
-      borderRadius: "10px",
-      transition: "all 0.3s ease",
-      boxSizing: "border-box",
-      textDecoration: "none"
-    }}
-    onMouseEnter={(e) => {
-      e.target.style.background = "#1e40af";
-      e.target.style.transform = "translateY(-2px)";
-      e.target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
-    }}
-    onMouseLeave={(e) => {
-      e.target.style.background = "blue";
-      e.target.style.transform = "translateY(0)";
-      e.target.style.boxShadow = "none";
-    }}
-  >
-    Book now
-  </a>
-</div>     
-     </div>
-        </div>
-      ))}
-    </div>
-
-    <div className="lux-footer">
-      <button
-        className="lux-view-btn"
-        onClick={() => navigate("/room")}
-      >
-        VIEW ALL ROOMS
-      </button>
-    </div>
-
-  </div>
-</section>
-
-         {/* Hotel Features Section */}
-         <section className="features-section">
-            <div className="container">
-               <div className="features-content">
-                  <div className="features-text">
-                     <p className="features-description">
-                        Located in the historic town of Berkeley, close to Junction 13/14 of the M5 and just off the A38, our hotel is perfectly positioned for travellers whether passing through or visiting Gloucester, Bristol, South Gloucestershire, and the Cotswolds.
-                     </p>
-
-                     <div className="features-grid-left">
-                        <div className="feature-item">
-                           <div className="feature-icon">
-                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                 <path d="M20 5L25 15H15L20 5Z" fill="#D4AF37" />
-                                 <circle cx="20" cy="20" r="15" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                                 <path d="M15 25L25 25" stroke="#D4AF37" strokeWidth="2" />
-                              </svg>
-                           </div>
-                           <h3>In J3/14 of the M5</h3>
-                        </div>
-
-                        <div className="feature-item">
-                           <div className="feature-icon">
-                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                 <rect x="5" y="10" width="30" height="20" rx="3" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                                 <rect x="10" y="15" width="20" height="10" fill="#D4AF37" />
-                              </svg>
-                           </div>
-                           <h3>38 Bedrooms</h3>
-                        </div>
-
-                        <div className="feature-item">
-                           <div className="feature-icon">
-                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                 <rect x="5" y="8" width="30" height="20" rx="2" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                                 <rect x="8" y="12" width="24" height="12" fill="#D4AF37" />
-                              </svg>
-                           </div>
-                           <h3>Flat-screen TV</h3>
-                        </div>
-
-                        <div className="feature-item">
-                           <div className="feature-icon">
-                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                 <rect x="8" y="15" width="24" height="15" rx="2" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                                 <path d="M12 20h16M12 25h12" stroke="#D4AF37" strokeWidth="2" />
-                              </svg>
-                           </div>
-                           <h3>Fresh towels</h3>
-                        </div>
-
-                        <div className="feature-item">
-                           <div className="feature-icon">
-                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                 <rect x="10" y="12" width="20" height="16" rx="2" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                                 <circle cx="20" cy="20" r="3" fill="#D4AF37" />
-                              </svg>
-                           </div>
-                           <h3>Free Toiletries</h3>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="features-cards">
-                     <div className="feature-card light">
-                        <div className="feature-card-icon">
-                           <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                              <rect x="5" y="15" width="40" height="25" rx="3" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                              <rect x="10" y="20" width="30" height="15" fill="#D4AF37" />
-                              <circle cx="15" cy="10" r="3" fill="#D4AF37" />
-                              <circle cx="35" cy="10" r="3" fill="#D4AF37" />
-                           </svg>
-                        </div>
-                        <h3>Free On-Site Parking</h3>
-                        <p>Benefit from free on-site parking, offering generous space for cars and work vehicles.</p>
-                     </div>
-
-                     <div className="feature-card light">
-                        <div className="feature-card-icon">
-                           <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                              <circle cx="25" cy="25" r="20" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                              <path d="M15 25c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#D4AF37" strokeWidth="2" />
-                              <circle cx="25" cy="25" r="3" fill="#D4AF37" />
-                           </svg>
-                        </div>
-                        <h3>Free High-Speed Wi-Fi</h3>
-                        <p>Stay connected with our completely free, open Wi-Fi network available across the hotel.</p>
-                     </div>
-
-                     <div className="feature-card dark">
-                        <div className="feature-card-icon">
-                           <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                              <rect x="10" y="15" width="30" height="20" rx="3" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                              <path d="M15 20h20M15 25h15M15 30h18" stroke="#D4AF37" strokeWidth="2" />
-                              <circle cx="25" cy="8" r="3" fill="#D4AF37" />
-                           </svg>
-                        </div>
-                        <h3>Continental Breakfast</h3>
-                        <p>Start your day with a self-serve continental breakfast, including a toastie bar, available for £9.95 per person.</p>
-                     </div>
-
-                     <div className="feature-card light">
-                        <div className="feature-card-icon">
-                           <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
-                              <rect x="10" y="10" width="30" height="30" rx="5" stroke="#D4AF37" strokeWidth="2" fill="none" />
-                              <path d="M20 20h10M20 25h8M20 30h12" stroke="#D4AF37" strokeWidth="2" />
-                              <circle cx="32" cy="18" r="2" fill="#D4AF37" />
-                           </svg>
-                        </div>
-                        <h3>Easy Self Check-In</h3>
-                        <p>Arriving late? Our simple self check-in process allows hassle-free access after 10pm via WhatsApp instructions.</p>
-                     </div>
-                  </div>
+               <div className="lux-header">
+                  <p className="lux-subtitle">FEATURED ROOMS</p>
+                  <h2 className="lux-title">Discover Our Rooms</h2>
                </div>
+
+               <div className="room-grid">
+                  {rooms.map((room) => (
+                     <div key={room.id} className="room-card">
+                        <div className="room-image-container">
+                           <img
+                              src={room.image}
+                              alt={room.name}
+                              className="room-image"
+                              onClick={() => navigate(`/page${room.id}`)}
+                              style={{ cursor: 'pointer' }}
+                           />
+                           {room.featured && (
+                              <div className="room-featured-badge">FEATURED</div>
+                           )}
+                           <button
+                              className="room-favorite-btn"
+                              onClick={() => toggleFavorite(room.id)}
+                           >
+                              {favorites.includes(room.id) ? <MdFavorite /> : <MdFavoriteBorder />}
+                           </button>
+                           <div className="room-rating">
+                              <span className="room-rating-icon">⭐</span>
+                           </div>
+                        </div>
+                        <div className="room-content">
+                           <h3
+                              className="room-title"
+                              onClick={() => navigate(`/page${room.id}`)}
+                              style={{ cursor: 'pointer' }}
+                           >
+                              {room.name}
+                           </h3>
+
+                           <div className="room-details">
+                              <div className="room-detail">
+                                 <span className="room-detail-label">Area:</span>
+                                 <span className="room-detail-value">{room.area} m²</span>
+                              </div>
+                              <div className="room-detail">
+                                 <span className="room-detail-label">Person:</span>
+                                 <span className="room-detail-value">{room.person}</span>
+                              </div>
+                           </div>
+                           <div style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              width: "100%"
+                           }}>
+                              <a
+                                 href="https://bookingengine.stayflexi.com/?hotel_id=35135"
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 style={{
+                                    background: "blue",
+                                    color: "white",
+                                    padding: "clamp(10px, 2vw, 12px) clamp(20px, 4vw, 24px)",
+                                    textAlign: "center",
+                                    cursor: "pointer",
+                                    fontSize: "clamp(14px, 3vw, 16px)",
+                                    fontWeight: "500",
+                                    border: "none",
+                                    display: "inline-block",
+                                    width: "90%",
+                                    borderRadius: "10px",
+                                    transition: "all 0.3s ease",
+                                    boxSizing: "border-box",
+                                    textDecoration: "none"
+                                 }}
+                                 onMouseEnter={(e) => {
+                                    e.target.style.background = "#1e40af";
+                                    e.target.style.transform = "translateY(-2px)";
+                                    e.target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
+                                 }}
+                                 onMouseLeave={(e) => {
+                                    e.target.style.background = "blue";
+                                    e.target.style.transform = "translateY(0)";
+                                    e.target.style.boxShadow = "none";
+                                 }}
+                              >
+                                 Book now
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  ))}
+               </div>
+
+               <div className="lux-footer">
+                  <button
+                     className="lux-view-btn"
+                     onClick={() => navigate("/room")}
+                  >
+                     VIEW ALL ROOMS
+                  </button>
+               </div>
+
             </div>
          </section>
 
-         
+
 
          {/* Customer Reviews Section */}
          <section className="reviews-section">
@@ -769,39 +675,102 @@ const rooms = [
                   </div>
 
                   <div className="review-text">Had a two day stay and very relaxed atmosphere, the manager Sophia went above and beyond to make sure we were comfortable.
- </div>
+                  </div>
                </div>
 
             </div>
          </section>
          {/* Nearby Attractions Section */}
-         <section className="nearby-section">
-            <div className="container">
-
-               <div className="nearby-header">
-                
-                  <h2 className="nearby-title">Top attractions</h2>
+         <section className="property-surroundings-section">
+            <div className="surroundings-container">
+               <div className="surroundings-header">
+                  <h2 className="surroundings-title">Property surroundings</h2>
                </div>
 
-               <div className="amenities-list">
-                           <div className="amenity-item">
-                              <span className="check-icon">✓</span>
-                              <span>🍴 Restaurants & cafes</span>
-                           </div>
-                           <div className="amenity-item">
-                              <span className="check-icon">✓</span>
-                              <span>✈️ Closest airports</span>
-                           </div>
-                           <div className="amenity-item">
-                              <span className="check-icon">✓</span>
-                              <span>🏖️ Beaches in the neighbourhood</span>
-                           </div>
-                           
+               <div className="surroundings-categories">
+                  <div className="category-block">
+                     <div className="category-header">
+                        <span className="category-check">✓</span>
+                        <span className="category-title">🎯 Top attractions</span>
+                     </div>
+                     <div className="category-content">
+                        <div className="location-item">
+                           <span className="location-name">The Savannahs Recreation Area</span>
+                           <span className="location-distance">9 km</span>
                         </div>
+                        <div className="location-item">
+                           <span className="location-name">Fort Pierce Inlet State Park</span>
+                           <span className="location-distance">14 km</span>
+                        </div>
+                        <div className="location-item">
+                           <span className="location-name">Navy Seal Museum</span>
+                           <span className="location-distance">16 km</span>
+                        </div>
+                        <div className="location-item">
+                           <span className="location-name">Pepper Beach State Recreation Area</span>
+                           <span className="location-distance">19 km</span>
+                        </div>
+                     </div>
+                  </div>
 
+                  <div className="category-block">
+                     <div className="category-header">
+                        <span className="category-check">✓</span>
+                        <span className="category-title">🍴 Restaurants & cafes</span>
+                     </div>
+                     <div className="category-content">
+                        <div className="location-item">
+                           <span className="location-name">Cafe/bar • Dunkin'</span>
+                           <span className="location-distance">150 m</span>
+                        </div>
+                        <div className="location-item">
+                           <span className="location-name">Restaurant • La Granja</span>
+                           <span className="location-distance">200 m</span>
+                        </div>
+                        <div className="location-item">
+                           <span className="location-name">Restaurant • Arby's</span>
+                           <span className="location-distance">200 m</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div className="category-block">
+                     <div className="category-header">
+                        <span className="category-check">✓</span>
+                        <span className="category-title">✈️ Closest airports</span>
+                     </div>
+                     <div className="category-content">
+                        <div className="location-item">
+                           <span className="location-name">Vero Beach Municipal Airport</span>
+                           <span className="location-distance">28 km</span>
+                        </div>
+                        <div className="location-item">
+                           <span className="location-name">Witham Field Airport</span>
+                           <span className="location-distance">37 km</span>
+                        </div>
+                        <div className="location-item">
+                           <span className="location-name">Melbourne International Airport</span>
+                           <span className="location-distance">84 km</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div className="category-block">
+                     <div className="category-header">
+                        <span className="category-check">✓</span>
+                        <span className="category-title">🏖️ Beaches in the neighbourhood</span>
+                     </div>
+                     <div className="category-content">
+                        <div className="location-item">
+                           <span className="location-name">Fort Pierce Beach</span>
+                           <span className="location-distance">9 km</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </section>
-        
+
          {/* Partner Logos */}
          <section className="partners-section">
             <div className="partners-container">
@@ -809,7 +778,7 @@ const rooms = [
                <img src={booking} alt="Booking" />
                <img src={tripadvisor} alt="Tripadvisor" />
                <img src={agoda} alt="Agoda" />
-              
+
 
             </div>
          </section>
