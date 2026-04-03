@@ -3,34 +3,33 @@
 .prince-wales-footer {
   background: #3c4043;
   color: #9ca3af;
-  padding: 80px 0 0;
+  padding: 60px 0 0;
   font-family: 'Inter', sans-serif;
 }
 
-/* container */
-
+/* container - IMPROVED DESKTOP LAYOUT */
 .pwf-container {
-  max-width: 1400px;
+  max-width: 1200px; /* Reduced from 1400px */
   margin: auto;
-  padding: 0 40px 60px;
+  padding: 0 30px 50px; /* Reduced side padding */
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
-  gap: 70px;
+  grid-template-columns: 1fr 0.8fr 1.2fr; /* Better proportions */
+  gap: 40px; /* Reduced from 70px */
   align-items: flex-start;
+  justify-content: center;
 }
 
 /* logo */
-
 .pwf-logo-section {
-  max-width: 300px;
+  max-width: 280px; /* Slightly reduced */
 }
 
 .pwf-logo {
-  margin-bottom: 28px;
+  margin-bottom: 24px; /* Reduced spacing */
 }
 
 .pwf-logo img {
-  height: 100px;
+  height: 90px; /* Slightly smaller */
   background: white;
   padding: 0;
   border-radius: 18px;
@@ -40,18 +39,18 @@
 
 .pwf-description {
   font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 32px;
+  line-height: 1.6; /* Tighter line height */
+  margin-bottom: 28px;
 }
 
 .pwf-social-links {
   display: flex;
-  gap: 14px;
+  gap: 12px; /* Reduced gap */
 }
 
 .pwf-social-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px; /* Slightly smaller */
+  height: 42px;
   border-radius: 50%;
   background: #4b5563;
   display: flex;
@@ -59,7 +58,7 @@
   justify-content: center;
   color: #fff;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 16px;
   transition: .3s;
 }
 
@@ -69,22 +68,22 @@
 }
 
 /* titles */
-
 .pwf-title {
   color: #fff;
-  font-size: 20px;
+  font-size: 19px; /* Slightly smaller */
   font-weight: 600;
-  margin-bottom: 28px;
+  margin-bottom: 24px; /* Reduced spacing */
 }
 
 /* links */
-
 .pwf-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .pwf-links li {
-  margin-bottom: 14px;
+  margin-bottom: 12px; /* Reduced spacing */
 }
 
 .pwf-links button {
@@ -103,54 +102,55 @@
 }
 
 /* contact */
-
 .pwf-contact-section {
-  max-width: 380px;
+  max-width: 350px; /* Reduced width */
 }
 
 .pwf-contact-items {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px; /* Reduced gap */
 }
 
 .pwf-contact-item {
   display: flex;
-  gap: 14px;
+  gap: 12px; /* Reduced gap */
+  align-items: flex-start;
 }
 
 .pwf-contact-icon {
-  width: 48px;
-  height: 48px;
+  width: 44px; /* Slightly smaller */
+  height: 44px;
   border-radius: 50%;
   background: #1e40af;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 18px;
+  font-size: 17px;
   flex-shrink: 0;
 }
 
 .pwf-contact-details {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px; /* Reduced gap */
 }
 
 .pwf-contact-label {
   color: #fff;
-  font-size: 15px;
+  font-size: 14px; /* Slightly smaller */
   font-weight: 500;
 }
 
 .pwf-contact-value {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4; /* Tighter line height */
 }
 
 .pwf-contact-link {
   text-decoration: none;
+  color: #9ca3af;
 }
 
 .pwf-contact-link:hover {
@@ -158,7 +158,6 @@
 }
 
 /* bottom */
-
 .pwf-bottom {
   border-top: 1px solid #4b5563;
   padding: 25px 0;
@@ -166,24 +165,24 @@
 }
 
 .pwf-copyright {
-  max-width: 1400px;
+  max-width: 1200px; /* Match container width */
   margin: auto;
-  padding: 0 40px;
+  padding: 0 30px; /* Match container padding */
   text-align: center;
 }
 
 .pwf-copyright p {
   font-size: 14px;
+  margin: 0;
 }
 
 /* ----------- tablet ----------- */
-
 @media(max-width:1024px) {
-
   .pwf-container {
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 0 30px 50px;
+    gap: 35px;
+    padding: 0 25px 45px;
+    max-width: 900px;
   }
 
   .pwf-logo-section,
@@ -192,15 +191,12 @@
   }
 
   .pwf-copyright {
-    padding: 0 30px;
+    padding: 0 25px;
   }
-
 }
 
-/* ----------- MOBILE RESPONSIVE ----------- */
-
+/* Keep all your existing mobile styles below this line... */
 @media(max-width:768px) {
-
   .prince-wales-footer {
     padding: 40px 0 0;
     background: linear-gradient(135deg, #2d3748 0%, #374151 100%);
@@ -215,7 +211,7 @@
     max-width: 100%;
   }
 
-  /* LOGO SECTION - MOBILE */
+  /* Rest of your mobile styles remain the same... */
   .pwf-logo-section {
     text-align: center;
     background: rgba(16, 9, 9, 0.05);
@@ -230,7 +226,6 @@
   }
 
   .pwf-logo {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,7 +273,6 @@
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
   }
 
-  /* LINKS SECTION - MOBILE */
   .pwf-links-section {
     background: rgba(255, 255, 255, 0.05);
     padding: 25px 20px;
@@ -338,7 +332,6 @@
     transform: translateY(-1px);
   }
 
-  /* CONTACT SECTION - MOBILE */
   .pwf-contact-section {
     background: rgba(255, 255, 255, 0.05);
     padding: 25px 20px;
@@ -417,7 +410,6 @@
     color: #d4af37;
   }
 
-  /* BOTTOM SECTION - MOBILE */
   .pwf-bottom {
     background: linear-gradient(135deg, #1f2937 0%, #2d3748 100%);
     padding: 20px 0;
@@ -439,13 +431,10 @@
     line-height: 1.5;
     text-align: center;
   }
-
 }
 
 /* ----------- SMALL MOBILE ----------- */
-
 @media(max-width:480px) {
-
   .prince-wales-footer {
     padding: 30px 0 0;
   }
@@ -524,25 +513,19 @@
     font-size: 12px;
     text-align: center;
   }
-
 }
 
 /* ----------- EXTRA SMALL ----------- */
-
 @media(max-width:360px) {
-
   .pwf-container {
     padding: 0 10px 20px;
     gap: 20px;
   }
 
-
   .pwf-links-section,
   .pwf-contact-section {
     padding: 18px 12px;
   }
-
-  .pwf-logo img {}
 
   .pwf-description {
     font-size: 12px;
@@ -586,5 +569,4 @@
     font-size: 11px;
     text-align: center;
   }
-
 }

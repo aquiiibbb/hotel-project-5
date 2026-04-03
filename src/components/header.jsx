@@ -28,26 +28,8 @@ export default function Header() {
 
       {/* MOBILE TOP BAR - Only visible on mobile */}
       <div className="mobile-top-bar">
-        <a 
-          href="https://maps.google.com/?q=7050+Okeechobee+Rd,+Fort+Pierce,+FL+34945,+USA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mobile-top-item"
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <MdLocationOn className="mobile-icon" />
-          <span>Locate Us</span>
-        </a>
-        <a 
-          href="https://wa.me/17724658600"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mobile-top-item"
-          style={{ textDecoration: 'none', color: 'inherit' }}
-        >
-          <FaWhatsapp className="mobile-icon" />
-          <span>Get In Touch</span>
-        </a>
+       
+      
       </div>
 
       {/* DESKTOP TOP BAR */}
@@ -63,44 +45,13 @@ export default function Header() {
             <MdLocationOn className="icon" />
             7050 Okeechobee Rd, Fort Pierce, FL 34945, USA
           </a>
-          <span className="top-contact-item">
-            <MdEmail className="icon" />
-            crossroadsinnflorida@gmail.com
-          </span>
+          
           <span className="top-contact-item">
             <MdPhone className="icon" />
             +17724658600
           </span>
         </div>
 
-        <div className="top-actions-group">
-          <a 
-            href="https://maps.google.com/?q=7050+Okeechobee+Rd,+Fort+Pierce,+FL+34945,+USA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="top-contact-item"
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <MdLocationOn className="icon" />
-            Locate Us
-          </a>
-          <a 
-            href="https://wa.me/17724658600"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="top-contact-item"
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <FaWhatsapp className="icon" />
-            Get In Touch
-          </a>
-
-          <div className="social-icons">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaTiktok />
-          </div>
-        </div>
       </div>
 
       {/* MAIN NAV */}
@@ -153,7 +104,7 @@ export default function Header() {
                   className={`menu-link ${location.pathname === '/amenities' ? 'active' : ''}`}
                   onClick={() => handleLinkClick('/amenities')}
                 >
-                  Amenities/Facilities
+                  Amenities
                 </button>
               </li>
 

@@ -165,18 +165,7 @@ export default function Home() {
                   className={`slide ${index === currentSlide ? 'active' : ''}`}
                   style={{ backgroundImage: slide.bgImage }}
                >
-                  <div className="slide-content">
-                     <div className="text-content">
-                        {slide.subtitle && (
-                           <p className="subtitle">{slide.subtitle}</p>
-                        )}
-                        <h1 className="main-title">{slide.title}</h1>
-                        {slide.description && (
-                           <p className="description">{slide.description}</p>
-                        )}
-                        <div className="decorative-line"></div>
-                     </div>
-                  </div>
+                  
                </div>
             ))}
 
@@ -390,301 +379,11 @@ export default function Home() {
 
 
 
-         {/* Customer Reviews Section */}
-         <section className="reviews-section">
-
-            <style>{`
-.reviews-section {
-  padding: 90px 0;
-  background: #f3f3f3;
-  text-align: center;
-}
-
-/* HEADER */
-.crown-icon {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.reviews-subtitle {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #8a8a8a;
-  margin-bottom: 10px;
-}
-
-.reviews-title {
-  font-size: 48px;
-  font-weight: 500;
-  color: #2d2d2d;
-  margin-bottom: 50px;
-}
-
-/* SCROLL */
-.reviews-grid {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 20px;
-}
-
-.reviews-grid::-webkit-scrollbar {
-  display: none;
-}
-
-/* CARD */
-.review-card {
-  flex: 0 0 auto;
-  width: 300px;
-  background: #e6e6e6;
-  border-radius: 14px;
-  padding: 20px;
-  text-align: left;
-}
-
-/* HEADER */
-.review-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.reviewer-info {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.reviewer-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #0f766e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-}
-
-.reviewer-avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.reviewer-name {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.reviewer-date {
-  font-size: 12px;
-  color: #777;
-}
-
-/* GOOGLE ICON */
-.google-icon {
-  width: 18px;
-}
-
-/* RATING */
-.review-rating {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 8px 0;
-}
-
-.stars {
-  color: #fbbc04;
-  font-size: 14px;
-}
-
-.verified {
-  width: 16px;
-  height: 16px;
-  background: #4285F4;
-  color: #fff;
-  font-size: 10px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* TEXT */
-.review-text {
-  font-size: 14px;
-  color: #333;
-  line-height: 1.6;
-}
-
-.read-more {
-  font-size: 13px;
-  color: #888;
-  margin-top: 6px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .review-card{width:240px;}
-  .reviews-title{font-size:34px;}
-}
-
-@media(max-width:480px){
-  .review-card{width:85%;}
-  .reviews-title{font-size:26px;}
-}
-`}</style>
-
-            {/* LOGO */}
-            <div className="crown-icon">
-               <svg width="50" height="30" viewBox="0 0 40 30">
-                  <path d="M20 5L25 15H15L20 5Z" fill="#D4AF37" />
-                  <circle cx="8" cy="15" r="3" fill="#D4AF37" />
-                  <circle cx="32" cy="15" r="3" fill="#D4AF37" />
-                  <path d="M5 15L35 15L32 25H8L5 15Z" fill="#D4AF37" />
-               </svg>
-            </div>
-
-            <p className="reviews-subtitle">CUSTOMERS REVIEWS</p>
-            <h2 className="reviews-title">What They’re Saying?</h2>
-
-            <div className="reviews-grid">
-
-               {/* CARD 1 */}
-               <div className="review-card">
-                  <div className="review-header">
-                     <div className="reviewer-info">
-                        <div className="reviewer-avatar">P</div>
-                        <div>
-                           <div className="reviewer-name">Patrick Goodenough</div>
-                           <div className="reviewer-date">2 months ago</div>
-                        </div>
-                     </div>
-                     <img className="google-icon" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" />
-                  </div>
-
-                  <div className="review-rating">
-                     <div className="stars">★★★★★</div>
-                     <div className="verified">✓</div>
-                  </div>
-
-                  <div className="review-text">
-                     Great location for exploring the Cotswolds... restaurant food 5 star...
-                     room is clean and comfortable... Excellent value for money...
-                  </div>
-                  <div className="read-more">Read more</div>
-               </div>
-
-               {/* CARD 2 */}
-               <div className="review-card">
-                  <div className="review-header">
-                     <div className="reviewer-info">
-                        <div className="reviewer-avatar">
-                           <img src="https://lh3.googleusercontent.com/a-/ALV-UjWjC134L2j7knJzFzSGlNfKXAhKyODdaaUXD_hiXx9thdgHqZWM=w40-h40-c-rp-mo-br100" />
-                        </div>
-                        <div>
-                           <div className="reviewer-name">Sean Hurley</div>
-                           <div className="reviewer-date">2 months ago</div>
-                        </div>
-                     </div>
-                     <img className="google-icon" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" />
-                  </div>
-
-                  <div className="review-rating">
-                     <div className="stars">★★★★★</div>
-                     <div className="verified">✓</div>
-                  </div>
-
-                  <div className="review-text">
-                     Rooms were immaculate, newly renovated so the door system and shower...
-                  </div>
-                  <div className="read-more">Read more</div>
-               </div>
-
-               {/* CARD 3 */}
-               <div className="review-card">
-                  <div className="review-header">
-                     <div className="reviewer-info">
-                        <div className="reviewer-avatar" style={{ background: "#1a73e8" }}>M</div>
-                        <div>
-                           <div className="reviewer-name">Mark Hughes</div>
-                           <div className="reviewer-date">3 months ago</div>
-                        </div>
-                     </div>
-                     <img className="google-icon" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" />
-                  </div>
-
-                  <div className="review-rating">
-                     <div className="stars">★★★★★</div>
-                     <div className="verified">✓</div>
-                  </div>
-
-                  <div className="review-text">
-                     Dined in the steakhouse- BEST fillet steak I've ever eaten.
-                  </div>
-               </div>
-
-               {/* CARD 4 */}
-               <div className="review-card">
-                  <div className="review-header">
-                     <div className="reviewer-info">
-                        <div className="reviewer-avatar" style={{ background: "#9333ea" }}>M</div>
-                        <div>
-                           <div className="reviewer-name">Macadam Mac</div>
-                           <div className="reviewer-date">3 months ago</div>
-                        </div>
-                     </div>
-                     <img
-                        className="google-icon"
-                        src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
-                        alt="Google review"
-                     />
-                  </div>
-
-                  <div className="review-rating">
-                     <div className="stars">★★★★★</div>
-                     <div className="verified">✓</div>
-                  </div>
-
-                  <div className="review-text">Ok</div>
-               </div>
-               {/* CARD 5 */}
-               <div className="review-card">
-                  <div className="review-header">
-                     <div className="reviewer-info">
-                        <div className="reviewer-avatar" style={{ background: "#9333ea" }}>G</div>
-                        <div>
-                           <div className="reviewer-name">Gordon Brumby</div>
-                           <div className="reviewer-date">3 months ago</div>
-                        </div>
-                     </div>
-                     <img
-                        className="google-icon"
-                        src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
-                        alt="Google review"
-                     />
-                  </div>
-
-                  <div className="review-rating">
-                     <div className="stars">★★★★★</div>
-                     <div className="verified">✓</div>
-                  </div>
-
-                  <div className="review-text">Had a two day stay and very relaxed atmosphere, the manager Sophia went above and beyond to make sure we were comfortable.
-                  </div>
-               </div>
-
-            </div>
-         </section>
          {/* Nearby Attractions Section */}
          <section className="property-surroundings-section">
             <div className="surroundings-container">
                <div className="surroundings-header">
-                  <h2 className="surroundings-title">Property surroundings</h2>
+                  <h2 className="surroundings-title">Property Surroundings</h2>
                </div>
 
                <div className="surroundings-categories">
@@ -696,19 +395,19 @@ export default function Home() {
                      <div className="category-content">
                         <div className="location-item">
                            <span className="location-name">The Savannahs Recreation Area</span>
-                           <span className="location-distance">9 km</span>
+                           <span className="location-distance">9 miles</span>
                         </div>
                         <div className="location-item">
                            <span className="location-name">Fort Pierce Inlet State Park</span>
-                           <span className="location-distance">14 km</span>
+                           <span className="location-distance">14 miles</span>
                         </div>
                         <div className="location-item">
                            <span className="location-name">Navy Seal Museum</span>
-                           <span className="location-distance">16 km</span>
+                           <span className="location-distance">16 miles</span>
                         </div>
                         <div className="location-item">
                            <span className="location-name">Pepper Beach State Recreation Area</span>
-                           <span className="location-distance">19 km</span>
+                           <span className="location-distance">19 miles</span>
                         </div>
                      </div>
                   </div>
@@ -742,15 +441,15 @@ export default function Home() {
                      <div className="category-content">
                         <div className="location-item">
                            <span className="location-name">Vero Beach Municipal Airport</span>
-                           <span className="location-distance">28 km</span>
+                           <span className="location-distance">28 miles</span>
                         </div>
                         <div className="location-item">
                            <span className="location-name">Witham Field Airport</span>
-                           <span className="location-distance">37 km</span>
+                           <span className="location-distance">37 miles</span>
                         </div>
                         <div className="location-item">
                            <span className="location-name">Melbourne International Airport</span>
-                           <span className="location-distance">84 km</span>
+                           <span className="location-distance">84 miles</span>
                         </div>
                      </div>
                   </div>
@@ -763,7 +462,7 @@ export default function Home() {
                      <div className="category-content">
                         <div className="location-item">
                            <span className="location-name">Fort Pierce Beach</span>
-                           <span className="location-distance">9 km</span>
+                           <span className="location-distance">9 miles</span>
                         </div>
                      </div>
                   </div>
@@ -771,17 +470,7 @@ export default function Home() {
             </div>
          </section>
 
-         {/* Partner Logos */}
-         <section className="partners-section">
-            <div className="partners-container">
-
-               <img src={booking} alt="Booking" />
-               <img src={tripadvisor} alt="Tripadvisor" />
-               <img src={agoda} alt="Agoda" />
-
-
-            </div>
-         </section>
+        
       </>
    )
 }

@@ -20,14 +20,7 @@ export default function Gallery() {
       {/* Hero Section */}
       <section className="gallery-hero-section">
         <div className="gallery-hero-overlay">
-          <div className="gallery-hero-content">
-            <h1 className="gallery-hero-title">Gallery</h1>
-            <div className="gallery-breadcrumb">
-              <span>HOME</span>
-              <span className="gallery-breadcrumb-separator">/</span>
-              <span>GALLERY</span>
-            </div>
-          </div>
+          
         </div>
       </section>
 

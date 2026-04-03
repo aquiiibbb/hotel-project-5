@@ -56,14 +56,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="contact-hero-section">
         <div className="contact-hero-overlay">
-          <div className="contact-hero-content">
-            <h1 className="contact-hero-title">Contact</h1>
-            <div className="contact-breadcrumb">
-              <span>HOME</span>
-              <span className="contact-breadcrumb-separator">/</span>
-              <span>CONTACT</span>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -137,8 +130,8 @@ export default function Contact() {
                   <div className="contact-info-details">
                     <h4 className="contact-info-label">RECEPTION HOURS</h4>
                     <p className="contact-info-text">
-                      2 PM - 10 PM<br />
-                      After 10 PM Self Check In
+                      24/7 Available <br />
+                      
                     </p>
                   </div>
                 </div>
@@ -150,32 +143,22 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="contact-map-section">
-        <div className="contact-map-container">
-          <iframe
-            src="https://maps.google.com/maps?q=Bristol%20Road,%20A38,%20Berkeley,%20Gloucestershire,%20GL13%209HD&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="500"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Prince of Wales Hotel - Bristol Road, A38, Berkeley"
-          ></iframe>
-        </div>
-      </section>
+     <section className="contact-map-section">
+  <div className="contact-map-container">
+    <iframe
+      src="https://maps.google.com/maps?q=7050%20Okeechobee%20Rd,%20Fort%20Pierce,%20FL%2034945,%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="500"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="7050 Okeechobee Rd, Fort Pierce, FL 34945, USA"
+    ></iframe>
+  </div>
+</section>
 
-      {/* FAQ Section */}
-      <section className="faq-section">
-        <div className="faq-wrapper">
-          <h2 className="faq-heading">FAQs about Crossroads Inn</h2>
-          <div className="faq-grid">
-            {faqs.map((faq, index) => (
-              <FAQItem key={index} faq={faq} />
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
     </>
   )

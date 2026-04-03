@@ -24,19 +24,9 @@ export default function Footer(){
                <img src={logo1} alt="The Prince of Wales Hotel" />
             </div>
             <p className="pwf-description">
-            The Crossroads Inn Hotel Berkeley is near Fort Pierce City Marina (9 km), Inlet State Park (15 km), and Vero Beach Airport (28 km).
+           Crossroads Inn is near Fort Pierce City Marina (9 miles), Inlet State Park (15 miles), and Vero Beach Airport (28 miles).
             </p>
-            <div className="pwf-social-links">
-              <div className="pwf-social-icon">
-                <FaFacebookF />
-              </div>
-              <div className="pwf-social-icon">
-                <FaInstagram />
-              </div>
-              <div className="pwf-social-icon">
-                <FaTiktok />
-              </div>
-            </div>
+            
           </div>
 
           {/* Quick Links */}
@@ -46,24 +36,11 @@ export default function Footer(){
               <li><button onClick={() => handleLinkClick('/')}>Home</button></li>
               <li><button onClick={() => handleLinkClick('/about')}>About</button></li>
               <li><button onClick={() => handleLinkClick('/contact')}>Contact</button></li>
-              <li><button onClick={() => handleLinkClick('/')}>Privacy policy</button></li>
+             
               <li><button onClick={() => handleLinkClick('/')}>Terms & Condition</button></li>
             </ul>
           </div>
 
-          {/* Facilities */}
-          <div className="pwf-section">
-            <h3 className="pwf-title">Facilities</h3>
-            <ul className="pwf-links">
-               <li><button onClick={() => handleLinkClick('/room')}>Great for your stay</button></li>
-               <li><button onClick={() => handleLinkClick('/')}>Internet</button></li>
-               <li><button onClick={() => handleLinkClick('/room')}>Bedroom</button></li>
-               <li><button onClick={() => handleLinkClick('/')}>Kitchen</button></li>
-               <li><button onClick={() => handleLinkClick('/room')}>Living Area</button></li>
-               <li><button onClick={() => handleLinkClick('/')}>Family friendly</button></li>
-               <li><button onClick={() => handleLinkClick('/')}>Safety & security</button></li>
-            </ul>
-          </div>
 
           {/* Contact */}
           <div className="pwf-section pwf-contact-section">
@@ -104,15 +81,7 @@ export default function Footer(){
                 </div>
               </div>
               
-              <div className="pwf-contact-item">
-                <div className="pwf-contact-icon pwf-whatsapp-icon">
-                  <FaWhatsapp />
-                </div>
-                <div className="pwf-contact-details">
-                  <span className="pwf-contact-label">Get in Touch</span>
-                   <a href="https://wa.me/ +17724658600" className="pwf-contact-value pwf-contact-link">+17724658600</a>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

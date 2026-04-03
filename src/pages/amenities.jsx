@@ -49,14 +49,7 @@ export default function Amenities() {
       {/* Hero Section */}
       <section className="amenities-hero-section">
         <div className="amenities-hero-overlay">
-          <div className="amenities-hero-content">
-            <h1 className="amenities-hero-title">Amenities/Facilities</h1>
-            <div className="amenities-breadcrumb">
-              <span>HOME</span>
-              <span className="amenities-breadcrumb-separator">/</span>
-              <span>AMENITIES/FACILITIES</span>
-            </div>
-          </div>
+          
         </div>
       </section>
 

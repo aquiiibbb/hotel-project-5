@@ -4,7 +4,7 @@ import ScrollToTop from "./ScrollToTop";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
-import WhatsAppChat from "./pages/WhatsAppChat"; // ✅ IMPORT
+
 
 import Home from "./pages/home";
 import Contact from "./pages/contact";
@@ -43,7 +43,7 @@ function App() {
       </Routes>
 
       {/* ✅ GLOBAL WHATSAPP CHAT */}
-      <WhatsAppChat />
+     
 
       <Footer />
     </Router>

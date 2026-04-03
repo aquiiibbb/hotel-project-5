@@ -31,14 +31,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="about-hero-section">
         <div className="about-hero-overlay">
-          <div className="about-hero-content">
-            <h1 className="about-hero-title">About</h1>
-            <div className="about-breadcrumb">
-              <span>HOME</span>
-              <span className="about-breadcrumb-separator">/</span>
-              <span>ABOUT</span>
-            </div>
-          </div>
+        
         </div>
       </section>
 

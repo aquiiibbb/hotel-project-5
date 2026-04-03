@@ -110,12 +110,7 @@ export default function Room() {
     <>
       {/* Hero Section */}
       <section className="room-hero-section">
-        <div className="room-hero-overlay">
-          <div className="room-hero-content">
-            <h1 className="room-hero-title">Our Rooms</h1>
-            <p className="room-hero-subtitle">HOME / ROOM</p>
-          </div>
-        </div>
+       
       </section>
 
       {/* Rooms Listing Section */}
@@ -237,9 +232,9 @@ export default function Room() {
               <h2 className="comfort-title">Comfortable Rooms for Every Stay</h2>
             </div>
             <div className="comfort-description">
-              <p className="comfort-highlight">Recently refurbished rooms designed for comfort, convenience, and a restful stay.</p>
+              <p className="comfort-highlight"> Rooms designed for comfort, convenience, and a restful stay.</p>
               <p className="comfort-text">
-                All rooms at The Crossroads Inn Hotel are recently refurbished and thoughtfully
+                All rooms at Crossroads Inn Hotel are thoughtfully
                 equipped to ensure a comfortable stay. Guests enjoy en-suite bathrooms, free Wi-Fi, flat-
                 screen TVs, tea and coffee facilities, fresh towels, and complimentary toiletries.
               </p>
