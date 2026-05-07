@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-wrapper {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------- MOBILE TOP BAR ---------- */
+.mobile-top-bar {
+  display: none;
+  background: #4a5568;
+  color: #fff;
+  padding: 4px 0;
+  justify-content: center;
+  gap: 0;
+}
+
+.mobile-top-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex: 1;
+  justify-content: center;
+}
+
+.mobile-top-item:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-top-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-icon {
+  color: #1eaf36;
+  font-size: 14px;
+}
+
+/* ---------- DESKTOP TOP BAR ---------- */
+.header-top {
+  background: #2d3748;
+  color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.top-contact {
+  display: flex;
+  gap:94px;
+  flex-wrap: wrap;
+}
+
+.top-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.top-contact-item:hover {
+  opacity: .8;
+}
+
+.top-contact-item .icon {
+  color: #1eaf36;
+  font-size: 14px;
+}
+
+.top-actions-group {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons svg {
+  cursor: pointer;
+  font-size: 14px;
+  transition: color .3s;
+}
+
+.social-icons svg:hover {
+  color: #1e40af;
+}
+
+/* ---------- NAVBAR ---------- */
+.header-nav {
+  background: #fff;
+  padding: 20px 38px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.brand-logo img {
+  height: 65px;
+  max-width: 150px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* NAV RIGHT */
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu-link {
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  padding: 6px 0;
+  transition: 0.3s;
+}
+
+.menu-link:hover,
+.menu-link.active {
+  color: #1c41b8;
+}
+
+/* underline animation */
+.menu-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #1c40b4;
+  transition: 0.3s;
+}
+
+.menu-link:hover::after,
+.menu-link.active::after {
+  width: 100%;
+}
+
+/* BOOK BUTTON */
+.btn-booking {
+  background: #1e40af;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: .5px;
+}
+
+.btn-booking:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(200, 134, 13, .3);
+}
+
+/* MOBILE BUTTON */
+.menu-toggle-btn {
+  display: none;
+  font-size: 26px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 1001;
+  position: relative;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+  .header-nav {
+    padding: 18px 25px;
+  }
+
+  .brand-logo img {
+    height: 42px;
+  }
+
+  .menu-list {
+    gap: 20px;
+  }
+
+  .nav-section {
+    gap: 25px;
+  }
+}
+
+/* ---------- MOBILE ONLY ---------- */
+@media (max-width: 768px) {
+
+  /* Show mobile top bar, hide desktop */
+  .mobile-top-bar {
+    display: flex;
+  }
+
+  .header-top {
+    display: none;
+  }
+
+  /* MOBILE STICKY HEADER */
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+  }
+
+  /* ADD BODY PADDING TO PREVENT CONTENT OVERLAP */
+  body {
+    padding-top: 110px; /* Increased for mobile top bar */
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .header-nav {
+    padding: 16px 20px;
+    background: #fff;
+    position: relative;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .brand-logo img {
+    height: 45px;
+  }
+
+  /* MOBILE DROPDOWN MENU */
+  .nav-section {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-section.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+
+  .menu-list li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-link {
+    display: block;
+    width: 100%;
+    padding: 18px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 2px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-link:hover {
+    background: rgba(200, 134, 13, 0.2);
+    color: #1e40af;
+    transform: translateY(-2px);
+  }
+
+  .menu-link.active {
+    background: rgba(200, 134, 13, 0.3);
+    color: #1e40af;
+    font-weight: 600;
+  }
+
+  .menu-link::after {
+    display: none;
+  }
+
+  /* Center the booking button */
+  .booking-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding-left: 20px; /* Button ko right side shift karne ke liye */
+  }
+
+  .btn-booking {
+    width: 250px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    background: #1e40af;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(200, 134, 13, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    display: block;
+  }
+
+  .btn-booking:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200, 134, 13, 0.4);
+    background: #1e40af;
+  }
+
+  /* MOBILE MENU ANIMATION */
+  .nav-section.open .menu-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.5s ease forwards;
+  }
+
+  .nav-section.open .menu-list li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .nav-section.open .menu-list li:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+
+  .nav-section.open .menu-list li:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .nav-section.open .menu-list li:nth-child(4) {
+    animation-delay: 0.25s;
+  }
+
+  .nav-section.open .menu-list li:nth-child(5) {
+    animation-delay: 0.3s;
+  }
+
+  .nav-section.open .booking-button-wrapper {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.5s ease 0.35s forwards;
+  }
+
+  @keyframes slideInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 105px;
+  }
+
+  .header-nav {
+    padding: 14px 16px;
+  }
+
+  .brand-logo img {
+    height: 40px;
+  }
+
+  .mobile-top-item {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .mobile-icon {
+    font-size: 13px;
+  }
+
+  .menu-link {
+    font-size: 15px;
+    padding: 16px 25px;
+  }
+
+  .btn-booking {
+    width: 220px !important;
+    font-size: 14px;
+  }
+
+  .nav-section {
+    padding: 25px 15px;
+  }
+}

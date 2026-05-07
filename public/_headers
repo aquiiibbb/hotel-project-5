@@ -1,0 +1,35 @@
+# Cache-Control Headers – Crossroads Inn Hotel
+# For Netlify deployment
+
+# HTML - no cache (always fresh)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# JS & CSS - long cache (hashed filenames)
+/static/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - long cache
+/static/media/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# WebP images
+*.webp
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/webp
+
+# XML Sitemaps - short cache
+/sitemap*.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=UTF-8
+
+# Fonts
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
